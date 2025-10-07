@@ -1,0 +1,27 @@
+{
+  "name": "turingforce-website",
+  "version": "1.0.0",
+  "description": "TuringForce - Agentic AI Agent Platform Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'Static site - no build process needed'",
+    "serve": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "project-management",
+    "automation",
+    "platform"
+  ],
+  "author": "TuringForce",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/turingforce/website.git"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Memory & Knowledge Agent — TuringForce</title>
+  <meta name="description" content="Organizational memory and insights — intelligent knowledge management and retrieval." />
+  <link rel="icon" type="image/png" href="../images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=9.5" />
+  <link rel="stylesheet" href="../css/agent-pages.css?v=1.0" />
+</head>
+<body class="tf-body">
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="../index.html">
+          <img src='../images/logo.png' alt='TuringForce logo' class='logo'/>
+          <span class="brand-name">TuringForce</span>
+        </a>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../index.html#platform" class="nav-link">Platform</a>
+        <div class="nav-dropdown">
+          <a href="../index.html#agents" class="nav-link dropdown-toggle">Agents <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-menu agents-dropdown">
+            <div class="dropdown-header">
+              <h3>Agents</h3>
+              <p>Specialized AI agents for project management excellence</p>
+            </div>
+            
+            <div class="agents-grid-dropdown">
+              <div class="agent-column">
+                <a href="backlog-grooming-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">📋</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Backlog Grooming Agent</h4>
+                    <p>INVEST checks, acceptance validation, story splitting</p>
+                  </div>
+                </a>
+                
+                <a href="daily-standup-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">🎯</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Daily Standup Agent</h4>
+                    <p>Automated standup summaries and team insights</p>
+                  </div>
+                </a>
+                
+                <a href="risk-dependency-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">⚠️</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Risk & Dependency Agent</h4>
+                    <p>Late items, PR aging, cross-team dependencies</p>
+                  </div>
+                </a>
+                
+                <a href="status-reporting-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">📊</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Status Reporting Agent</h4>
+                    <p>Automated sprint & project updates</p>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="agent-column">
+                <a href="sprint-planning-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">🗓️</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Sprint Planning Agent</h4>
+                    <p>Intelligent sprint scope & forecasting</p>
+                  </div>
+                </a>
+                
+                <a href="devex-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">💻</div>
+                  <div class="agent-dropdown-content">
+                    <h4>DevEx: Visual + Code</h4>
+                    <p>Self-service agent building platform</p>
+                  </div>
+                </a>
+                
+                <a href="memory-knowledge-agent.html" class="agent-dropdown-item active">
+                  <div class="agent-dropdown-icon">🧠</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Memory & Knowledge</h4>
+                    <p>Organizational memory and insights</p>
+                  </div>
+                </a>
+                
+                <div class="agent-dropdown-item coming-soon">
+                  <div class="agent-dropdown-icon">🔮</div>
+                  <div class="agent-dropdown-content">
+                    <h4>AI Governance <span class="coming-soon-badge">coming soon</span></h4>
+                    <p>Compliance and governance automation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="dropdown-footer">
+              <a href="../index.html#agents" class="view-all-agents">View All Agents →</a>
+            </div>
+          </div>
+        </div>
+        <a href="../index.html#security" class="nav-link">Security</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="../index.html#contact" class="btn-ghost">Log in</a>
+        <a href="../index.html#contact" class="btn-primary">Free trial</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Agent Hero Section -->
+  <section class="agent-hero">
+    <div class="container">
+      <div class="agent-breadcrumb">
+        <a href="../index.html">Home</a> / <a href="../index.html#agents">Agents</a> / <span>Memory & Knowledge</span>
+      </div>
+      
+      <div class="agent-hero-content">
+        <div class="agent-hero-icon">🧠</div>
+        <h1>Memory & Knowledge. Powered by Intelligence.</h1>
+        <p class="agent-hero-subtitle">The Memory & Knowledge Agent serves as your organization's intelligent memory system, capturing, organizing, and surfacing critical project insights, decisions, and learnings. It transforms scattered information into actionable knowledge that improves decision-making and prevents repeated mistakes across teams and projects.</p>
+        
+        <div class="agent-hero-actions">
+          <a href="#demo" class="btn-primary">See Agent in Action</a>
+          <a href="#trial" class="btn-outline">Sign up for Free Trial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agent Core Powers -->
+  <section class="agent-powers">
+    <div class="container">
+      <div class="section-header">
+        <h2>Agent's Core Power. Unleashed.</h2>
+        <p>Where organizational knowledge becomes a strategic advantage for every team.</p>
+      </div>
+      
+      <div class="powers-grid">
+        <div class="power-card">
+          <div class="power-icon">📚</div>
+          <h3>Capture & Organize</h3>
+          <p>Automatically capture decisions, lessons learned, and best practices from all projects.</p>
+        </div>
+        
+        <div class="power-card">
+          <div class="power-icon">🔍</div>
+          <h3>Search & Retrieve</h3>
+          <p>Intelligent search across all organizational knowledge with contextual recommendations.</p>
+        </div>
+        
+        <div class="power-card">
+          <div class="power-icon">💡</div>
+          <h3>Insights & Patterns</h3>
+          <p>Surface patterns, trends, and insights from historical project data and decisions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- You + AI Working Together -->
+  <section class="agent-collaboration">
+    <div class="container">
+      <div class="collaboration-content">
+        <div class="collaboration-text">
+          <h2>You + AI,<br>Working Together</h2>
+          
+          <div class="collaboration-items">
+            <div class="collaboration-item">
+              <h4>Curate Knowledge Base</h4>
+              <p>Review and organize captured knowledge to ensure accuracy and relevance.</p>
+            </div>
+            
+            <div class="collaboration-item">
+              <h4>Validate Insights</h4>
+              <p>Confirm AI-generated patterns and insights before sharing with teams.</p>
+            </div>
+            
+            <div class="collaboration-item">
+              <h4>Tag & Categorize</h4>
+              <p>Add context and metadata to improve knowledge discoverability and usefulness.</p>
+            </div>
+            
+            <div class="collaboration-item">
+              <h4>Share Best Practices</h4>
+              <p>Promote successful patterns and learnings across the organization.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="collaboration-visual">
+          <div class="agent-cortex">
+            <div class="cortex-header">
+              <h3>Memory & Knowledge Agent</h3>
+              <span class="cortex-status">Active</span>
+            </div>
+            
+            <div class="cortex-metrics">
+              <div class="metric">
+                <span class="metric-label">Knowledge Items</span>
+                <span class="metric-value">1,247</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Searches/Day</span>
+                <span class="metric-value">89</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Insights Generated</span>
+                <span class="metric-value">34</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agent in Action -->
+  <section class="agent-action">
+    <div class="container">
+      <h2>Memory & Knowledge Agent in Action</h2>
+      <p>Powered by the TuringForce Reasoning Engine, the Memory & Knowledge Agent operates as part of a collaborative, agentic framework:</p>
+      
+      <div class="action-workflow">
+        <div class="workflow-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Capture</h3>
+            <p>Automatically extract decisions, learnings, and insights from meetings, documents, and projects.</p>
+          </div>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Organize</h3>
+            <p>Structure knowledge with intelligent tagging, categorization, and relationship mapping.</p>
+          </div>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Analyze</h3>
+            <p>Identify patterns, trends, and insights across projects and time periods.</p>
+          </div>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Surface</h3>
+            <p>Proactively recommend relevant knowledge and insights when teams need them.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ask the Agent -->
+  <section class="ask-agent">
+    <div class="container">
+      <h2>Ask the Memory & Knowledge Agent Anything</h2>
+      
+      <div class="ask-categories">
+        <div class="ask-category">
+          <h3>Knowledge Retrieval</h3>
+          <div class="ask-examples">
+            <div class="ask-example">What did we learn from the last mobile app project?</div>
+            <div class="ask-example">Show me best practices for API integration projects</div>
+          </div>
+        </div>
+        
+        <div class="ask-category">
+          <h3>Pattern Analysis</h3>
+          <div class="ask-examples">
+            <div class="ask-example">What are common causes of sprint delays in our team?</div>
+            <div class="ask-example">Which project patterns lead to the best outcomes?</div>
+          </div>
+        </div>
+        
+        <div class="ask-category">
+          <h3>Decision Support</h3>
+          <div class="ask-examples">
+            <div class="ask-example">What similar decisions have we made in the past?</div>
+            <div class="ask-example">Generate a lessons learned report for this project type</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcomes -->
+  <section class="agent-outcomes">
+    <div class="container">
+      <h2>Institutional Memory, Continuous Learning</h2>
+      <p>Where every lesson learned becomes organizational wisdom for future success.</p>
+      
+      <div class="outcomes-comparison">
+        <div class="outcome-from">
+          <h3>From</h3>
+          <ul>
+            <li>Scattered tribal knowledge</li>
+            <li>Repeated mistakes across teams</li>
+            <li>Lost project learnings</li>
+            <li>Inefficient knowledge sharing</li>
+          </ul>
+        </div>
+        
+        <div class="outcome-to">
+          <h3>To</h3>
+          <ul>
+            <li>Centralized organizational memory</li>
+            <li>Proactive pattern recognition</li>
+            <li>Preserved institutional knowledge</li>
+            <li>Intelligent knowledge discovery</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-Agent Intelligence -->
+  <section class="multi-agent">
+    <div class="container">
+      <h2>Multi-Agent Intelligence</h2>
+      <p>The Memory & Knowledge Agent enhances all other agents by providing historical context, patterns, and organizational learnings.</p>
+      
+      <div class="related-agents">
+        <a href="sprint-planning-agent.html" class="related-agent">
+          <div class="related-icon">🗓️</div>
+          <h4>Sprint Planning Agent</h4>
+          <p>Provides historical velocity data and planning insights for better forecasting.</p>
+        </a>
+        
+        <a href="risk-dependency-agent.html" class="related-agent">
+          <div class="related-icon">⚠️</div>
+          <h4>Risk & Dependency Agent</h4>
+          <p>Shares historical risk patterns to improve future risk identification.</p>
+        </a>
+        
+        <a href="devex-agent.html" class="related-agent">
+          <div class="related-icon">💻</div>
+          <h4>DevEx Agent</h4>
+          <p>Provides templates and patterns from successful agent implementations.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="../images/logo.png" alt="TuringForce" class="footer-logo">
+          <p>Agentic AI Agent Platform</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Platform</h4>
+            <a href="../index.html#platform">Overview</a>
+            <a href="../index.html#features">Features</a>
+            <a href="../index.html#agents">Agents</a>
+          </div>
+          <div class="footer-column">
+            <h4>Agents</h4>
+            <a href="backlog-grooming-agent.html">Backlog Grooming</a>
+            <a href="daily-standup-agent.html">Daily Standup</a>
+            <a href="sprint-planning-agent.html">Sprint Planning</a>
+          </div>
+          <div class="footer-column">
+            <h4>Company</h4>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#contact">Contact</a>
+            <a href="../index.html#security">Security</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 TuringForce.ai • Privacy • Terms</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=2.2"></script>
+</body>
+</html>

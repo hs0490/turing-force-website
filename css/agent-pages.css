@@ -1,0 +1,566 @@
+/* Agent Pages Styles - Following Acceldata Design Patterns */
+
+/* Agent Hero Section */
+.agent-hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: var(--white);
+  padding: 8rem 0 6rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.agent-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.agent-breadcrumb {
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  opacity: 0.8;
+  position: relative;
+  z-index: 1;
+}
+
+.agent-breadcrumb a {
+  color: var(--white);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.agent-breadcrumb a:hover {
+  opacity: 0.8;
+}
+
+.agent-breadcrumb span {
+  opacity: 0.6;
+}
+
+.agent-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.agent-hero-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.agent-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.agent-hero-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+
+.agent-hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.agent-hero-actions .btn-primary,
+.agent-hero-actions .btn-outline {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.agent-hero-actions .btn-outline {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: var(--white);
+  backdrop-filter: blur(10px);
+}
+
+.agent-hero-actions .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Agent Powers Section */
+.agent-powers {
+  padding: 6rem 0;
+  background: var(--gray-50);
+}
+
+.powers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.power-card {
+  background: var(--white);
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.power-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.power-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.power-card h3 {
+  color: var(--gray-900);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.power-card p {
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* Agent Collaboration Section */
+.agent-collaboration {
+  padding: 6rem 0;
+  background: var(--white);
+}
+
+.collaboration-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.collaboration-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.collaboration-items {
+  space-y: 1.5rem;
+}
+
+.collaboration-item {
+  margin-bottom: 1.5rem;
+}
+
+.collaboration-item h4 {
+  color: var(--gray-900);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.collaboration-item p {
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+.collaboration-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.agent-cortex {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  min-width: 300px;
+}
+
+.cortex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.cortex-header h3 {
+  color: var(--gray-900);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.cortex-status {
+  background: var(--success);
+  color: var(--white);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.cortex-metrics {
+  space-y: 1rem;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+
+.metric-label {
+  color: var(--gray-600);
+  font-size: 0.9rem;
+}
+
+.metric-value {
+  color: var(--gray-900);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Agent Action Section */
+.agent-action {
+  padding: 6rem 0;
+  background: var(--gray-50);
+}
+
+.agent-action h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.agent-action > p {
+  text-align: center;
+  color: var(--gray-600);
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
+
+.action-workflow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.workflow-step {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  text-align: center;
+  position: relative;
+}
+
+.step-number {
+  background: var(--primary);
+  color: var(--white);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0 auto 1.5rem auto;
+}
+
+.step-content h3 {
+  color: var(--gray-900);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.step-content p {
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* Ask Agent Section */
+.ask-agent {
+  padding: 6rem 0;
+  background: var(--white);
+}
+
+.ask-agent h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.ask-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.ask-category {
+  background: var(--gray-50);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+}
+
+.ask-category h3 {
+  color: var(--gray-900);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.ask-examples {
+  space-y: 1rem;
+}
+
+.ask-example {
+  background: var(--white);
+  padding: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-200);
+  color: var(--gray-700);
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.ask-example::before {
+  content: '"';
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.ask-example::after {
+  content: '"';
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Agent Outcomes Section */
+.agent-outcomes {
+  padding: 6rem 0;
+  background: var(--gray-900);
+  color: var(--white);
+}
+
+.agent-outcomes h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.agent-outcomes > p {
+  text-align: center;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
+
+.outcomes-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.outcome-from,
+.outcome-to {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.outcome-from h3,
+.outcome-to h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.outcome-from h3 {
+  color: var(--error);
+}
+
+.outcome-to h3 {
+  color: var(--success);
+}
+
+.outcome-from ul,
+.outcome-to ul {
+  list-style: none;
+  padding: 0;
+}
+
+.outcome-from li,
+.outcome-to li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  padding-left: 2rem;
+}
+
+.outcome-from li:before {
+  content: "×";
+  position: absolute;
+  left: 0;
+  color: var(--error);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.outcome-to li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.outcome-from li:last-child,
+.outcome-to li:last-child {
+  border-bottom: none;
+}
+
+/* Multi-Agent Section */
+.multi-agent {
+  padding: 6rem 0;
+  background: var(--gray-50);
+}
+
+.multi-agent h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.multi-agent > p {
+  text-align: center;
+  color: var(--gray-600);
+  max-width: 800px;
+  margin: 0 auto 3rem auto;
+}
+
+.related-agents {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.related-agent {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-200);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.related-agent:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  text-decoration: none;
+}
+
+.related-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.related-agent h4 {
+  color: var(--gray-900);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.related-agent p {
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* Active state for current agent in dropdown */
+.agent-dropdown-item.active {
+  background: var(--primary);
+  color: var(--white);
+}
+
+.agent-dropdown-item.active .agent-dropdown-content h4,
+.agent-dropdown-item.active .agent-dropdown-content p {
+  color: var(--white);
+}
+
+.agent-dropdown-item.active .agent-dropdown-icon {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .agent-hero {
+    padding: 6rem 0 4rem 0;
+  }
+  
+  .agent-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .agent-hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .agent-hero-actions {
+    flex-direction: column;
+  }
+  
+  .collaboration-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .collaboration-text h2 {
+    font-size: 2rem;
+  }
+  
+  .outcomes-comparison {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .powers-grid,
+  .action-workflow,
+  .ask-categories,
+  .related-agents {
+    grid-template-columns: 1fr;
+  }
+}

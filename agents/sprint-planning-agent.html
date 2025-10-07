@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sprint Planning Agent — TuringForce</title>
+  <meta name="description" content="Intelligent sprint scope & forecasting — data-driven sprint planning for predictable delivery." />
+  <link rel="icon" type="image/png" href="../images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=9.5" />
+  <link rel="stylesheet" href="../css/agent-pages.css?v=1.0" />
+</head>
+<body class="tf-body">
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="../index.html">
+          <img src='../images/logo.png' alt='TuringForce logo' class='logo'/>
+          <span class="brand-name">TuringForce</span>
+        </a>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../index.html#platform" class="nav-link">Platform</a>
+        <div class="nav-dropdown">
+          <a href="../index.html#agents" class="nav-link dropdown-toggle">Agents <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-menu agents-dropdown">
+            <div class="dropdown-header">
+              <h3>Agents</h3>
+              <p>Specialized AI agents for project management excellence</p>
+            </div>
+            
+            <div class="agents-grid-dropdown">
+              <div class="agent-column">
+                <a href="backlog-grooming-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">📋</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Backlog Grooming Agent</h4>
+                    <p>INVEST checks, acceptance validation, story splitting</p>
+                  </div>
+                </a>
+                
+                <a href="daily-standup-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">🎯</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Daily Standup Agent</h4>
+                    <p>Automated standup summaries and team insights</p>
+                  </div>
+                </a>
+                
+                <a href="risk-dependency-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">⚠️</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Risk & Dependency Agent</h4>
+                    <p>Late items, PR aging, cross-team dependencies</p>
+                  </div>
+                </a>
+                
+                <a href="status-reporting-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">📊</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Status Reporting Agent</h4>
+                    <p>Automated sprint & project updates</p>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="agent-column">
+                <a href="sprint-planning-agent.html" class="agent-dropdown-item active">
+                  <div class="agent-dropdown-icon">🗓️</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Sprint Planning Agent</h4>
+                    <p>Intelligent sprint scope & forecasting</p>
+                  </div>
+                </a>
+                
+                <a href="devex-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">💻</div>
+                  <div class="agent-dropdown-content">
+                    <h4>DevEx: Visual + Code</h4>
+                    <p>Self-service agent building platform</p>
+                  </div>
+                </a>
+                
+                <a href="memory-knowledge-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">🧠</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Memory & Knowledge</h4>
+                    <p>Organizational memory and insights</p>
+                  </div>
+                </a>
+                
+                <div class="agent-dropdown-item coming-soon">
+                  <div class="agent-dropdown-icon">🔮</div>
+                  <div class="agent-dropdown-content">
+                    <h4>AI Governance <span class="coming-soon-badge">coming soon</span></h4>
+                    <p>Compliance and governance automation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="dropdown-footer">
+              <a href="../index.html#agents" class="view-all-agents">View All Agents →</a>
+            </div>
+          </div>
+        </div>
+        <a href="../index.html#security" class="nav-link">Security</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="../index.html#contact" class="btn-ghost">Log in</a>
+        <a href="../index.html#contact" class="btn-primary">Free trial</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Agent Hero Section -->
+  <section class="agent-hero">
+    <div class="container">
+      <div class="agent-breadcrumb">
+        <a href="../index.html">Home</a> / <a href="../index.html#agents">Agents</a> / <span>Sprint Planning Agent</span>
+      </div>
+      
+      <div class="agent-hero-content">
+        <div class="agent-hero-icon">🗓️</div>
+        <h1>Sprint Planning. Powered by Precision.</h1>
+        <p class="agent-hero-subtitle">The Sprint Planning Agent helps product owners and engineering leaders plan sprints with precision and predictability. It analyzes backlog health, team velocity, dependencies, and risks to recommend the right scope for each sprint—ensuring commitments are realistic and delivery is reliable.</p>
+        
+        <div class="agent-hero-actions">
+          <a href="#demo" class="btn-primary">See Agent in Action</a>
+          <a href="#trial" class="btn-outline">Sign up for Free Trial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agent Core Powers -->
+  <section class="agent-powers">
+    <div class="container">
+      <div class="section-header">
+        <h2>Agent's Core Power. Unleashed.</h2>
+        <p>Where every sprint commitment is backed by data and delivered with confidence.</p>
+      </div>
+      
+      <div class="powers-grid">
+        <div class="power-card">
+          <div class="power-icon">📈</div>
+          <h3>Forecast & Predict</h3>
+          <p>Analyze historical velocity and team capacity to predict realistic sprint outcomes.</p>
+        </div>
+        
+        <div class="power-card">
+          <div class="power-icon">⚖️</div>
+          <h3>Balance & Optimize</h3>
+          <p>Distribute work evenly across team members based on skills and availability.</p>
+        </div>
+        
+        <div class="power-card">
+          <div class="power-icon">🎯</div>
+          <h3>Validate & Recommend</h3>
+          <p>Ensure story readiness and suggest optimal sprint scope for maximum delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- You + AI Working Together -->
+  <section class="agent-collaboration">
+    <div class="container">
+      <div class="collaboration-content">
+        <div class="collaboration-text">
+          <h2>You + AI,<br>Working Together</h2>
+          
+          <div class="collaboration-items">
+            <div class="collaboration-item">
+              <h4>Review Capacity Forecasts</h4>
+              <p>Validate AI-generated capacity predictions based on team availability and historical data.</p>
+            </div>
+            
+            <div class="collaboration-item">
+              <h4>Adjust Sprint Scope</h4>
+              <p>Fine-tune recommended sprint scope based on business priorities and team feedback.</p>
+            </div>
+            
+            <div class="collaboration-item">
+              <h4>Approve Risk Assessments</h4>
+              <p>Review identified risks and dependencies before finalizing sprint commitments.</p>
+            </div>
+            
+            <div class="collaboration-item">
+              <h4>Customize Planning Rules</h4>
+              <p>Set team-specific planning parameters and business rule preferences.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="collaboration-visual">
+          <div class="agent-cortex">
+            <div class="cortex-header">
+              <h3>Sprint Planning Agent</h3>
+              <span class="cortex-status">Active</span>
+            </div>
+            
+            <div class="cortex-metrics">
+              <div class="metric">
+                <span class="metric-label">Predicted Velocity</span>
+                <span class="metric-value">28 pts</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Capacity Utilization</span>
+                <span class="metric-value">85%</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Risk Level</span>
+                <span class="metric-value">Low</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agent in Action -->
+  <section class="agent-action">
+    <div class="container">
+      <h2>Sprint Planning Agent in Action</h2>
+      <p>Powered by the TuringForce Reasoning Engine, the Sprint Planning Agent operates as part of a collaborative, agentic framework:</p>
+      
+      <div class="action-workflow">
+        <div class="workflow-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Analyze Backlog</h3>
+            <p>Assess story readiness, dependencies, and quality scores from grooming activities.</p>
+          </div>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Forecast Capacity</h3>
+            <p>Calculate team velocity and availability considering holidays, PTO, and parallel work.</p>
+          </div>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Recommend Scope</h3>
+            <p>Suggest optimal story selection and sprint scope based on capacity and priorities.</p>
+          </div>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Validate Plan</h3>
+            <p>Review risks, dependencies, and team balance before sprint commitment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ask the Agent -->
+  <section class="ask-agent">
+    <div class="container">
+      <h2>Ask the Sprint Planning Agent Anything</h2>
+      
+      <div class="ask-categories">
+        <div class="ask-category">
+          <h3>Capacity Planning</h3>
+          <div class="ask-examples">
+            <div class="ask-example">What's our realistic velocity for the next sprint?</div>
+            <div class="ask-example">How does team availability affect our capacity?</div>
+          </div>
+        </div>
+        
+        <div class="ask-category">
+          <h3>Scope Optimization</h3>
+          <div class="ask-examples">
+            <div class="ask-example">Which stories should we include in Sprint 15?</div>
+            <div class="ask-example">What's the risk level of our current sprint plan?</div>
+          </div>
+        </div>
+        
+        <div class="ask-category">
+          <h3>Planning Insights</h3>
+          <div class="ask-examples">
+            <div class="ask-example">Generate a sprint planning summary for stakeholders</div>
+            <div class="ask-example">What dependencies should we address before sprint start?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcomes -->
+  <section class="agent-outcomes">
+    <div class="container">
+      <h2>Predictable Sprints, Reliable Delivery</h2>
+      <p>Where every sprint commitment is realistic, achievable, and aligned with team capacity.</p>
+      
+      <div class="outcomes-comparison">
+        <div class="outcome-from">
+          <h3>From</h3>
+          <ul>
+            <li>Subjective sprint planning</li>
+            <li>Overcommitted sprint goals</li>
+            <li>Missed sprint commitments</li>
+            <li>Reactive scope adjustments</li>
+          </ul>
+        </div>
+        
+        <div class="outcome-to">
+          <h3>To</h3>
+          <ul>
+            <li>Data-driven sprint planning</li>
+            <li>Realistic, achievable goals</li>
+            <li>Consistent sprint delivery</li>
+            <li>Proactive capacity management</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-Agent Intelligence -->
+  <section class="multi-agent">
+    <div class="container">
+      <h2>Multi-Agent Intelligence</h2>
+      <p>The Sprint Planning Agent is part of a multi-agent system—working alongside other specialized agents to share context, coordinate actions, and deliver better outcomes.</p>
+      
+      <div class="related-agents">
+        <a href="backlog-grooming-agent.html" class="related-agent">
+          <div class="related-icon">📋</div>
+          <h4>Backlog Grooming Agent</h4>
+          <p>Provides story readiness scores and quality assessments for planning decisions.</p>
+        </a>
+        
+        <a href="daily-standup-agent.html" class="related-agent">
+          <div class="related-icon">🎯</div>
+          <h4>Daily Standup Agent</h4>
+          <p>Shares velocity and progress data to improve future planning accuracy.</p>
+        </a>
+        
+        <a href="risk-dependency-agent.html" class="related-agent">
+          <div class="related-icon">⚠️</div>
+          <h4>Risk & Dependency Agent</h4>
+          <p>Identifies risks and dependencies that impact sprint planning decisions.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="../images/logo.png" alt="TuringForce" class="footer-logo">
+          <p>Agentic AI Agent Platform</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Platform</h4>
+            <a href="../index.html#platform">Overview</a>
+            <a href="../index.html#features">Features</a>
+            <a href="../index.html#agents">Agents</a>
+          </div>
+          <div class="footer-column">
+            <h4>Agents</h4>
+            <a href="backlog-grooming-agent.html">Backlog Grooming</a>
+            <a href="daily-standup-agent.html">Daily Standup</a>
+            <a href="sprint-planning-agent.html">Sprint Planning</a>
+          </div>
+          <div class="footer-column">
+            <h4>Company</h4>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#contact">Contact</a>
+            <a href="../index.html#security">Security</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 TuringForce.ai • Privacy • Terms</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=2.2"></script>
+</body>
+</html>

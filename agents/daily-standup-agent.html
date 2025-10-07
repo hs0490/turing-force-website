@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Standup Agent — TuringForce</title>
+  <meta name="description" content="Automated standup summaries and team insights — intelligent daily standup facilitation." />
+  <link rel="icon" type="image/png" href="../images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=9.5" />
+  <link rel="stylesheet" href="../css/agent-pages.css?v=1.0" />
+</head>
+<body class="tf-body">
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="../index.html">
+          <img src='../images/logo.png' alt='TuringForce logo' class='logo'/>
+          <span class="brand-name">TuringForce</span>
+        </a>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../index.html#platform" class="nav-link">Platform</a>
+        <div class="nav-dropdown">
+          <a href="../index.html#agents" class="nav-link dropdown-toggle">Agents <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-menu agents-dropdown">
+            <div class="dropdown-header">
+              <h3>Agents</h3>
+              <p>Specialized AI agents for project management excellence</p>
+            </div>
+            
+            <div class="agents-grid-dropdown">
+              <div class="agent-column">
+                <a href="backlog-grooming-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">📋</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Backlog Grooming Agent</h4>
+                    <p>INVEST checks, acceptance validation, story splitting</p>
+                  </div>
+                </a>
+                
+                <a href="daily-standup-agent.html" class="agent-dropdown-item active">
+                  <div class="agent-dropdown-icon">🎯</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Daily Standup Agent</h4>
+                    <p>Automated standup summaries and team insights</p>
+                  </div>
+                </a>
+                
+                <a href="risk-dependency-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">⚠️</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Risk & Dependency Agent</h4>
+                    <p>Late items, PR aging, cross-team dependencies</p>
+                  </div>
+                </a>
+                
+                <a href="status-reporting-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">📊</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Status Reporting Agent</h4>
+                    <p>Automated sprint & project updates</p>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="agent-column">
+                <a href="sprint-planning-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">🗓️</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Sprint Planning Agent</h4>
+                    <p>Intelligent sprint scope & forecasting</p>
+                  </div>
+                </a>
+                
+                <a href="devex-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">💻</div>
+                  <div class="agent-dropdown-content">
+                    <h4>DevEx: Visual + Code</h4>
+                    <p>Self-service agent building platform</p>
+                  </div>
+                </a>
+                
+                <a href="memory-knowledge-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">🧠</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Memory & Knowledge</h4>
+                    <p>Organizational memory and insights</p>
+                  </div>
+                </a>
+                
+                <div class="agent-dropdown-item coming-soon">
+                  <div class="agent-dropdown-icon">🔮</div>
+                  <div class="agent-dropdown-content">
+                    <h4>AI Governance <span class="coming-soon-badge">coming soon</span></h4>
+                    <p>Compliance and governance automation</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="dropdown-footer">
+              <a href="../index.html#agents" class="view-all-agents">View All Agents →</a>
+            </div>
+          </div>
+        </div>
+        <a href="../index.html#security" class="nav-link">Security</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="../index.html#contact" class="btn-ghost">Log in</a>
+        <a href="../index.html#contact" class="btn-primary">Free trial</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Agent Hero Section -->
+  <section class="agent-hero">
+    <div class="container">
+      <div class="agent-breadcrumb">
+        <a href="../index.html">Home</a> / <a href="../index.html#agents">Agents</a> / <span>Daily Standup Agent</span>
+      </div>
+      
+      <div class="agent-hero-content">
+        <div class="agent-hero-icon">🎯</div>
+        <h1>Daily Standups. Powered by Intelligence.</h1>
+        <p class="agent-hero-subtitle">The Daily Standup Agent transforms routine status meetings into strategic alignment sessions. It synthesizes progress, identifies blockers, and surfaces insights—autonomously—so your team stays focused on delivery, not reporting.</p>
+        
+        <div class="agent-hero-actions">
+          <a href="#demo" class="btn-primary">See Agent in Action</a>
+          <a href="#trial" class="btn-outline">Sign up for Free Trial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agent Core Powers -->
+  <section class="agent-powers">
+    <div class="container">
+      <div class="section-header">
+        <h2>Agent's Core Power. Unleashed.</h2>
+        <p>Where every standup drives meaningful progress and team alignment.</p>
+      </div>
+      
+      <div class="powers-grid">
+        <div class="power-card">
+          <div class="power-icon">📊</div>
+          <h3>Synthesize & Summarize</h3>
+          <p>Automatically generate comprehensive standup summaries from team updates and progress data.</p>
+        </div>
+        
+        <div class="power-card">
+          <div class="power-icon">🚨</div>
+          <h3>Identify & Alert</h3>
+          <p>Surface blockers, risks, and dependencies that need immediate attention.</p>
+        </div>
+        
+        <div class="power-card">
+          <div class="power-icon">🎯</div>
+          <h3>Focus & Align</h3>
+          <p>Highlight key priorities and ensure team alignment on sprint goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- You + AI Working Together -->
+  <section class="agent-collaboration">
+    <div class="container">
+      <div class="collaboration-content">
+        <div class="collaboration-text">
+          <h2>You + AI,<br>Working Together</h2>
+          
+          <div class="collaboration-items">
+            <div class="collaboration-item">
+              <h4>Review Generated Summaries</h4>
+              <p>Validate AI-generated standup summaries before sharing with stakeholders.</p>
+            </div>
+            
+            <div class="collaboration-item">
+              <h4>Prioritize Blockers</h4>
+              <p>Review identified blockers and set priority levels for resolution.</p>
+            </div>
+            
+            <div class="collaboration-item">
+              <h4>Customize Insights</h4>
+              <p>Tailor the types of insights and metrics that matter most to your team.</p>
+            </div>
+            
+            <div class="collaboration-item">
+              <h4>Guide Team Focus</h4>
+              <p>Use AI insights to facilitate more effective standup discussions.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="collaboration-visual">
+          <div class="agent-cortex">
+            <div class="cortex-header">
+              <h3>Daily Standup Agent</h3>
+              <span class="cortex-status">Active</span>
+            </div>
+            
+            <div class="cortex-metrics">
+              <div class="metric">
+                <span class="metric-label">Team Velocity</span>
+                <span class="metric-value">32 pts</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Active Blockers</span>
+                <span class="metric-value">2</span>
+              </div>
+              <div class="metric">
+                <span class="metric-label">Sprint Progress</span>
+                <span class="metric-value">67%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Agent in Action -->
+  <section class="agent-action">
+    <div class="container">
+      <h2>Daily Standup Agent in Action</h2>
+      <p>Powered by the TuringForce Reasoning Engine, the Daily Standup Agent continuously monitors team progress and generates intelligent insights:</p>
+      
+      <div class="action-workflow">
+        <div class="workflow-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Collect</h3>
+            <p>Gather progress updates from Jira, GitHub, and team communications.</p>
+          </div>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Analyze</h3>
+            <p>Process velocity trends, identify blockers, and assess sprint health.</p>
+          </div>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Synthesize</h3>
+            <p>Generate comprehensive summaries and actionable insights.</p>
+          </div>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Facilitate</h3>
+            <p>Present insights to guide focused, productive standup discussions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ask the Agent -->
+  <section class="ask-agent">
+    <div class="container">
+      <h2>Ask the Daily Standup Agent Anything</h2>
+      
+      <div class="ask-categories">
+        <div class="ask-category">
+          <h3>Progress Tracking</h3>
+          <div class="ask-examples">
+            <div class="ask-example">What's our current sprint velocity compared to planned?</div>
+            <div class="ask-example">Which stories are at risk of not completing this sprint?</div>
+          </div>
+        </div>
+        
+        <div class="ask-category">
+          <h3>Blocker Analysis</h3>
+          <div class="ask-examples">
+            <div class="ask-example">What are the current blockers and their impact?</div>
+            <div class="ask-example">How long have our critical blockers been open?</div>
+          </div>
+        </div>
+        
+        <div class="ask-category">
+          <h3>Team Insights</h3>
+          <div class="ask-examples">
+            <div class="ask-example">Generate today's standup summary for leadership</div>
+            <div class="ask-example">What should we focus on in today's standup?</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcomes -->
+  <section class="agent-outcomes">
+    <div class="container">
+      <h2>Efficient Standups, Maximum Impact</h2>
+      <p>Where every standup drives meaningful progress and strategic alignment.</p>
+      
+      <div class="outcomes-comparison">
+        <div class="outcome-from">
+          <h3>From</h3>
+          <ul>
+            <li>Lengthy status update meetings</li>
+            <li>Manual progress tracking</li>
+            <li>Missed blocker identification</li>
+            <li>Inconsistent team alignment</li>
+          </ul>
+        </div>
+        
+        <div class="outcome-to">
+          <h3>To</h3>
+          <ul>
+            <li>Focused, insight-driven discussions</li>
+            <li>Automated progress synthesis</li>
+            <li>Proactive blocker surfacing</li>
+            <li>Clear team alignment and focus</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-Agent Intelligence -->
+  <section class="multi-agent">
+    <div class="container">
+      <h2>Multi-Agent Intelligence</h2>
+      <p>The Daily Standup Agent is part of a multi-agent system—working alongside other specialized agents to share context, coordinate actions, and deliver better outcomes.</p>
+      
+      <div class="related-agents">
+        <a href="backlog-grooming-agent.html" class="related-agent">
+          <div class="related-icon">📋</div>
+          <h4>Backlog Grooming Agent</h4>
+          <p>Provides story readiness data to inform sprint progress discussions.</p>
+        </a>
+        
+        <a href="risk-dependency-agent.html" class="related-agent">
+          <div class="related-icon">⚠️</div>
+          <h4>Risk & Dependency Agent</h4>
+          <p>Surfaces critical risks and dependencies for standup attention.</p>
+        </a>
+        
+        <a href="sprint-planning-agent.html" class="related-agent">
+          <div class="related-icon">🗓️</div>
+          <h4>Sprint Planning Agent</h4>
+          <p>Uses standup insights to improve future sprint planning accuracy.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="../images/logo.png" alt="TuringForce" class="footer-logo">
+          <p>Agentic AI Agent Platform</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Platform</h4>
+            <a href="../index.html#platform">Overview</a>
+            <a href="../index.html#features">Features</a>
+            <a href="../index.html#agents">Agents</a>
+          </div>
+          <div class="footer-column">
+            <h4>Agents</h4>
+            <a href="backlog-grooming-agent.html">Backlog Grooming</a>
+            <a href="daily-standup-agent.html">Daily Standup</a>
+            <a href="sprint-planning-agent.html">Sprint Planning</a>
+          </div>
+          <div class="footer-column">
+            <h4>Company</h4>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#contact">Contact</a>
+            <a href="../index.html#security">Security</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 TuringForce.ai • Privacy • Terms</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=2.2"></script>
+</body>
+</html>
