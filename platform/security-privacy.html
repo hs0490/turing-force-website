@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Security & Privacy — TuringForce Platform</title>
+  <meta name="description" content="Enterprise-grade security, SOC 2 compliance alignment, comprehensive role-based access controls for AI agent deployment." />
+  <link rel="icon" type="image/png" href="../images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=10.5" />
+  <link rel="stylesheet" href="../css/agent-pages.css?v=1.0" />
+</head>
+<body class="tf-body">
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="../index.html">
+          <img src='../images/logo.png' alt='TuringForce logo' class='logo'/>
+          <span class="brand-name">TuringForce</span>
+        </a>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../index.html#agents" class="nav-link">Agents</a>
+        <div class="nav-dropdown">
+          <a href="../index.html#platform" class="nav-link dropdown-toggle">Platform <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-menu platform-dropdown">
+            <div class="dropdown-header">
+              <h3>Platform</h3>
+              <p>Enterprise-grade capabilities for AI agent deployment</p>
+            </div>
+            
+            <div class="platform-grid-dropdown">
+              <div class="platform-column">
+                <a href="security-privacy.html" class="platform-dropdown-item active">
+                  <div class="platform-dropdown-icon">🔒</div>
+                  <div class="platform-dropdown-content">
+                    <h4>Security & Privacy</h4>
+                    <p>SOC 2 compliance and role-based controls</p>
+                  </div>
+                </a>
+                
+                <a href="agent-orchestration.html" class="platform-dropdown-item">
+                  <div class="platform-dropdown-icon">🔄</div>
+                  <div class="platform-dropdown-content">
+                    <h4>Agent Orchestration</h4>
+                    <p>Multi-agent workflows and tool integration</p>
+                  </div>
+                </a>
+                
+                <a href="policy-safety.html" class="platform-dropdown-item">
+                  <div class="platform-dropdown-icon">🛡️</div>
+                  <div class="platform-dropdown-content">
+                    <h4>Policy & Safety</h4>
+                    <p>PII protection and approval guardrails</p>
+                  </div>
+                </a>
+                
+                <a href="tooling-connectors.html" class="platform-dropdown-item">
+                  <div class="platform-dropdown-icon">🔧</div>
+                  <div class="platform-dropdown-content">
+                    <h4>Tooling & Connectors</h4>
+                    <p>Jira, Confluence, Slack, and GitHub</p>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="platform-column">
+                <a href="devex-visual-code.html" class="platform-dropdown-item">
+                  <div class="platform-dropdown-icon">💻</div>
+                  <div class="platform-dropdown-content">
+                    <h4>DevEx: Visual + Code</h4>
+                    <p>Low-code builder with code export</p>
+                  </div>
+                </a>
+                
+                <a href="memory-knowledge.html" class="platform-dropdown-item">
+                  <div class="platform-dropdown-icon">🧠</div>
+                  <div class="platform-dropdown-content">
+                    <h4>Memory & Knowledge</h4>
+                    <p>Hybrid retrieval and data contracts</p>
+                  </div>
+                </a>
+                
+                <div class="platform-dropdown-item coming-soon">
+                  <div class="platform-dropdown-icon">📊</div>
+                  <div class="platform-dropdown-content">
+                    <h4>Analytics & Insights <span class="coming-soon-badge">coming soon</span></h4>
+                    <p>Performance metrics and BI dashboards</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="dropdown-footer">
+              <a href="../index.html#platform" class="view-all-platform">View Platform Overview →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <a href="../index.html#agents" class="nav-link dropdown-toggle">Agents <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-menu agents-dropdown">
+            <div class="dropdown-header">
+              <h3>Agents</h3>
+              <p>Specialized AI agents for project management excellence</p>
+            </div>
+            
+            <div class="agents-grid-dropdown">
+              <div class="agent-column">
+                <a href="../agents/backlog-grooming-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">📋</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Backlog Grooming Agent</h4>
+                    <p>INVEST checks, acceptance validation, story splitting</p>
+                  </div>
+                </a>
+                
+                <a href="../agents/daily-standup-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">🎯</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Daily Standup Agent</h4>
+                    <p>Automated standup summaries and team insights</p>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="agent-column">
+                <a href="../agents/risk-dependency-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">⚠️</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Risk & Dependency Agent</h4>
+                    <p>Late items, PR aging, cross-team dependencies</p>
+                  </div>
+                </a>
+                
+                <a href="../agents/status-reporting-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">📊</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Status Reporting Agent</h4>
+                    <p>Automated sprint & project updates</p>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="agent-column">
+                <a href="../agents/sprint-planning-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">🗓️</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Sprint Planning Agent</h4>
+                    <p>Intelligent sprint scope & forecasting</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="dropdown-footer">
+              <a href="../index.html#agents" class="view-all-agents">View All Agents →</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="../index.html#security" class="nav-link">Security</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+      </div>
+      
+      <div class="nav-cta">
+        <a href="../index.html#contact" class="btn-ghost">Log in</a>
+        <a href="../index.html#contact" class="btn-primary">Free trial</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Agent Hero Section -->
+  <section class="agent-hero">
+    <div class="container">
+      <div class="agent-breadcrumb">
+        <a href="../index.html">Home</a> / <a href="../index.html#platform">Platform</a> / <span>Security & Privacy</span>
+      </div>
+      
+      <div class="agent-hero-content">
+        <div class="agent-hero-icon">🔒</div>
+        <h1>Security & Privacy. Powered by Intelligence.</h1>
+        <p class="agent-hero-subtitle">Enterprise-grade security, SOC 2 compliance alignment, comprehensive role-based access controls for AI agent deployment with governance and protection.</p>
+        
+        <div class="agent-hero-actions">
+          <a href="#demo" class="btn-primary">See Platform in Action</a>
+          <a href="#trial" class="btn-outline">Sign up for Free Trial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Powers Section -->
+  <section class="agent-powers">
+    <div class="container">
+      <h2>Core Security Capabilities</h2>
+      <div class="powers-grid">
+        <div class="power-card">
+          <div class="power-icon">🛡️</div>
+          <h3>Enterprise-Grade Security</h3>
+          <p>End-to-end encryption, secure data transmission, and robust infrastructure protection for all AI agent operations.</p>
+        </div>
+        
+        <div class="power-card">
+          <div class="power-icon">📋</div>
+          <h3>SOC 2 Compliance</h3>
+          <p>Full alignment with SOC 2 Type II standards, ensuring security, availability, and confidentiality of customer data.</p>
+        </div>
+        
+        <div class="power-card">
+          <div class="power-icon">👥</div>
+          <h3>Role-Based Access Control</h3>
+          <p>Comprehensive RBAC implementation with fine-grained permissions and multi-factor authentication support.</p>
+        </div>
+        
+        <div class="power-card">
+          <div class="power-icon">🔐</div>
+          <h3>Data Privacy Protection</h3>
+          <p>Advanced data anonymization, PII detection, and compliance with GDPR, CCPA, and other privacy regulations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- You + AI Section -->
+  <section class="agent-collaboration">
+    <div class="container">
+      <h2>You + AI: Secure Collaboration</h2>
+      <div class="ai-features">
+        <div class="ai-feature">
+          <div class="feature-icon">🔒</div>
+          <div class="feature-content">
+            <h3>Secure Agent Deployment</h3>
+            <p>Deploy AI agents with enterprise-grade security controls, ensuring all interactions are encrypted and monitored.</p>
+          </div>
+        </div>
+        
+        <div class="ai-feature">
+          <div class="feature-icon">👤</div>
+          <div class="feature-content">
+            <h3>Identity & Access Management</h3>
+            <p>Integrate with your existing IAM systems for seamless user authentication and authorization across all agents.</p>
+          </div>
+        </div>
+        
+        <div class="ai-feature">
+          <div class="feature-icon">📊</div>
+          <div class="feature-content">
+            <h3>Audit & Compliance</h3>
+            <p>Comprehensive audit logs and compliance reporting to meet regulatory requirements and internal security policies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security in Action Section -->
+  <section class="agent-action">
+    <div class="container">
+      <h2>Security in Action</h2>
+      <div class="action-workflow">
+        <div class="workflow-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Secure Onboarding</h3>
+            <p>Users are authenticated through your existing SSO system with MFA enforcement and role-based access provisioning.</p>
+          </div>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Encrypted Communication</h3>
+            <p>All agent communications are encrypted in transit and at rest, with automatic key rotation and secure protocols.</p>
+          </div>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Continuous Monitoring</h3>
+            <p>Real-time security monitoring with anomaly detection, threat intelligence, and automated incident response.</p>
+          </div>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Compliance Reporting</h3>
+            <p>Automated generation of compliance reports and audit trails for regulatory requirements and security assessments.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ask the Platform Section -->
+  <section class="ask-agent">
+    <div class="container">
+      <h2>Ask the Platform</h2>
+      <div class="ask-categories">
+        <div class="ask-category">
+          <h3>🔒 Security Questions</h3>
+          <ul>
+            <li>How does TuringForce ensure data encryption?</li>
+            <li>What compliance certifications does the platform have?</li>
+            <li>How are user permissions managed?</li>
+            <li>What audit capabilities are available?</li>
+          </ul>
+        </div>
+        
+        <div class="ask-category">
+          <h3>👥 Access Control</h3>
+          <ul>
+            <li>How does RBAC work with AI agents?</li>
+            <li>Can I integrate with my existing IAM?</li>
+            <li>What MFA options are supported?</li>
+            <li>How are admin privileges managed?</li>
+          </ul>
+        </div>
+        
+        <div class="ask-category">
+          <h3>📋 Compliance</h3>
+          <ul>
+            <li>What SOC 2 controls are implemented?</li>
+            <li>How does GDPR compliance work?</li>
+            <li>What data retention policies exist?</li>
+            <li>How are privacy regulations enforced?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcomes Section -->
+  <section class="agent-outcomes">
+    <div class="container">
+      <h2>Security Outcomes</h2>
+      <p>Where enterprise security meets AI agent deployment with confidence and compliance.</p>
+      
+      <div class="outcomes-comparison">
+        <div class="outcome-from">
+          <h3>From</h3>
+          <ul>
+            <li>Manual security reviews</li>
+            <li>Inconsistent access controls</li>
+            <li>Complex compliance tracking</li>
+            <li>Fragmented audit trails</li>
+          </ul>
+        </div>
+        
+        <div class="outcome-to">
+          <h3>To</h3>
+          <ul>
+            <li>Automated security enforcement</li>
+            <li>Role-based access control (RBAC)</li>
+            <li>Built-in SOC 2 compliance</li>
+            <li>Comprehensive audit logging</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Multi-Agent Intelligence Section -->
+  <section class="multi-agent-section">
+    <div class="container">
+      <h2>Related Platform Capabilities</h2>
+      <div class="related-agents">
+        <div class="related-agent-card">
+          <div class="agent-icon">🛡️</div>
+          <h3>Policy & Safety</h3>
+          <p>Guardrails for PII protection, RBAC controls, rate limits and approval gates</p>
+          <a href="policy-safety.html" class="btn btn-outline">Learn More</a>
+        </div>
+        
+        <div class="related-agent-card">
+          <div class="agent-icon">🔄</div>
+          <h3>Agent Orchestration</h3>
+          <p>Graph-based multi-agent workflows with intelligent tool integration and orchestration</p>
+          <a href="agent-orchestration.html" class="btn btn-outline">Learn More</a>
+        </div>
+        
+        <div class="related-agent-card">
+          <div class="agent-icon">🔧</div>
+          <h3>Tooling & Connectors</h3>
+          <p>Jira, Confluence, Slack/Teams, GitHub, and comprehensive enterprise integrations</p>
+          <a href="tooling-connectors.html" class="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Secure Your AI Agents?</h2>
+      <p>Experience enterprise-grade security with TuringForce's comprehensive platform</p>
+      <div class="cta-actions">
+        <a href="../index.html#contact" class="btn btn-primary">Get Started</a>
+        <a href="../index.html#platform" class="btn btn-outline">Explore Platform</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src='../images/logo.png' alt='TuringForce logo' class='logo'/>
+          <div class="brand-name">TuringForce</div>
+          <p>Agentic AI Agent Platform for modern PMOs.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="../index.html#platform">Platform</a></li>
+              <li><a href="../index.html#agents">Agents</a></li>
+              <li><a href="../index.html#security">Security</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="../index.html#about">About</a></li>
+              <li><a href="../index.html#contact">Contact</a></li>
+              <li><a href="../index.html#home">Careers</a></li>
+              <li><a href="../index.html#home">Press</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="../index.html#home">Blog</a></li>
+              <li><a href="../index.html#contact">Support</a></li>
+              <li><a href="../index.html#home">Documentation</a></li>
+              <li><a href="../index.html#contact">Community</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 TuringForce.ai • Privacy • Terms</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=2.2"></script>
+</body>
+</html>

@@ -142,7 +142,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         // Rotate arrow
                         const arrow = toggle.querySelector('.dropdown-arrow');
                         if (arrow) {
-                            arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+                            if (isOpen) {
+                                arrow.classList.remove('rotated');
+                            } else {
+                                arrow.classList.add('rotated');
+                            }
                         }
                     }
                 });
@@ -153,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         menu.classList.remove('mobile-open');
                         const arrow = toggle.querySelector('.dropdown-arrow');
                         if (arrow) {
-                            arrow.style.transform = 'rotate(0deg)';
+                            arrow.classList.remove('rotated');
                         }
                     }
                 });
@@ -164,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         menu.classList.remove('mobile-open');
                         const arrow = toggle.querySelector('.dropdown-arrow');
                         if (arrow) {
-                            arrow.style.transform = '';
+                            arrow.classList.remove('rotated');
                         }
                     }
                 });
@@ -178,14 +182,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         menu.classList.remove('mobile-open');
                         const arrow = toggle.querySelector('.dropdown-arrow');
                         if (arrow) {
-                            arrow.style.transform = 'rotate(0deg)';
+                            arrow.classList.remove('rotated');
                         }
                     }
                 });
                 
-                // Handle dropdown item clicks
-                const dropdownItems = menu.querySelectorAll('.agent-dropdown-item, .dropdown-item');
-                dropdownItems.forEach(item => {
+                   // Handle dropdown item clicks
+                   const dropdownItems = menu.querySelectorAll('.platform-dropdown-item, .agent-dropdown-item, .dropdown-item');
+                   dropdownItems.forEach(item => {
                     item.addEventListener('click', function() {
                         // Close dropdown after clicking an item
                         if (window.innerWidth <= 768) {
