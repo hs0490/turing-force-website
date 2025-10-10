@@ -1,17 +1,9 @@
 # AWS Amplify redirects file
-# Clean URL routing - redirect all routes to index.html for SPA behavior
+# For SPA routing - redirect all routes to index.html
 /*    /index.html   200
 
-# Specific page redirects for clean URLs
-/about          /index.html#about    200
-/platform      /index.html#platform  200
-/agents         /index.html#agents   200
-/security       /index.html#security 200
-/resources      /index.html#resources 200
-/contact        /index.html#contact  200
-
-# Static page redirects
-/platform/*     /platform/*          200
-/agents/*       /agents/*            200
-/resources/*    /resources/*         200
-/security/*     /security/*          200
+# Security headers and redirects
+/security.html    /security.html   200
+/platform/*      /platform/*      200
+/agents/*        /agents/*        200
+/resources/*     /resources/*     200
