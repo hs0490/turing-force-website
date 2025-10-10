@@ -48,7 +48,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 70px;
 }
 
 body {
@@ -100,7 +100,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
+  height: 70px;
 }
 
 .nav-brand {
@@ -531,12 +531,13 @@ body {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+  padding-top: 3rem;
 }
 
 .hero-background {
@@ -588,9 +589,9 @@ body {
 .hero .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  gap: 3rem;
   align-items: center;
-  min-height: 80vh;
+  min-height: 70vh;
 }
 
 .hero-content {
@@ -608,7 +609,7 @@ body {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--gray-700);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   box-shadow: var(--shadow-sm);
 }
 
@@ -623,7 +624,7 @@ body {
   font-size: 3.75rem;
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   letter-spacing: -0.025em;
 }
 
@@ -642,7 +643,7 @@ body {
   font-size: 1.125rem;
   color: var(--gray-600);
   line-height: 1.6;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   font-weight: 400;
 }
 
@@ -719,13 +720,13 @@ body {
 
 /* Sections */
 section {
-  padding: 6rem 0;
+  padding: 4rem 0;
 }
 
 .section-header {
   text-align: center;
   max-width: 800px;
-  margin: 0 auto 4rem;
+  margin: 0 auto 3rem;
 }
 
 .section-title {
@@ -1260,7 +1261,7 @@ section {
   }
   
   .security-section {
-    padding: 4rem 0;
+    padding: 3rem 0;
   }
 }
 
@@ -1547,10 +1548,15 @@ section {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+  .hero {
+    min-height: 75vh;
+  }
+  
   .hero .container {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
     text-align: center;
+    min-height: 65vh;
   }
   
   .hero-title {
@@ -1572,6 +1578,19 @@ section {
 @media (max-width: 768px) {
   .nav-menu {
     display: none;
+  }
+  
+  section {
+    padding: 3rem 0;
+  }
+  
+  .hero {
+    min-height: 70vh;
+    padding-top: 2rem;
+  }
+  
+  .hero .container {
+    min-height: 60vh;
   }
   
   .hamburger {
