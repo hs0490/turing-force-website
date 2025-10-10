@@ -208,6 +208,12 @@ body {
   z-index: 1000;
 }
 
+/* Resources dropdown - match Platform dropdown width */
+.resources-dropdown {
+  min-width: 600px;
+  left: -200px; /* Match Platform dropdown centering */
+}
+
 .nav-dropdown:hover .platform-dropdown,
 .nav-dropdown:hover .agents-dropdown,
 .nav-dropdown:hover .security-dropdown,
@@ -234,6 +240,12 @@ body {
   font-size: 0.9rem;
   margin: 0;
   line-height: 1.4;
+}
+
+/* Resources dropdown header - ensure subtitle fits in one row */
+.resources-dropdown .dropdown-header p {
+  white-space: nowrap;
+  line-height: 1.2;
 }
 
 /* Security dropdown updated - 2 items per row, no footer */
@@ -302,10 +314,14 @@ body {
 
 .platform-dropdown-content,
 .agent-dropdown-content,
-.security-dropdown-content,
-.resources-dropdown-content {
+.security-dropdown-content {
   flex: 1;
   max-width: 200px; /* Limit width to force text wrapping */
+}
+
+.resources-dropdown-content {
+  flex: 1;
+  max-width: 200px; /* Match Platform submenu items for 2-row descriptions */
 }
 
 .platform-dropdown-content h4,
@@ -352,7 +368,8 @@ body {
 }
 
 .view-all-platform,
-.view-all-agents {
+.view-all-agents,
+.view-all-resources {
   color: var(--primary);
   text-decoration: none;
   font-size: 0.9rem;
@@ -364,7 +381,8 @@ body {
 }
 
 .view-all-platform:hover,
-.view-all-agents:hover {
+.view-all-agents:hover,
+.view-all-resources:hover {
   color: var(--primary-dark);
   gap: 0.75rem;
 }
@@ -905,6 +923,19 @@ section {
 .security-card p {
   color: var(--gray-600);
   line-height: 1.6;
+}
+
+/* Security Card Clickable */
+.security-card-clickable {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  display: block;
+}
+
+.security-card-clickable:hover {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* About Section */
