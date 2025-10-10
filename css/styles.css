@@ -750,6 +750,11 @@ section {
   background: var(--white);
 }
 
+/* Features Section */
+.features-section {
+  background: var(--gray-50);
+}
+
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -803,6 +808,8 @@ section {
 .feature-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  display: block;
+  text-align: center;
 }
 
 .feature-card h3 {
@@ -811,6 +818,7 @@ section {
   margin-bottom: 0.75rem;
   color: var(--gray-900);
   letter-spacing: -0.01em;
+  text-align: center;
 }
 
 .feature-card p {
@@ -819,6 +827,7 @@ section {
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
   font-weight: 400;
+  text-align: center;
 }
 
 .feature-tags {
@@ -866,6 +875,8 @@ section {
 .agent-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
+  display: block;
+  text-align: center;
 }
 
 .agent-card h3 {
@@ -873,11 +884,13 @@ section {
   font-weight: 600;
   margin-bottom: 1rem;
   color: var(--gray-900);
+  text-align: center;
 }
 
 .agent-card p {
   color: var(--gray-600);
   line-height: 1.6;
+  text-align: center;
 }
 
 
@@ -912,6 +925,8 @@ section {
 .security-icon {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  display: block;
+  text-align: center;
 }
 
 .security-card h3 {
@@ -919,11 +934,13 @@ section {
   font-weight: 600;
   margin-bottom: 1rem;
   color: var(--gray-900);
+  text-align: center;
 }
 
 .security-card p {
   color: var(--gray-600);
   line-height: 1.6;
+  text-align: center;
 }
 
 /* Security Card Clickable */
@@ -2665,11 +2682,6 @@ a:focus {
   border-color: var(--primary);
 }
 
-.feature-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  display: block;
-}
 
 .feature-item h4 {
   color: var(--gray-900);
