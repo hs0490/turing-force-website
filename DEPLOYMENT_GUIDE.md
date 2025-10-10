@@ -107,13 +107,61 @@ zip -r turingforce-website.zip . -x "*.git*" "node_modules/*" "*.DS_Store"
 
 ## Post-Deployment Configuration
 
-### Custom Domain (Optional)
+### Custom Domain Setup for turingforce.ai (GoDaddy)
+
+Since your domain `turingforce.ai` is registered with GoDaddy, here's the specific setup:
+
+#### Step 1: Add Domain in Amplify Console
 
 1. **In Amplify Console:**
    - Go to your app → **"Domain management"**
    - Click **"Add domain"**
-   - Enter your domain name
-   - Follow DNS configuration instructions
+   - Enter `turingforce.ai`
+   - Choose **"Add both www and non-www"** (recommended)
+
+#### Step 2: Configure DNS in GoDaddy
+
+1. **Log into GoDaddy:**
+   - Go to https://dcc.godaddy.com/
+   - Sign in to your account
+   - Go to **"My Products"** → **"DNS"**
+
+2. **Update DNS Records:**
+   
+   **For Root Domain (turingforce.ai):**
+   - **Type:** CNAME
+   - **Name:** @ (or leave blank)
+   - **Value:** [Amplify will provide this - looks like: `d1234567890.cloudfront.net`]
+   - **TTL:** 600 (10 minutes)
+
+   **For WWW Subdomain (www.turingforce.ai):**
+   - **Type:** CNAME  
+   - **Name:** www
+   - **Value:** [Same Amplify value as above]
+   - **TTL:** 600
+
+3. **Remove Conflicting Records:**
+   - Delete any existing A records for `@` and `www`
+   - Keep only the CNAME records you just added
+
+#### Step 3: SSL Certificate (Automatic)
+
+- Amplify automatically provisions SSL certificates via AWS Certificate Manager
+- Your site will be available at both:
+  - `https://turingforce.ai`
+  - `https://www.turingforce.ai`
+
+#### Step 4: Verify Domain Connection
+
+1. **Wait for DNS Propagation:** 5-60 minutes
+2. **Check Status in Amplify:** Should show "Available"
+3. **Test Your Domain:** Visit `https://turingforce.ai`
+
+#### GoDaddy-Specific Notes:
+
+- **CNAME for Root Domain:** GoDaddy supports CNAME for root domains (unlike some other providers)
+- **DNS Propagation:** GoDaddy typically propagates changes within 15-30 minutes
+- **Backup Plan:** If CNAME doesn't work, use A records with Amplify's IP addresses
 
 ### Environment Variables (If Needed)
 
@@ -160,6 +208,13 @@ frontend:
 3. **Assets Not Loading:**
    - Ensure all asset paths are relative
    - Check that files are in the correct directories
+
+4. **Domain Not Working (turingforce.ai):**
+   - **DNS Not Propagated:** Wait 15-60 minutes after GoDaddy changes
+   - **Wrong CNAME Value:** Double-check the Amplify-provided CNAME value
+   - **Conflicting Records:** Remove old A records in GoDaddy
+   - **GoDaddy Caching:** Clear GoDaddy DNS cache or wait longer
+   - **Test DNS:** Use `nslookup turingforce.ai` to verify DNS resolution
 
 ### Build Logs:
 
@@ -209,7 +264,8 @@ frontend:
 ## Next Steps After Deployment
 
 1. **Test Your Site:**
-   - Visit your Amplify URL
+   - Visit your Amplify URL: `https://[app-id].amplifyapp.com`
+   - Test your custom domain: `https://turingforce.ai`
    - Test all pages and functionality
    - Check mobile responsiveness
 
