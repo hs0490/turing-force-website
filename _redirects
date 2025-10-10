@@ -1,0 +1,9 @@
+# AWS Amplify redirects file
+# For SPA routing - redirect all routes to index.html
+/*    /index.html   200
+
+# Security headers and redirects
+/security.html    /security.html   200
+/platform/*      /platform/*      200
+/agents/*        /agents/*        200
+/resources/*     /resources/*     200
