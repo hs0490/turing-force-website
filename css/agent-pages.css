@@ -48,6 +48,33 @@
   max-width: 800px;
 }
 
+.agent-hero-content-with-video {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.agent-hero-text {
+  max-width: 600px;
+}
+
+.agent-hero-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agent-hero-video video {
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
 .agent-hero-icon {
   font-size: 4rem;
   margin-bottom: 1.5rem;
@@ -529,6 +556,15 @@
 @media (max-width: 768px) {
   .agent-hero {
     padding: 6rem 0 4rem 0;
+  }
+  
+  .agent-hero-content-with-video {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .agent-hero-video video {
+    max-width: 100%;
   }
   
   .agent-hero h1 {
