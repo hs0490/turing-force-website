@@ -1576,7 +1576,7 @@ section {
 }
 
 .footer-brand {
-  max-width: 300px;
+  max-width: 450px;
 }
 
 .footer-brand .logo {
@@ -1593,6 +1593,7 @@ section {
 .footer-brand p {
   color: var(--gray-400);
   line-height: 1.6;
+  white-space: nowrap;
 }
 
 .footer-links {
