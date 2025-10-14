@@ -675,6 +675,20 @@ body {
   color: var(--gray-400);
 }
 
+/* Highlighted Terms in Section */
+.highlight-studio {
+  background: linear-gradient(135deg, #4338ca 0%, #7c3aed 50%, #4338ca 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.highlight-pulse {
+  color: #6366f1;
+  font-weight: 800;
+}
+
 /* Running Reel */
 .running-reel {
   width: 100vw;
