@@ -531,13 +531,13 @@ body {
 
 /* Hero Section */
 .hero {
-  min-height: 85vh;
+  min-height: 70vh;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
-  padding-top: 3rem;
+  padding-top: 2rem;
 }
 
 .hero-background {
@@ -589,9 +589,9 @@ body {
 .hero .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 2rem;
   align-items: center;
-  min-height: 70vh;
+  min-height: 60vh;
 }
 
 .hero-content {
@@ -609,7 +609,7 @@ body {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--gray-700);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   box-shadow: var(--shadow-sm);
 }
 
@@ -624,7 +624,7 @@ body {
   font-size: 3.75rem;
   font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   letter-spacing: -0.025em;
 }
 
@@ -650,14 +650,14 @@ body {
   font-size: 1.125rem;
   color: var(--gray-600);
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: 400;
 }
 
 .hero-actions {
   display: flex;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   flex-wrap: wrap;
 }
 
@@ -689,7 +689,34 @@ body {
   font-weight: 800;
 }
 
-/* Running Reel */
+/* Running Reel Section */
+.running-reel-section {
+  width: 100%;
+  background: linear-gradient(135deg, 
+    rgba(99, 102, 241, 0.03) 0%, 
+    rgba(139, 92, 246, 0.04) 50%,
+    rgba(99, 102, 241, 0.03) 100%);
+  padding: 1.75rem 0;
+  margin: 0;
+  border-top: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.running-reel-section .running-reel {
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  left: auto;
+  transform: none;
+  box-shadow: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Legacy Running Reel (for backwards compatibility) */
 .running-reel {
   width: 100vw;
   max-width: 100vw;
@@ -706,6 +733,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 0 1px 3px rgba(99, 102, 241, 0.05);
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
 }
 
 
@@ -715,8 +744,8 @@ body {
   animation: scroll 45s linear infinite;
   width: fit-content;
   will-change: transform;
-  padding-left: 100vw;
-  padding-right: 100vw;
+  padding-left: 50vw;
+  padding-right: 50vw;
 }
 
 .reel-track:hover {
@@ -725,10 +754,10 @@ body {
 
 @keyframes scroll {
   0% {
-    transform: translateX(25%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-75%);
+    transform: translateX(-100%);
   }
 }
 
@@ -1780,6 +1809,8 @@ section {
   display: block;
   border-radius: var(--radius-lg);
   background: var(--gray-900);
+  min-height: 300px;
+  object-fit: cover;
 }
 
 .video-caption {
