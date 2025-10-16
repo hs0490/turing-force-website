@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TuringNexus — TuringForce Platform</title>
+  <meta name="description" content="TuringNexus is the MCP integration layer—connectors, tools, and data contracts—that feeds least-privilege, policy-bound context to agents." />
+  <link rel="icon" type="image/png" href="../images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css?v=10.5" />
+  <link rel="stylesheet" href="../css/agent-pages.css?v=1.0" />
+</head>
+<body class="tf-body">
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="../index.html">
+          <img src="../images/logo.png" alt="TuringForce" class="logo" />
+          <span class="brand-name">TuringForce</span>
+        </a>
+      </div>
+      
+      <div class="nav-menu" id="nav-menu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="../index.html#agents" class="nav-link">Agents</a>        <div class="nav-dropdown">
+          <a href="../index.html#platform" class="nav-link dropdown-toggle">Platform <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-menu platform-dropdown">
+            <div class="dropdown-header">
+              <h3>Platform</h3>
+              <p>Enterprise-grade capabilities for AI agent deployment</p>
+            </div>
+            
+            <div class="platform-grid-dropdown">
+              <div class="platform-column">
+                <a href="security-privacy.html" class="platform-dropdown-item">
+                  <div class="platform-dropdown-icon">🔒</div>
+                  <div class="platform-dropdown-content">
+                    <h4>Security & Privacy</h4>
+                    <p>SOC 2 compliance and role-based controls</p>
+                  </div>
+                </a>
+                
+                <a href="agent-orchestration.html" class="platform-dropdown-item">
+                  <div class="platform-dropdown-icon">🔄</div>
+                  <div class="platform-dropdown-content">
+                    <h4>TuringFlow</h4>
+                    <p>Multi-agent workflows and tool integration</p>
+                  </div>
+                </a>
+                
+                <a href="policy-safety.html" class="platform-dropdown-item">
+                  <div class="platform-dropdown-icon">🛡️</div>
+                  <div class="platform-dropdown-content">
+                    <h4>Policy & Safety</h4>
+                    <p>PII protection and approval guardrails</p>
+                  </div>
+                </a>
+                
+                <a href="turingnexus.html" class="platform-dropdown-item active">
+                  <div class="platform-dropdown-icon">🔌</div>
+                  <div class="platform-dropdown-content">
+                    <h4>TuringNexus</h4>
+                    <p>MCP-backed integration layer</p>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="platform-column">
+                <a href="devex-visual-code.html" class="platform-dropdown-item">
+                  <div class="platform-dropdown-icon">💻</div>
+                  <div class="platform-dropdown-content">
+                    <h4>TuringForce Agent Studio</h4>
+                    <p>Low-code builder with code export</p>
+                  </div>
+                </a>
+                
+                <a href="memory-knowledge.html" class="platform-dropdown-item">
+                  <div class="platform-dropdown-icon">🧠</div>
+                  <div class="platform-dropdown-content">
+                    <h4>Memory & Knowledge</h4>
+                    <p>Hybrid retrieval and data contracts</p>
+                  </div>
+                </a>
+                
+                <div class="platform-dropdown-item coming-soon">
+                  <div class="platform-dropdown-icon">📊</div>
+                  <div class="platform-dropdown-content">
+                    <h4>Analytics & Insights <span class="coming-soon-badge">coming soon</span></h4>
+                    <p>Performance metrics and BI dashboards</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="dropdown-footer">
+              <a href="../index.html#platform" class="view-all-platform">View Platform Overview →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <a href="../index.html#agents" class="nav-link dropdown-toggle">Agents <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-menu agents-dropdown">
+            <div class="dropdown-header">
+              <h3>Agents</h3>
+              <p>Specialized AI agents for project management excellence</p>
+            </div>
+            
+            <div class="agents-grid-dropdown">
+              <div class="agent-column">
+                <a href="../agents/backlog-grooming-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">📋</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Backlog Grooming Agent</h4>
+                    <p>INVEST checks, acceptance validation, story splitting</p>
+                  </div>
+                </a>
+                
+                <a href="../agents/daily-standup-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">🎯</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Daily Standup Agent</h4>
+                    <p>Automated standup summaries and team insights</p>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="agent-column">
+                <a href="../agents/risk-dependency-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">⚠️</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Risk & Dependency Agent</h4>
+                    <p>Late items, PR aging, cross-team dependencies</p>
+                  </div>
+                </a>
+                
+                <a href="../agents/status-reporting-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">📊</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Status Reporting Agent</h4>
+                    <p>Automated sprint & project updates</p>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="agent-column">
+                <a href="../agents/sprint-planning-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">🗓️</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Sprint Planning Agent</h4>
+                    <p>Intelligent sprint scope & forecasting</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="dropdown-footer">
+              <a href="../index.html#agents" class="view-all-agents">View All Agents →</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="../index.html#security" class="nav-link">Security</a>
+        <a href="../index.html#about" class="nav-link">About</a>
+        <a href="../index.html#contact" class="nav-link">Contact</a>
+      </div>
+      
+      
+      <div class="nav-cta">
+        <a href="../index.html#contact" class="btn-ghost">Log in</a>
+        <a href="../index.html#contact" class="btn-primary">Free trial</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Agent Hero Section -->
+  <section class="agent-hero">
+    <div class="container">
+      <div class="agent-breadcrumb">
+        <a href="../index.html">Home</a> / <a href="../index.html#platform">Platform</a> / <span>TuringNexus</span>
+      </div>
+      
+      <div class="agent-hero-content">
+        <div class="agent-hero-icon">🔌</div>
+        <h1>TuringNexus. Powered by Intelligence.</h1>
+        <p class="agent-hero-subtitle">TuringNexus connects your delivery tools and streams governed context to PMO agents—so leaders get real-time answers without moving data.</p>
+        
+        <div class="agent-hero-actions">
+          <a href="#demo" class="btn-primary">See TuringNexus in Action</a>
+          <a href="#trial" class="btn-outline">Sign up for Free Trial</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Powers Section -->
+  <section class="agent-powers">
+    <div class="container">
+      <h2>Core Integration Capabilities</h2>
+      <div class="powers-grid">
+        <div class="power-card">
+          <div class="power-icon">🔗</div>
+          <h3>Connectors & Tools</h3>
+          <p>Connect to sources, databases, vector databases, and action tools with pre-built integrations that reduce time-to-value.</p>
+        </div>
+        
+        <div class="power-card">
+          <div class="power-icon">📋</div>
+          <h3>Data Contracts</h3>
+          <p>Define schemas, PII policies, redaction rules, field allowlists, TTLs, and freshness SLAs for governed data access.</p>
+        </div>
+        
+        <div class="power-card">
+          <div class="power-icon">🧠</div>
+          <h3>Context Windows</h3>
+          <p>Hybrid retrieval (BM25 + vectors), workspace memory, relevance filters, and token budgets for optimized context delivery.</p>
+        </div>
+        
+        <div class="power-card">
+          <div class="power-icon">🛡️</div>
+          <h3>Policy & RBAC</h3>
+          <p>Per-role scopes, per-agent policies, and environment separation (dev/stage/prod) with least-privilege access controls.</p>
+        </div>
+
+        <div class="power-card">
+          <div class="power-icon">📊</div>
+          <h3>Observability</h3>
+          <p>Traces, cost per call/agent, connector error budgets, and policy hit/miss metrics for complete visibility.</p>
+        </div>
+
+        <div class="power-card">
+          <div class="power-icon">🚀</div>
+          <h3>Enterprise Deployments</h3>
+          <p>BYO VPC/VNet, secrets in vaults, SSO/SCIM integration, and webhook/event-driven pipelines for secure deployments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Executive Benefits Section -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why Leaders Choose TuringNexus</h2>
+        <p class="section-subtitle">Drive faster decisions with governed, real-time portfolio insights</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Faster Decisions</h3>
+          <p>Live portfolio answers on status, risk, and cost with full auditability—enabling data-driven decisions in real-time.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🔧</div>
+          <h3>Reduced Integration Lift</h3>
+          <p>Prebuilt connectors and data contracts cut time-to-value, eliminating months of custom integration work.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">✅</div>
+          <h3>Governed by Design</h3>
+          <p>RBAC, data contracts, and audit trails standardize how AI uses data—ensuring compliance and security from day one.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>Lower Risk & Cost</h3>
+          <p>Scoped context windows, automatic redaction, and spend guardrails minimize exposure and control AI costs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Architecture Section -->
+  <section class="agent-action">
+    <div class="container">
+      <h2>Architecture at a Glance</h2>
+      <div class="action-workflow">
+        <div class="workflow-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>TuringCanvas</h3>
+            <p>Design the agent graph visually—define workflows, logic, and agent interactions using the visual builder.</p>
+          </div>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>TuringFlow</h3>
+            <p>Schedule and orchestrate multi-agent workflows with intelligent routing, retries, and handoffs.</p>
+          </div>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>TuringForge</h3>
+            <p>The engine compiles, validates (RBAC, token/cost), and optimizes prompts for secure, efficient execution.</p>
+          </div>
+        </div>
+        
+        <div class="workflow-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>TuringNexus (MCP)</h3>
+            <p>Provides connectors, contracts, and governed context windows—feeding agents with least-privilege, policy-bound data.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%); border-radius: 12px; text-align: center;">
+        <p style="font-size: 1.125rem; font-weight: 600; color: var(--text-primary); margin: 0;">
+          <strong>Studio (Canvas/Flow/Forge)</strong> ⇄ <strong>Nexus (MCP)</strong> ⇄ <strong>Sources & Actions</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Governance & Security Section -->
+  <section class="multi-agent-section" style="background: var(--bg-secondary);">
+    <div class="container">
+      <h2>Governance & Security</h2>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem; color: var(--text-secondary);">
+        Enterprise-grade controls that protect data, ensure compliance, and maintain auditability across all agent operations.
+      </p>
+      
+      <div class="related-agents">
+        <div class="related-agent-card">
+          <div class="agent-icon">👥</div>
+          <h3>RBAC/ABAC</h3>
+          <p>Role-, project-, and team-scoped access controls ensure agents only access data they're authorized to see.</p>
+        </div>
+        
+        <div class="related-agent-card">
+          <div class="agent-icon">📋</div>
+          <h3>Data Contracts</h3>
+          <p>Schemas, masking rules, lineage notes, and retention policies govern how data flows to agents.</p>
+        </div>
+        
+        <div class="related-agent-card">
+          <div class="agent-icon">🔒</div>
+          <h3>PII/PHI Handling</h3>
+          <p>Redact-at-source and field allowlists ensure sensitive data never enters prompts without explicit controls.</p>
+        </div>
+
+        <div class="related-agent-card">
+          <div class="agent-icon">📝</div>
+          <h3>Audit Trails</h3>
+          <p>Per-query evidence captures inputs, policy decisions, tool calls, and outputs for complete traceability.</p>
+        </div>
+
+        <div class="related-agent-card">
+          <div class="agent-icon">💳</div>
+          <h3>Cost Guardrails</h3>
+          <p>Per-agent budgets, alerts, and threshold blocking prevent runaway AI spending and control costs.</p>
+        </div>
+
+        <div class="related-agent-card">
+          <div class="agent-icon">🔐</div>
+          <h3>Workspace Isolation</h3>
+          <p>Workspace boundaries, environment separation, and keys per connector ensure secure multi-tenant operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ask the Platform Section -->
+  <section class="ask-agent">
+    <div class="container">
+      <h2>Ask TuringNexus</h2>
+      <div class="ask-categories">
+        <div class="ask-category">
+          <h3>🔗 Connectors & Integration</h3>
+          <ul>
+            <li>Which data sources can I connect?</li>
+            <li>How do I set up a new connector?</li>
+            <li>What are data contracts and how do I use them?</li>
+            <li>How do I handle API rate limits?</li>
+          </ul>
+        </div>
+        
+        <div class="ask-category">
+          <h3>🛡️ Governance & Security</h3>
+          <ul>
+            <li>How do I configure RBAC policies?</li>
+            <li>What PII protections are available?</li>
+            <li>How are credentials stored and managed?</li>
+            <li>Can I audit all agent data access?</li>
+          </ul>
+        </div>
+        
+        <div class="ask-category">
+          <h3>💰 Cost & Performance</h3>
+          <ul>
+            <li>How do I set cost guardrails?</li>
+            <li>What metrics are tracked?</li>
+            <li>How do I optimize context windows?</li>
+            <li>Can I get alerts on budget thresholds?</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KPIs Section -->
+  <section class="agent-outcomes">
+    <div class="container">
+      <h2>Proof KPIs to Track</h2>
+      <p>Measure the impact of TuringNexus on your PMO operations with key performance indicators.</p>
+      
+      <div class="outcomes-comparison">
+        <div class="outcome-from">
+          <h3>Traditional Integration</h3>
+          <ul>
+            <li>Days to weeks for integration setup</li>
+            <li>Manual data extraction & reporting</li>
+            <li>High cost per query</li>
+            <li>Multiple compliance exceptions</li>
+            <li>Long decision latency</li>
+          </ul>
+        </div>
+        
+        <div class="outcome-to">
+          <h3>With TuringNexus</h3>
+          <ul>
+            <li>Decision latency ↓ (real-time answers)</li>
+            <li>Time to onboard a source ↓ (pre-built connectors)</li>
+            <li>Cost per query ↓ (optimized context)</li>
+            <li>Compliance exceptions ↓ (governed by design)</li>
+            <li>Integration effort ↓ (data contracts)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Platform Capabilities Section -->
+  <section class="multi-agent-section">
+    <div class="container">
+      <h2>Related Platform Capabilities</h2>
+      <div class="related-agents">
+        <div class="related-agent-card">
+          <div class="agent-icon">💻</div>
+          <h3>TuringForce Agent Studio</h3>
+          <p>Build, test, and ship governed PMO agents with TuringCanvas, TuringFlow, and TuringForge</p>
+          <a href="devex-visual-code.html" class="btn btn-outline">Learn More</a>
+        </div>
+        
+        <div class="related-agent-card">
+          <div class="agent-icon">🔄</div>
+          <h3>TuringFlow</h3>
+          <p>Graph-based multi-agent workflows with intelligent tool integration and orchestration</p>
+          <a href="agent-orchestration.html" class="btn btn-outline">Learn More</a>
+        </div>
+        
+        <div class="related-agent-card">
+          <div class="agent-icon">🧠</div>
+          <h3>Memory & Knowledge</h3>
+          <p>Hybrid retrieval, workspace memory, intelligent data contracts and knowledge management</p>
+          <a href="memory-knowledge.html" class="btn btn-outline">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title">Ready to Connect Your Enterprise Tools?</h2>
+        <p class="cta-subtitle">Integrate your delivery tools with governed, policy-bound context for AI agents</p>
+        <div class="cta-actions">
+          <a href="../index.html#contact" class="btn-outline">Get Started</a>
+          <a href="../index.html#platform" class="btn-primary">Explore Platform</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src='../images/logo.png' alt='TuringForce logo' class='logo'/>
+          <div class="brand-name">TuringForce</div>
+          <p>Agentic AI Agent Platform for modern PMOs.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Product</h4>
+            <ul>
+              <li><a href="../index.html#platform">Platform</a></li>
+              <li><a href="../index.html#agents">Agents</a></li>
+              <li><a href="../index.html#security">Security</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="../index.html#about">About</a></li>
+              <li><a href="../index.html#contact">Contact</a></li>
+              <li><a href="../index.html#home">Careers</a></li>
+              <li><a href="../index.html#home">Press</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="../index.html#home">Blog</a></li>
+              <li><a href="../index.html#contact">Support</a></li>
+              <li><a href="../index.html#home">Documentation</a></li>
+              <li><a href="../index.html#contact">Community</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 TuringForce.ai • Privacy • Terms</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=2.2"></script>
+</body>
+</html>
+
