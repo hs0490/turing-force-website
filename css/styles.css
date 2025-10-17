@@ -938,11 +938,11 @@ section {
 
 .section-title {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--gray-900);
-  letter-spacing: -0.015em;
+  letter-spacing: -0.02em;
 }
 
 .section-subtitle {
