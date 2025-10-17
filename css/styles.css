@@ -622,11 +622,11 @@ body {
 }
 
 .hero-title {
-  font-size: 3.75rem;
-  font-weight: 700;
-  line-height: 1.1;
+  font-size: 3.25rem;
+  font-weight: 600;
+  line-height: 1.2;
   margin-bottom: 0.75rem;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.015em;
 }
 
 .title-line {
@@ -645,6 +645,8 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 600;
+  letter-spacing: -0.015em;
 }
 
 .hero-description {
@@ -1917,7 +1919,7 @@ section {
   }
   
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.75rem;
   }
   
   .about-content {
@@ -2107,7 +2109,7 @@ section {
   }
   
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
   
   .hero-description {
@@ -2171,7 +2173,7 @@ section {
   }
   
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.875rem;
   }
   
   .hero-visual {
