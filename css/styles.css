@@ -701,7 +701,7 @@ body {
     rgba(99, 102, 241, 0.12) 100%);
   padding: 2.5rem 0;
   margin: 0;
-  border-top: 3px solid rgba(99, 102, 241, 0.3);
+  border-top: none;
   position: relative;
   overflow: hidden;
 }
@@ -802,7 +802,7 @@ body {
   border-radius: 60px;
   box-shadow: 0 12px 40px rgba(99, 102, 241, 0.2), 
               0 4px 16px rgba(139, 92, 246, 0.15);
-  border: 2px solid rgba(99, 102, 241, 0.15);
+  border: none;
   backdrop-filter: blur(20px);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -831,7 +831,6 @@ body {
   transform: translateY(-4px) scale(1.02);
   box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3), 
               0 8px 24px rgba(139, 92, 246, 0.25);
-  border-color: rgba(99, 102, 241, 0.4);
 }
 
 .reel-title {
@@ -844,18 +843,6 @@ body {
   background-clip: text;
   text-shadow: 0 4px 8px rgba(99, 102, 241, 0.2);
   position: relative;
-}
-
-.reel-title::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, #4338ca, #7c3aed, #a855f7);
-  border-radius: 1px;
-  opacity: 0.6;
 }
 
 .reel-separator {
