@@ -694,11 +694,11 @@ body {
 .running-reel-section {
   width: 100%;
   background: linear-gradient(135deg, 
-    rgba(99, 102, 241, 0.12) 0%, 
-    rgba(139, 92, 246, 0.18) 25%,
-    rgba(99, 102, 241, 0.12) 50%,
-    rgba(139, 92, 246, 0.18) 75%,
-    rgba(99, 102, 241, 0.12) 100%);
+    rgba(99, 102, 241, 0.08) 0%, 
+    rgba(139, 92, 246, 0.12) 25%,
+    rgba(99, 102, 241, 0.08) 50%,
+    rgba(139, 92, 246, 0.12) 75%,
+    rgba(99, 102, 241, 0.08) 100%);
   padding: 2.5rem 0;
   margin: 0;
   border-top: none;
@@ -794,17 +794,17 @@ body {
   align-items: center;
   gap: 1.5rem;
   white-space: nowrap;
-  font-size: 1.15rem;
-  padding: 1.25rem 2.5rem;
+  font-size: 1.1rem;
+  padding: 1.2rem 2.2rem;
   background: linear-gradient(135deg, 
     rgba(255, 255, 255, 0.95) 0%, 
-    rgba(255, 255, 255, 0.9) 100%);
-  border-radius: 60px;
-  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.2), 
-              0 4px 16px rgba(139, 92, 246, 0.15);
+    rgba(248, 250, 252, 0.9) 100%);
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(99, 102, 241, 0.12), 
+              0 4px 16px rgba(139, 92, 246, 0.08);
   border: none;
-  backdrop-filter: blur(20px);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(16px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 }
@@ -828,48 +828,48 @@ body {
 }
 
 .reel-item:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 20px 60px rgba(99, 102, 241, 0.3), 
-              0 8px 24px rgba(139, 92, 246, 0.25);
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 16px 48px rgba(99, 102, 241, 0.18), 
+              0 8px 24px rgba(139, 92, 246, 0.12);
 }
 
 .reel-title {
-  font-weight: 900;
-  font-size: 1.5rem;
-  letter-spacing: -0.025em;
-  background: linear-gradient(135deg, #4338ca 0%, #7c3aed 30%, #a855f7 60%, #4338ca 100%);
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 50%, var(--primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-shadow: 0 4px 8px rgba(99, 102, 241, 0.2);
+  text-shadow: 0 2px 4px rgba(99, 102, 241, 0.2);
   position: relative;
 }
 
 .reel-separator {
-  color: rgba(99, 102, 241, 0.7);
+  color: rgba(99, 102, 241, 0.6);
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin: 0 0.75rem;
-  text-shadow: 0 2px 4px rgba(99, 102, 241, 0.1);
+  text-shadow: 0 1px 2px rgba(99, 102, 241, 0.1);
 }
 
 .reel-description {
-  color: #1f2937;
-  font-weight: 600;
-  font-size: 1.05rem;
-  letter-spacing: -0.015em;
+  color: var(--gray-700);
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
   line-height: 1.4;
 }
 
 .reel-tagline {
   color: #ffffff;
-  font-weight: 700;
-  font-size: 0.9rem;
-  background: linear-gradient(135deg, #4338ca 0%, #7c3aed 100%);
-  padding: 0.4rem 1rem;
-  border-radius: 25px;
-  border: 1px solid rgba(99, 102, 241, 0.3);
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+  font-weight: 600;
+  font-size: 0.85rem;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  box-shadow: 0 3px 8px rgba(99, 102, 241, 0.2);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
