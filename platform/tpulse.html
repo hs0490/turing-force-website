@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TPulse — TuringForce Platform</title>
+  <meta name="description" content="Interactive answers to your business questions across portfolios. Ask a question. Get a governed answer." />
+  <link rel="icon" type="image/png" href="../images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/agent-pages.css?v=1.5" />
+</head>
+<body class="tf-body">
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <a href="../index.html">
+          <img src='../images/logo.png' alt='TuringForce logo' class='logo'/>
+          <span class="brand-name">TuringForce</span>
+        </a>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <a href="../index.html" class="nav-link">Home</a>
+        <div class="nav-dropdown">
+          <a href="#platform" class="nav-link dropdown-toggle">Platform <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-menu platform-dropdown">
+            <div class="dropdown-header">
+              <h3>Platform</h3>
+              <p>Enterprise-grade capabilities for AI agent deployment</p>
+            </div>
+            
+            <div class="platform-grid-dropdown">
+              <div class="platform-column">
+                <a href="security-privacy.html" class="platform-dropdown-item">
+                  <div class="platform-dropdown-icon">🔒</div>
+                  <div class="platform-dropdown-content">
+                    <h4>Security & Privacy</h4>
+                    <p>SOC 2 compliance and role-based controls</p>
+                  </div>
+                </a>
+                
+                <a href="policy-safety.html" class="platform-dropdown-item">
+                  <div class="platform-dropdown-icon">🛡️</div>
+                  <div class="platform-dropdown-content">
+                    <h4>Policy & Safety</h4>
+                    <p>PII protection and approval guardrails</p>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="platform-column">
+                <a href="memory-knowledge.html" class="platform-dropdown-item">
+                  <div class="platform-dropdown-icon">🧠</div>
+                  <div class="platform-dropdown-content">
+                    <h4>Memory & Knowledge</h4>
+                    <p>Hybrid retrieval and data contracts</p>
+                  </div>
+                </a>
+                
+                <div class="platform-dropdown-item coming-soon">
+                  <div class="platform-dropdown-icon">📊</div>
+                  <div class="platform-dropdown-content">
+                    <h4>Analytics & Insights <span class="coming-soon-badge">coming soon</span></h4>
+                    <p>Performance metrics and BI dashboards</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="dropdown-footer">
+              <a href="#platform" class="view-all-platform">View Platform Overview →</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#agents" class="nav-link dropdown-toggle">Agents <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-menu agents-dropdown">
+            <div class="dropdown-header">
+              <h3>Agents</h3>
+              <p>Specialized AI agents for project management excellence</p>
+            </div>
+            
+            <div class="agents-grid-dropdown">
+              <div class="agent-column">
+                <a href="../agents/backlog-grooming-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">📋</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Backlog Grooming Agent</h4>
+                    <p>INVEST checks, acceptance validation, story splitting</p>
+                  </div>
+                </a>
+                
+                <a href="../agents/daily-standup-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">🎯</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Daily Standup Agent</h4>
+                    <p>Automated standup summaries and team insights</p>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="agent-column">
+                <a href="../agents/risk-dependency-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">⚠️</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Risk & Dependency Agent</h4>
+                    <p>Late items, PR aging, cross-team dependencies</p>
+                  </div>
+                </a>
+                
+                <a href="../agents/status-reporting-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">📊</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Status Reporting Agent</h4>
+                    <p>Automated sprint & project updates</p>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="agent-column">
+                <a href="../agents/sprint-planning-agent.html" class="agent-dropdown-item">
+                  <div class="agent-dropdown-icon">🗓️</div>
+                  <div class="agent-dropdown-content">
+                    <h4>Sprint Planning Agent</h4>
+                    <p>Intelligent sprint scope & forecasting</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            
+            <div class="dropdown-footer">
+              <a href="#agents" class="view-all-agents">View All Agents →</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#security" class="nav-link dropdown-toggle">Security <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-menu security-dropdown">
+            <div class="dropdown-header">
+              <h3>Security</h3>
+              <p>Enterprise-grade security and compliance</p>
+            </div>
+            
+            <div class="security-grid-dropdown">
+              <a href="../security/data-protection.html" class="security-dropdown-item">
+                <div class="security-dropdown-icon">🔐</div>
+                <div class="security-dropdown-content">
+                  <h4>Data Protection</h4>
+                  <p>Encryption, minimization, and ephemeral memory</p>
+                </div>
+              </a>
+              
+              <a href="../security/access-control.html" class="security-dropdown-item">
+                <div class="security-dropdown-icon">👥</div>
+                <div class="security-dropdown-content">
+                  <h4>Access Control</h4>
+                  <p>SSO, MFA, and RBAC</p>
+                </div>
+              </a>
+              
+              <a href="../security/compliance.html" class="security-dropdown-item">
+                <div class="security-dropdown-icon">🏢</div>
+                <div class="security-dropdown-content">
+                  <h4>Compliance</h4>
+                  <p>SOC 2, GDPR, CCPA, and HIPAA</p>
+                </div>
+              </a>
+              
+              <a href="../security/audit-monitoring.html" class="security-dropdown-item">
+                <div class="security-dropdown-icon">🔍</div>
+                <div class="security-dropdown-content">
+                  <h4>Audit & Monitoring</h4>
+                  <p>Logs, traceability, and alerting</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#resources" class="nav-link dropdown-toggle">Resources <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-menu resources-dropdown">
+            <div class="dropdown-header">
+              <h3>Resources</h3>
+              <p>Documentation, updates, and community</p>
+            </div>
+            
+            <div class="resources-grid-dropdown">
+              <a href="../resources/news.html" class="resources-dropdown-item">
+                <div class="resources-dropdown-icon">📰</div>
+                <div class="resources-dropdown-content">
+                  <h4>News</h4>
+                  <p>Latest updates and announcements</p>
+                </div>
+              </a>
+              
+              <a href="../resources/blog.html" class="resources-dropdown-item">
+                <div class="resources-dropdown-icon">📝</div>
+                <div class="resources-dropdown-content">
+                  <h4>Blog</h4>
+                  <p>Insights and best practices</p>
+                </div>
+              </a>
+              
+              <a href="../resources/docs.html" class="resources-dropdown-item">
+                <div class="resources-dropdown-icon">📚</div>
+                <div class="resources-dropdown-content">
+                  <h4>Product Docs</h4>
+                  <p>Technical documentation and guides</p>
+                </div>
+              </a>
+              
+              <a href="../resources/events.html" class="resources-dropdown-item">
+                <div class="resources-dropdown-icon">🎪</div>
+                <div class="resources-dropdown-content">
+                  <h4>Events</h4>
+                  <p>Webinars, conferences, and meetups</p>
+                </div>
+              </a>
+              
+              <a href="../resources/trust-center.html" class="resources-dropdown-item">
+                <div class="resources-dropdown-icon">🛡️</div>
+                <div class="resources-dropdown-content">
+                  <h4>Trust Center</h4>
+                  <p>Security, compliance, and reliability</p>
+                </div>
+              </a>
+            </div>
+            
+            <div class="dropdown-footer">
+              <a href="#resources" class="view-all-resources">View All Resources →</a>
+            </div>
+          </div>
+        </div>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-cta">
+        <a href="#contact" class="btn-ghost">Log in</a>
+        <a href="#contact" class="btn-primary">Free trial</a>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="agent-hero">
+    <div class="container">
+      <div class="agent-hero-content">
+        <div class="agent-breadcrumb">
+          <a href="../index.html">Home</a>
+          <span>/</span>
+          <a href="../index.html#agent-studio">Platform</a>
+          <span>/</span>
+          <span>TPulse</span>
+        </div>
+        <h1 class="agent-hero-title">TPulse. Powered by Intelligence.</h1>
+        <p class="agent-hero-subtitle">Interactive answers to your business questions across portfolios. Ask a question. Get a governed answer.</p>
+        <div class="agent-hero-actions">
+          <a href="#contact" class="btn-primary">Ask TPulse</a>
+          <a href="#contact" class="btn-outline">See live demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why TPulse Section -->
+  <section class="agent-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Why TPulse</h2>
+        <p class="section-subtitle">TPulse turns portfolio data into interactive, agentic answers—backlog, sprints, risk, dependencies, cost—without moving your data.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Decide faster</h3>
+          <p>Instant, conversational answers instead of hunting across tools.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎯</div>
+          <h3>Actionable by design</h3>
+          <p>Ask follow-ups, then trigger agents to update, assign, notify, or create work items.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Governed & explainable</h3>
+          <p>RBAC, data contracts, audit trails, and per-agent budgets ensure safe, traceable responses.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🏠</div>
+          <h3>Runs where your data lives</h3>
+          <p>Context is streamed under policy; no bulk data migration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What TPulse Does Section -->
+  <section class="agent-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">What TPulse does</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3>Interactive Q&A</h3>
+          <p>Natural-language questions about delivery status, blockers, velocity, cost, and risk.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🧠</div>
+          <h3>Context reasoning</h3>
+          <p>Hybrid retrieval (BM25 + vectors) + workspace memory for precise, on-topic answers.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔗</div>
+          <h3>Answer provenance</h3>
+          <p>Inline evidence and links back to source records; show "why" and "where it came from."</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Follow-up actions</h3>
+          <p>Convert answers into actions via agents (assign owner, update status, create ticket, post summary).</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3>Multirole views</h3>
+          <p>Responses adapt to AI-Exec-Viewer, AI-Product-Owner, AI-Scrum-Master, AI-Developer, AI-Auditor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How TPulse Works Section -->
+  <section class="agent-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">How TPulse works</h2>
+        <p class="section-subtitle">Inside the TuringForce platform</p>
+      </div>
+      <div class="workflow-steps">
+        <div class="workflow-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Connect & Contract (TuringNexus)</h3>
+            <p>Bring sources and actions under data contracts (allowlists, redaction, TTLs).</p>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Design Agents (TuringCanvas)</h3>
+            <p>Optional: compose helper agents for summaries, risk scans, or cost rollups.</p>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Orchestrate (TuringFlow)</h3>
+            <p>Schedule refreshes or run on-demand; maintain fresh, governed context windows.</p>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Guardrails (TuringForge)</h3>
+            <p>Compile/validate prompts, enforce RBAC, audit, and cost/token budgets.</p>
+          </div>
+        </div>
+        <div class="workflow-step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3>Ask TPulse</h3>
+            <p>Users ask questions; TPulse retrieves governed context, reasons, cites sources, and can trigger follow-ups.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Capabilities Section -->
+  <section class="agent-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Core capabilities</h2>
+      </div>
+      <div class="capabilities-grid">
+        <div class="capability-item">
+          <h3>Portfolio Answers</h3>
+          <p>Readiness, velocity, scope confidence, risk heatmaps, dependency impact, cost signals.</p>
+        </div>
+        <div class="capability-item">
+          <h3>Blocker Radar</h3>
+          <p>Detect items idle beyond thresholds; surface owners, dependencies, and next best actions.</p>
+        </div>
+        <div class="capability-item">
+          <h3>Status in Seconds</h3>
+          <p>Generate exec-ready updates with deltas, trends, and confidence notes.</p>
+        </div>
+        <div class="capability-item">
+          <h3>Cost Insights</h3>
+          <p>Attribute spend to agents, teams, or workstreams; flag anomalies and right-size opportunities.</p>
+        </div>
+        <div class="capability-item">
+          <h3>Drill-down & "Why"</h3>
+          <p>Expand an answer to see evidence, filters, and the reasoning path.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Example Prompts Section -->
+  <section class="agent-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Example prompts</h2>
+      </div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <p>"What threatens this sprint goal and who owns each blocker?"</p>
+        </div>
+        <div class="prompt-item">
+          <p>"Which stories fail Definition of Ready for next sprint?"</p>
+        </div>
+        <div class="prompt-item">
+          <p>"Show velocity trend and forecasted capacity for the next two sprints."</p>
+        </div>
+        <div class="prompt-item">
+          <p>"What's the cost per completed story this month and top drivers?"</p>
+        </div>
+        <div class="prompt-item">
+          <p>"Summarize cross-team dependencies likely to slip this release."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Roles & Views Section -->
+  <section class="agent-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Roles & views</h2>
+      </div>
+      <div class="roles-grid">
+        <div class="role-item">
+          <h3>Leaders (AI-Exec-Viewer)</h3>
+          <p>KPIs, trend deltas, confidence, and risk in one answer.</p>
+        </div>
+        <div class="role-item">
+          <h3>Product Owners</h3>
+          <p>DoR gaps, scope realism, auto-generated planning notes.</p>
+        </div>
+        <div class="role-item">
+          <h3>Scrum Masters</h3>
+          <p>Blockers by age/owner, follow-ups auto-tracked.</p>
+        </div>
+        <div class="role-item">
+          <h3>Developers</h3>
+          <p>Precise asks, next steps, and fewer meetings.</p>
+        </div>
+        <div class="role-item">
+          <h3>Auditors</h3>
+          <p>Full answer lineage with policies and evidence.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Governance & Security Section -->
+  <section class="agent-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Governance & security</h2>
+      </div>
+      <div class="governance-grid">
+        <div class="governance-item">
+          <h3>RBAC/ABAC</h3>
+          <p>Role, project, and workspace scopes.</p>
+        </div>
+        <div class="governance-item">
+          <h3>Data contracts</h3>
+          <p>Schemas, allowlists, field-level redaction, retention, freshness SLAs.</p>
+        </div>
+        <div class="governance-item">
+          <h3>Auditable answers</h3>
+          <p>Inputs, tools, policies, and outputs logged for review.</p>
+        </div>
+        <div class="governance-item">
+          <h3>Cost guardrails</h3>
+          <p>Per-agent budgets, alerts, and block-on-threshold.</p>
+        </div>
+        <div class="governance-item">
+          <h3>Private deployment</h3>
+          <p>Run in your environment; secrets in your vault; SSO/SCIM.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Makes TPulse Different Section -->
+  <section class="agent-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">What makes TPulse different</h2>
+      </div>
+      <div class="differentiators-grid">
+        <div class="differentiator-item">
+          <h3>Agentic from the start</h3>
+          <p>Answers can do things—kick off actions via your agents.</p>
+        </div>
+        <div class="differentiator-item">
+          <h3>Explainable</h3>
+          <p>Clear citations and reasoning context—no black boxes.</p>
+        </div>
+        <div class="differentiator-item">
+          <h3>Composable</h3>
+          <p>Snap into Agent Studio (Canvas/Flow/Forge) and TuringNexus contracts.</p>
+        </div>
+        <div class="differentiator-item">
+          <h3>Enterprise-ready</h3>
+          <p>Policy, audit, and cost controls are built in.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KPIs Section -->
+  <section class="agent-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">KPIs to watch</h2>
+      </div>
+      <div class="kpis-grid">
+        <div class="kpi-item">
+          <h3>Decision latency ↓</h3>
+          <p>Time from question to action</p>
+        </div>
+        <div class="kpi-item">
+          <h3>Manual reporting hours ↓</h3>
+          <p>Reduced time spent on status updates</p>
+        </div>
+        <div class="kpi-item">
+          <h3>Blocker time-to-resolution ↓</h3>
+          <p>Faster identification and resolution</p>
+        </div>
+        <div class="kpi-item">
+          <h3>Answer coverage ↑</h3>
+          <p>Questions answered with citations</p>
+        </div>
+        <div class="kpi-item">
+          <h3>Cost per answer/agent ↔</h3>
+          <p>Predictable and governed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Started Section -->
+  <section class="agent-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Get started</h2>
+      </div>
+      <div class="get-started-steps">
+        <div class="get-started-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Open Nexus</h3>
+            <p>Connect sources/actions; apply a contract template.</p>
+          </div>
+        </div>
+        <div class="get-started-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Create an Agent (optional)</h3>
+            <p>In Canvas, add a summary/risk agent.</p>
+          </div>
+        </div>
+        <div class="get-started-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Set Guardrails</h3>
+            <p>In Forge, configure RBAC, audit, and budgets.</p>
+          </div>
+        </div>
+        <div class="get-started-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Ask TPulse</h3>
+            <p>Start with our prompt library; share answers to stakeholders.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Platform Capabilities Section -->
+  <section class="agent-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Related platform capabilities</h2>
+      </div>
+      <div class="related-capabilities">
+        <a href="devex-visual-code.html" class="capability-link">
+          <div class="capability-icon">💻</div>
+          <div class="capability-content">
+            <h3>TuringForce Agent Studio</h3>
+            <p>Build, test, and ship governed PMO agents</p>
+          </div>
+        </a>
+        <a href="agent-orchestration.html" class="capability-link">
+          <div class="capability-icon">🔄</div>
+          <div class="capability-content">
+            <h3>TuringFlow</h3>
+            <p>Graph-based multi-agent orchestration</p>
+          </div>
+        </a>
+        <a href="turingnexus.html" class="capability-link">
+          <div class="capability-icon">🔌</div>
+          <div class="capability-content">
+            <h3>TuringNexus</h3>
+            <p>MCP-backed connectors and governance</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="../images/logo.png" alt="TuringForce logo" class="footer-logo">
+          <span class="footer-brand-name">TuringForce</span>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Platform</h4>
+            <a href="security-privacy.html">Security & Privacy</a>
+            <a href="policy-safety.html">Policy & Safety</a>
+            <a href="memory-knowledge.html">Memory & Knowledge</a>
+          </div>
+          <div class="footer-column">
+            <h4>Agents</h4>
+            <a href="../agents/backlog-grooming-agent.html">Backlog Grooming</a>
+            <a href="../agents/sprint-planning-agent.html">Sprint Planning</a>
+            <a href="../agents/daily-standup-agent.html">Daily Standup</a>
+          </div>
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <a href="../resources/docs.html">Documentation</a>
+            <a href="../resources/blog.html">Blog</a>
+            <a href="../resources/news.html">News</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 TuringForce. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
