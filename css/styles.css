@@ -2011,10 +2011,10 @@ section {
   }
   
   .hero-title {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
     line-height: 1.3;
     margin-bottom: 1rem;
-    padding-top: 1rem;
+    padding-top: 0.25rem;
     margin-top: 0;
   }
   
@@ -2023,13 +2023,13 @@ section {
   }
   
   .hero {
-    min-height: 60vh;
-    padding-top: 1rem;
+    min-height: 50vh;
+    padding-top: 0.5rem;
   }
   
   .hero .container {
-    min-height: 50vh;
-    padding-top: 1rem;
+    min-height: 40vh;
+    padding-top: 0.5rem;
   }
   
   .running-reel {
