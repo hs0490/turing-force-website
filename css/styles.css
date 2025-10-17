@@ -537,7 +537,7 @@ body {
   position: relative;
   overflow: hidden;
   background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
-  padding-top: 1rem;
+  padding-top: 3rem;
   padding-bottom: 0;
 }
 
