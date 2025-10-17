@@ -1940,6 +1940,21 @@ section {
     display: none;
   }
   
+  .nav-cta {
+    gap: 0.5rem;
+  }
+  
+  .nav-cta .btn-ghost,
+  .nav-cta .btn-primary {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  
+  .nav-container {
+    padding: 0 1rem;
+  }
+  
   section {
     padding: 3rem 0;
   }
