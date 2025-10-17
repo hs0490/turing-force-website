@@ -937,18 +937,18 @@ section {
 }
 
 .section-title {
-  font-size: 2.25rem;
-  font-weight: 600;
+  font-size: 2.5rem;
+  font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: var(--gray-900);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
 
 .section-subtitle {
   font-size: 1.125rem;
   color: var(--gray-600);
-  line-height: 1.5;
+  line-height: 1.6;
   font-weight: 400;
 }
 
@@ -1743,6 +1743,7 @@ section {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  letter-spacing: -0.015em;
 }
 
 .cta-content p {
@@ -2117,7 +2118,7 @@ section {
   }
   
   .section-title {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
   
   .features-grid,
@@ -4200,6 +4201,7 @@ a:focus {
   font-weight: 700;
   color: var(--gray-900);
   margin-bottom: 1rem;
+  letter-spacing: -0.015em;
 }
 
 .section-header p {
@@ -4253,7 +4255,7 @@ a:focus {
   }
   
   .section-header h2 {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
   
   .grid {
