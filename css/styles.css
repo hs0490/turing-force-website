@@ -834,14 +834,6 @@ body {
   line-height: 1.4;
 }
 
-.reel-tagline {
-  color: var(--white);
-  font-weight: 600;
-  font-size: 0.85rem;
-  background: var(--primary);
-  padding: 0.35rem 0.9rem;
-  border-radius: 20px;
-}
 
 /* Hero Visual */
 .hero-visual {
