@@ -905,8 +905,12 @@ section {
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: var(--gray-900);
+  background: linear-gradient(90deg, #4c1d95, #5b21b6, #6d28d9, #7c3aed, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   letter-spacing: -0.02em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .section-subtitle {
@@ -918,7 +922,12 @@ section {
 
 /* Platform Section */
 .platform-section {
-  background: var(--white);
+  background: linear-gradient(135deg, 
+    rgba(99, 102, 241, 0.01) 0%, 
+    rgba(139, 92, 246, 0.02) 50%,
+    rgba(99, 102, 241, 0.01) 100%);
+  border-top: 1px solid rgba(99, 102, 241, 0.08);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.08);
 }
 
 /* Features Section */
@@ -1055,6 +1064,15 @@ section {
 }
 
 /* Agent Studio Section - Center 4 cards */
+.agent-studio-section {
+  background: linear-gradient(135deg, 
+    rgba(99, 102, 241, 0.03) 0%, 
+    rgba(139, 92, 246, 0.04) 50%,
+    rgba(99, 102, 241, 0.03) 100%);
+  border-top: 1px solid rgba(99, 102, 241, 0.1);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+}
+
 .agent-studio-section .features-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1066,12 +1084,13 @@ section {
 
 .feature-card {
   background: var(--white);
-  border: 1px solid var(--gray-200);
+  border: 1px solid rgba(99, 102, 241, 0.15);
   border-radius: var(--radius-xl);
   padding: 2rem;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.05);
 }
 
 .feature-card-clickable {
@@ -1100,8 +1119,11 @@ section {
 
 .feature-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15);
   border-color: var(--primary);
+  background: linear-gradient(135deg, 
+    rgba(99, 102, 241, 0.01) 0%, 
+    rgba(139, 92, 246, 0.02) 100%);
 }
 
 .feature-card:hover::before {
@@ -1151,7 +1173,12 @@ section {
 
 /* Agents Section */
 .agents-section {
-  background: var(--gray-50);
+  background: linear-gradient(135deg, 
+    rgba(99, 102, 241, 0.02) 0%, 
+    rgba(139, 92, 246, 0.03) 50%,
+    rgba(99, 102, 241, 0.02) 100%);
+  border-top: 1px solid rgba(99, 102, 241, 0.1);
+  border-bottom: 1px solid rgba(99, 102, 241, 0.1);
 }
 
 .agents-grid {
@@ -1162,17 +1189,21 @@ section {
 
 .agent-card {
   background: var(--white);
-  border: 1px solid var(--gray-200);
+  border: 1px solid rgba(99, 102, 241, 0.15);
   border-radius: var(--radius-xl);
   padding: 2rem;
   text-align: center;
   transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.05);
 }
 
 .agent-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15);
   border-color: var(--primary);
+  background: linear-gradient(135deg, 
+    rgba(99, 102, 241, 0.01) 0%, 
+    rgba(139, 92, 246, 0.02) 100%);
 }
 
 .agent-icon {
@@ -1186,8 +1217,12 @@ section {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--primary);
+  background: linear-gradient(90deg, #4c1d95, #5b21b6, #6d28d9, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .agent-card p {
@@ -1212,17 +1247,21 @@ section {
 
 .security-card {
   background: var(--white);
-  border: 1px solid var(--gray-200);
+  border: 1px solid rgba(99, 102, 241, 0.15);
   border-radius: var(--radius-xl);
   padding: 2rem;
   text-align: center;
   transition: var(--transition);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.05);
 }
 
 .security-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15);
   border-color: var(--primary);
+  background: linear-gradient(135deg, 
+    rgba(99, 102, 241, 0.01) 0%, 
+    rgba(139, 92, 246, 0.02) 100%);
 }
 
 .security-icon {

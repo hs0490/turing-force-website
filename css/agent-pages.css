@@ -425,7 +425,27 @@
   justify-content: center;
   font-weight: 600;
   font-size: 1.1rem;
-  margin: 0 auto 1.5rem auto;
+}
+
+
+.step-logo {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--white);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+  transition: all 0.3s ease;
+  margin: 0 auto 1rem auto;
+}
+
+.step-logo:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
 }
 
 .step-content h3 {
@@ -434,6 +454,7 @@
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
+
 
 .step-content p {
   color: var(--gray-600);
@@ -741,7 +762,48 @@
   justify-content: center;
   font-weight: 700;
   font-size: 1.25rem;
+}
+
+.step-icon {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--white);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  transition: all 0.3s ease;
+  margin: 0 auto 1.5rem auto;
   flex-shrink: 0;
+}
+
+.step-icon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+}
+
+.step-logo {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--white);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.25rem;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+  transition: all 0.3s ease;
+  margin: 0 auto 1rem auto;
+  flex-shrink: 0;
+}
+
+.step-logo:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
 }
 
 .step-content h3 {
