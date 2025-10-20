@@ -1915,6 +1915,37 @@ section {
     z-index: 999;
   }
   
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .nav-cta .btn-ghost,
+  .nav-cta .btn-primary {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  
+  .nav-container {
+    padding: 0 1rem;
+    height: 60px;
+  }
+  
+  .nav-brand {
+    font-size: 1.1rem;
+  }
+  
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+  
   .nav-menu.active {
     display: block;
     transform: translateY(0);
@@ -1956,23 +1987,6 @@ section {
     display: none;
   }
   
-  .nav-cta {
-    gap: 0.5rem;
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--gray-100);
-  }
-  
-  .nav-cta .btn-ghost,
-  .nav-cta .btn-primary {
-    padding: 0.5rem 0.75rem;
-    font-size: 0.85rem;
-    white-space: nowrap;
-  }
-  
-  .nav-container {
-    padding: 0 1rem;
-  }
   
   .hero-title {
     font-size: 2rem;
