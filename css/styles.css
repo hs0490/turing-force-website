@@ -696,11 +696,11 @@ body {
 .running-reel-section {
   width: 100%;
   background: linear-gradient(135deg, 
-    rgba(99, 102, 241, 0.08) 0%, 
-    rgba(139, 92, 246, 0.12) 25%,
-    rgba(99, 102, 241, 0.08) 50%,
-    rgba(139, 92, 246, 0.12) 75%,
-    rgba(99, 102, 241, 0.08) 100%);
+    rgba(99, 102, 241, 0.02) 0%, 
+    rgba(139, 92, 246, 0.03) 25%,
+    rgba(99, 102, 241, 0.02) 50%,
+    rgba(139, 92, 246, 0.03) 75%,
+    rgba(99, 102, 241, 0.02) 100%);
   padding: 2.5rem 0;
   margin: 0;
   border-top: none;
@@ -717,9 +717,9 @@ body {
   bottom: 0;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(255, 255, 255, 0.15) 30%,
-    rgba(255, 255, 255, 0.25) 50%, 
-    rgba(255, 255, 255, 0.15) 70%,
+    rgba(255, 255, 255, 0.05) 30%,
+    rgba(255, 255, 255, 0.08) 50%, 
+    rgba(255, 255, 255, 0.05) 70%,
     transparent 100%);
   animation: shimmer 4s ease-in-out infinite;
   pointer-events: none;
