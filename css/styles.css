@@ -1929,28 +1929,34 @@ section {
   .nav-cta .btn-ghost {
     padding: 0.35rem 0.5rem;
     font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
     white-space: nowrap;
     min-width: auto;
     height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
   }
   
   .nav-cta .btn-primary {
     padding: 0.35rem 0.6rem;
     font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
     white-space: nowrap;
     min-width: auto;
     height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: none;
   }
   
   .nav-container {
     padding: 0 0.75rem;
-    height: 60px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1963,6 +1969,20 @@ section {
     height: 32px;
     display: flex;
     align-items: center;
+  }
+  
+  .nav-brand a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 100%;
+  }
+  
+  .brand-name {
+    font-weight: 700;
+    line-height: 1;
+    font-size: 1.1rem;
+    color: var(--gray-900);
   }
   
   .hamburger {
