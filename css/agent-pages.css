@@ -1872,9 +1872,9 @@
     width: 100% !important;
     min-height: 200px !important;
     margin: 1rem 0 !important;
-    padding: 0 !important;
-    background: transparent !important;
-    border: none !important;
+    padding: 1rem !important;
+    background: rgba(255, 0, 0, 0.1) !important; /* DEBUG: Red background to see container */
+    border: 2px solid red !important; /* DEBUG: Red border to see container */
     position: static !important;
     z-index: 999 !important;
   }
@@ -1888,8 +1888,8 @@
     min-height: 200px !important;
     max-height: 400px !important;
     object-fit: contain !important;
-    background: transparent !important;
-    border: none !important;
+    background: rgba(0, 255, 0, 0.2) !important; /* DEBUG: Green background to see video element */
+    border: 2px solid green !important; /* DEBUG: Green border to see video element */
     outline: none !important;
     margin: 0 !important;
     padding: 0 !important;
