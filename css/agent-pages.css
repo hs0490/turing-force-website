@@ -193,11 +193,11 @@
 }
 
 .agent-hero h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1.1;
+  font-size: 3.25rem;
+  font-weight: 600;
+  line-height: 1.2;
   margin-bottom: 1.5rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.015em;
 
 .agent-hero-subtitle {
   font-size: 1.25rem;
@@ -755,6 +755,13 @@
     width: 100% !important;
     height: auto !important;
   }
+  
+  .agent-hero h1 {
+    font-size: 2.75rem !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.015em !important;
+  }
 }
 
 /* CRITICAL MOBILE OVERRIDE - 768px and below */
@@ -819,7 +826,9 @@
     word-break: break-word !important;
     white-space: normal !important;
     font-size: 2.25rem !important;
+    font-weight: 600 !important;
     line-height: 1.2 !important;
+    letter-spacing: -0.015em !important;
   }
   
   /* Hero subtitle - fully visible */
@@ -1150,7 +1159,9 @@
     
     .agent-hero h1 {
       font-size: 1.875rem !important;
-      line-height: 1.1 !important;
+      font-weight: 600 !important;
+      line-height: 1.2 !important;
+      letter-spacing: -0.015em !important;
       width: 100% !important;
       max-width: 100% !important;
       padding: 0 !important;
