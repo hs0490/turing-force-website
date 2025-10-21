@@ -1,0 +1,125 @@
+HOMEPAGE VS AGENT PAGE MOBILE COMPARISON
+=======================================
+
+HOMEPAGE HERO SECTION (WORKS ON MOBILE):
+========================================
+
+HTML Structure:
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="hero-title">...</h1>
+      <p class="hero-description">...</p>
+      <div class="hero-actions">...</div>
+    </div>
+    <div class="hero-visual">
+      <div class="video-container">
+        <div class="video-wrapper">
+          <video class="marketing-video">...</video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+CSS Structure:
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* Desktop: 2 columns */
+  gap: 1.5rem;
+  align-items: center;
+}
+
+Mobile CSS (1024px breakpoint):
+.hero .container {
+  grid-template-columns: 1fr;      /* Mobile: 1 column */
+  gap: 2rem;
+  text-align: center;
+}
+
+Mobile CSS (768px breakpoint):
+.hero .container {
+  min-height: 70vh;
+  padding-top: 1rem;
+}
+
+AGENT PAGE HERO SECTION (NOT WORKING ON MOBILE):
+===============================================
+
+HTML Structure:
+<section class="agent-hero">
+  <div class="container">
+    <div class="agent-breadcrumb">...</div>
+    <div class="agent-hero-content-with-video">
+      <div class="agent-hero-text">
+        <h1>...</h1>
+        <p class="agent-hero-subtitle">...</p>
+      </div>
+      <div class="agent-hero-video">
+        <video>...</video>
+      </div>
+    </div>
+  </div>
+</section>
+
+CSS Structure:
+.agent-hero-content-with-video {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* Desktop: 2 columns */
+  gap: 4rem;
+  align-items: center;
+}
+
+Desktop Video CSS (PROBLEMATIC):
+.agent-hero-video video {
+  margin-top: 1in;        /* PROBLEM: Pushes video off-screen */
+  margin-left: 0.5in;     /* PROBLEM: Pushes video to the right */
+}
+
+KEY DIFFERENCES IDENTIFIED:
+==========================
+
+1. BREAKPOINT DIFFERENCES:
+   - Homepage: Uses 1024px breakpoint for mobile layout
+   - Agent Page: Uses 768px breakpoint for mobile layout
+   - Homepage gets mobile layout earlier (1024px vs 768px)
+
+2. CSS SPECIFICITY:
+   - Homepage: Simple .hero .container selector
+   - Agent Page: Complex .agent-hero-content-with-video selector
+   - Agent page has more nested selectors
+
+3. DESKTOP VIDEO POSITIONING:
+   - Homepage: No problematic desktop margins
+   - Agent Page: margin-top: 1in; margin-left: 0.5in; (VERY PROBLEMATIC)
+
+4. MOBILE CSS OVERRIDE:
+   - Homepage: Clean grid-template-columns: 1fr override
+   - Agent Page: Complex overrides with !important needed
+
+5. CONTAINER STRUCTURE:
+   - Homepage: Direct .hero .container with simple grid
+   - Agent Page: Nested .agent-hero-content-with-video with complex grid
+
+SOLUTION APPROACH:
+=================
+
+The homepage works because:
+1. It uses a 1024px breakpoint (earlier mobile layout)
+2. It has no problematic desktop video positioning
+3. It has simpler CSS selectors
+4. It has cleaner mobile overrides
+
+The agent page fails because:
+1. It uses 768px breakpoint (later mobile layout)
+2. It has problematic desktop video positioning (1in margins)
+3. It has complex CSS selectors requiring !important
+4. It needs aggressive mobile overrides
+
+RECOMMENDED FIX:
+===============
+
+1. Add 1024px breakpoint for agent pages (like homepage)
+2. Remove problematic desktop video margins completely
+3. Simplify CSS selectors where possible
+4. Use homepage-style mobile overrides

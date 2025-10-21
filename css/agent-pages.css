@@ -181,8 +181,7 @@
   border-radius: var(--radius-lg);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   border: 2px solid rgba(255, 255, 255, 0.2);
-  margin-top: 1in;
-  margin-left: 0.5in;
+  /* Removed problematic margins that cause mobile issues */
 }
 
 .agent-hero-icon {
@@ -721,6 +720,33 @@
 
 .agent-dropdown-item.active .agent-dropdown-icon {
   background: rgba(255, 255, 255, 0.2);
+}
+
+/* HOMEPAGE-STYLE MOBILE OVERRIDE - 1024px breakpoint like homepage */
+@media (max-width: 1024px) {
+  /* Force single column layout like homepage */
+  .agent-hero-content-with-video {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: center !important;
+  }
+  
+  /* Reset video positioning like homepage */
+  .agent-hero-video {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 1rem 0 !important;
+  }
+  
+  .agent-hero-video video {
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+  }
 }
 
 /* CRITICAL MOBILE OVERRIDE - Must come before responsive design */
