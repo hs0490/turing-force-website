@@ -1306,6 +1306,56 @@
       padding: 0.75rem 1rem;
       font-size: 0.875rem;
     }
+    
+    /* Additional mobile optimizations for smaller screens */
+    .agent-powers {
+      padding: 2rem 0 !important;
+    }
+    
+    .features-section {
+      padding: 2rem 0 !important;
+    }
+    
+    .agent-action {
+      padding: 2rem 0 !important;
+    }
+    
+    .ask-agent {
+      padding: 2rem 0 !important;
+    }
+    
+    .agent-outcomes {
+      padding: 2rem 0 !important;
+    }
+    
+    .cta-section {
+      padding: 2rem 0 !important;
+    }
+    
+    .power-card,
+    .collaboration-card,
+    .workflow-step,
+    .ask-category,
+    .outcome-from,
+    .outcome-to {
+      padding: 1.25rem !important;
+    }
+    
+    .agent-cortex {
+      padding: 1.25rem !important;
+    }
+    
+    .collaboration-title {
+      font-size: 1.5rem !important;
+    }
+    
+    .agent-outcomes h2 {
+      font-size: 1.75rem !important;
+    }
+    
+    .cta-title {
+      font-size: 1.5rem !important;
+    }
   }
   
   /* Touch-friendly optimizations */
@@ -1331,10 +1381,246 @@
   .agent-powers,
   .agent-action,
   .agent-outcomes,
-  .collaboration-section {
+  .collaboration-section,
+  .features-section,
+  .ask-agent,
+  .cta-section {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+  }
+  
+  /* Agent Powers Section Mobile Optimization */
+  .agent-powers {
+    padding: 3rem 0 !important;
+  }
+  
+  .powers-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    margin-top: 2rem !important;
+  }
+  
+  .power-card {
+    padding: 1.5rem !important;
+    min-height: auto !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .power-card h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .power-card p {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  /* Features Section (You + AI Working Together) Mobile Optimization */
+  .features-section {
+    padding: 3rem 0 !important;
+  }
+  
+  .collaboration-layout {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  .collaboration-content {
+    display: block !important;
+    grid-template-columns: none !important;
+    gap: 2rem !important;
+  }
+  
+  .collaboration-text {
+    order: 1 !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+  
+  .collaboration-title {
+    font-size: 1.75rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .collaboration-cards {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  .collaboration-card {
+    padding: 1.5rem !important;
+    text-align: center !important;
+  }
+  
+  .collaboration-card h4 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .collaboration-card p {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  .collaboration-visual {
+    order: 2 !important;
+    width: 100% !important;
+    padding: 0 !important;
+    min-height: auto !important;
+    justify-content: center !important;
+  }
+  
+  .agent-cortex {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 1.5rem !important;
+  }
+  
+  .cortex-header h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  .cortex-metrics {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  
+  .metric {
+    padding: 0.75rem !important;
+  }
+  
+  .metric-value {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Agent Action Section Mobile Optimization */
+  .agent-action {
+    padding: 3rem 0 !important;
+  }
+  
+  .action-workflow {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  .workflow-step {
+    padding: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .workflow-step h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .workflow-step p {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  /* Ask Agent Section Mobile Optimization */
+  .ask-agent {
+    padding: 3rem 0 !important;
+  }
+  
+  .ask-categories {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+  
+  .ask-category {
+    padding: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .ask-category h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .ask-category li {
+    padding: 0.5rem 0 !important;
+    font-size: 0.9rem !important;
+    line-height: 1.4 !important;
+  }
+  
+  /* Agent Outcomes Section Mobile Optimization */
+  .agent-outcomes {
+    padding: 3rem 0 !important;
+  }
+  
+  .agent-outcomes h2 {
+    font-size: 2rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .agent-outcomes p {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .outcomes-comparison {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    max-width: 100% !important;
+  }
+  
+  .outcome-from,
+  .outcome-to {
+    padding: 1.5rem !important;
+  }
+  
+  .outcome-from h3,
+  .outcome-to h3 {
+    font-size: 1.25rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  
+  .outcome-from ul li,
+  .outcome-to ul li {
+    padding: 0.75rem 0 !important;
+    font-size: 0.9rem !important;
+  }
+  
+  /* CTA Section Mobile Optimization */
+  .cta-section {
+    padding: 3rem 0 !important;
+  }
+  
+  .cta-content {
+    text-align: center !important;
+  }
+  
+  .cta-title {
+    font-size: 1.75rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .cta-subtitle {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 2rem !important;
+  }
+  
+  .cta-actions {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    align-items: center !important;
+  }
+  
+  .cta-actions .btn-primary,
+  .cta-actions .btn-outline {
+    width: 100% !important;
+    max-width: 280px !important;
+    padding: 0.875rem 1.5rem !important;
+    font-size: 0.95rem !important;
   }
   
   /* Improve text readability on mobile */
