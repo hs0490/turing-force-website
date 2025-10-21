@@ -25,7 +25,7 @@
 .agent-hero {
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
   color: var(--white);
-  padding: 4rem 0 4rem 0;
+  padding: 2rem 0 3rem 0;
   position: relative;
   overflow: hidden;
 }
@@ -43,7 +43,7 @@
 
 .agent-breadcrumb {
   font-size: 0.9rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   opacity: 0.8;
   position: relative;
   z-index: 1;
@@ -174,7 +174,7 @@
 
 .agent-hero-icon {
   font-size: 4rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   display: block;
 }
 
@@ -805,7 +805,7 @@
   
   /* Hero section mobile optimization */
   .agent-hero {
-    padding: 4rem 0 3rem 0 !important;
+    padding: 2rem 0 2rem 0 !important;
     position: relative !important;
     width: 100% !important;
     max-width: 100% !important;
@@ -816,7 +816,7 @@
   
   .agent-breadcrumb {
     font-size: 0.85rem !important;
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1rem !important;
     padding: 0 !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
