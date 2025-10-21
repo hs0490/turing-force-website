@@ -578,6 +578,25 @@
 
 /* Mobile responsiveness for outcomes section */
 @media (max-width: 768px) {
+  /* Fix section title visibility */
+  .agent-outcomes h2 {
+    font-size: 2rem !important;
+    margin-bottom: 0.75rem !important;
+    line-height: 1.2 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  
+  .agent-outcomes p {
+    font-size: 1rem !important;
+    margin-bottom: 2rem !important;
+    line-height: 1.5 !important;
+  }
+  
+  .agent-outcomes {
+    padding: 3rem 0 !important;
+  }
+  
   .outcomes-comparison {
     display: flex !important;
     flex-direction: column !important;
@@ -624,6 +643,23 @@
 }
 
 @media (max-width: 480px) {
+  /* Further optimize section title for small screens */
+  .agent-outcomes h2 {
+    font-size: 1.75rem !important;
+    margin-bottom: 0.5rem !important;
+    padding: 0 1rem !important;
+  }
+  
+  .agent-outcomes p {
+    font-size: 0.9rem !important;
+    margin-bottom: 1.5rem !important;
+    padding: 0 1rem !important;
+  }
+  
+  .agent-outcomes {
+    padding: 2rem 0 !important;
+  }
+  
   .outcomes-comparison {
     gap: 1rem !important;
   }
