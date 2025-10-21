@@ -574,73 +574,9 @@
   margin: 0 auto 3rem auto;
 }
 
-.outcomes-comparison {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-}
+/* Outcomes section now uses inline styles to match Risk & Dependency Agent format */
 
-.outcome-from,
-.outcome-to {
-  background: #374151;
-  padding: 2.5rem;
-  border-radius: 12px;
-  border: 1px solid #4b5563;
-  text-align: center;
-}
-
-.outcome-from h3,
-.outcome-to h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.outcome-from h3 {
-  color: var(--error);
-}
-
-.outcome-to h3 {
-  color: var(--success);
-}
-
-.outcome-from ul,
-.outcome-to ul {
-  list-style: none;
-  padding: 0;
-}
-
-.outcome-from li,
-.outcome-to li {
-  color: #ffffff;
-  padding: 1rem 0;
-  border-bottom: 1px solid #4b5563;
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.outcome-from li:before {
-  content: "✗";
-  color: #ef4444;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.outcome-to li:before {
-  content: "✓";
-  color: #10b981;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.outcome-from li:last-child,
-.outcome-to li:last-child {
-  border-bottom: none;
-}
+/* Removed outcomes CSS - now using inline styles */
 
 /* Multi-Agent Section */
 .multi-agent {
