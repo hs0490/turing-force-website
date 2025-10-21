@@ -171,18 +171,11 @@
   max-width: 600px;
 }
 
-.agent-hero-video {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.agent-hero-video video {
-  width: 100%;
-  max-width: 500px;
-  border-radius: var(--radius-lg);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  border: 2px solid rgba(255, 255, 255, 0.2);
+/* Standard agent hero content styling */
+.agent-hero-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 
@@ -727,33 +720,16 @@
 /* HOMEPAGE-STYLE MOBILE OVERRIDE - 1024px breakpoint like homepage */
 @media (max-width: 1024px) {
   /* Force single column layout like homepage */
-  .agent-hero-content-with-video {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
+  .agent-hero-content {
     text-align: center !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    gap: 2rem !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
   }
   
   .agent-hero-text {
     width: 100% !important;
     max-width: 100% !important;
     text-align: center !important;
-    order: 1 !important;
-  }
-  
-  .agent-hero-video {
-    order: 2 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  
-  .agent-hero-video video {
-    max-width: 100% !important;
-    width: 100% !important;
-    height: auto !important;
   }
   
   .agent-hero h1 {
@@ -764,15 +740,14 @@
   }
 }
 
-/* CRITICAL MOBILE OVERRIDE - 768px and below */
+/* Standard mobile layout - 768px and below */
 @media (max-width: 768px) {
-  /* Force complete layout reset for mobile */
   .agent-hero * {
     box-sizing: border-box !important;
   }
   
   /* Hero content layout - centered single column */
-  .agent-hero-content-with-video {
+  .agent-hero-content {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -787,31 +762,6 @@
     width: 100% !important;
     max-width: 100% !important;
     text-align: center !important;
-    order: 1 !important;
-  }
-  
-  /* Hero video - mobile responsive */
-  .agent-hero-video {
-    order: 2 !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-  
-  .agent-hero-video video {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    border-radius: 12px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    object-fit: contain !important;
-    background: transparent !important;
   }
   
   /* Hero title - fully visible */
@@ -1108,38 +1058,11 @@
     clear: both !important;
   }
   
-  /* Additional mobile video visibility rules */
-  .agent-hero .agent-hero-video {
-    display: flex !important;
+  /* Standard mobile hero actions */
+  .agent-hero-actions {
     justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    height: auto !important;
-    min-height: 200px !important;
-    background: transparent !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  
-  .agent-hero .agent-hero-video video {
-    display: block !important;
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    min-height: 200px !important;
-    max-height: 400px !important;
-    object-fit: contain !important;
-    background: transparent !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    z-index: 10 !important;
-    position: static !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: none !important;
-    outline: none !important;
+    flex-wrap: wrap !important;
+    gap: 1rem !important;
   }
   
   /* Additional mobile optimizations for smaller screens */
@@ -1189,25 +1112,11 @@
       margin-right: 0 !important;
     }
     
-    /* Video visibility for 480px and below */
-    .agent-hero .agent-hero-video {
-      display: flex !important;
-      justify-content: center !important;
+    /* Standard mobile hero actions for 480px */
+    .agent-hero-actions {
+      flex-direction: column !important;
       align-items: center !important;
-      width: 100% !important;
-      min-height: 180px !important;
-      margin: 1rem 0 !important;
-    }
-    
-    .agent-hero .agent-hero-video video {
-      display: block !important;
-      width: 100% !important;
-      height: auto !important;
-      min-height: 180px !important;
-      max-height: 300px !important;
-      object-fit: contain !important;
-      visibility: visible !important;
-      opacity: 1 !important;
+      gap: 0.75rem !important;
     }
     
     .section-header h2 {
@@ -1863,37 +1772,22 @@
   margin: 0;
 }
 
-/* FINAL VIDEO VISIBILITY OVERRIDE - ULTIMATE FIX */
+/* Standard responsive layout for agent pages */
 @media (max-width: 768px) {
-  .agent-hero .agent-hero-video {
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 100% !important;
-    min-height: 200px !important;
-    margin: 1rem 0 !important;
-    padding: 1rem !important;
-    background: rgba(255, 0, 0, 0.1) !important; /* DEBUG: Red background to see container */
-    border: 2px solid red !important; /* DEBUG: Red border to see container */
-    position: static !important;
-    z-index: 999 !important;
+  .agent-hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
   }
   
-  .agent-hero .agent-hero-video video {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    width: 100% !important;
-    height: auto !important;
-    min-height: 200px !important;
-    max-height: 400px !important;
-    object-fit: contain !important;
-    background: rgba(0, 255, 0, 0.2) !important; /* DEBUG: Green background to see video element */
-    border: 2px solid green !important; /* DEBUG: Green border to see video element */
-    outline: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    position: static !important;
-    z-index: 999 !important;
+  .agent-hero-text {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .agent-hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }
