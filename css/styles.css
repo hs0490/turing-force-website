@@ -673,13 +673,13 @@ body {
   align-items: center;
   gap: 0.5rem;
   font-size: 0.875rem;
-  color: var(--gray-500);
+  color: rgba(255, 255, 255, 0.8);
   flex-wrap: wrap;
   font-weight: 400;
 }
 
 .separator {
-  color: var(--gray-400);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 /* Highlighted Terms in Section */
@@ -1907,7 +1907,7 @@ section {
 }
 
 .video-caption p {
-  color: var(--gray-600);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.9rem;
   font-weight: 500;
   margin: 0;
