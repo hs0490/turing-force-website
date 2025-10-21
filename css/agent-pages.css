@@ -255,6 +255,16 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Video controls styling */
+.agent-hero-video video::-webkit-media-controls {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 12px 12px;
+}
+
+.agent-hero-video video::-webkit-media-controls-panel {
+  background: rgba(0, 0, 0, 0.1);
+}
+
 /* Agent Powers Section */
 .agent-powers {
   padding: 6rem 0;
