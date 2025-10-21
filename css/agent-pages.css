@@ -1128,8 +1128,18 @@
     height: auto !important;
     max-width: 100% !important;
     min-width: 0 !important;
+    min-height: 200px !important;
+    max-height: 400px !important;
     object-fit: contain !important;
     background: transparent !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 10 !important;
+    position: static !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    outline: none !important;
   }
   
   /* Additional mobile optimizations for smaller screens */
@@ -1177,6 +1187,27 @@
       padding: 0 !important;
       margin-left: 0 !important;
       margin-right: 0 !important;
+    }
+    
+    /* Video visibility for 480px and below */
+    .agent-hero .agent-hero-video {
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      width: 100% !important;
+      min-height: 180px !important;
+      margin: 1rem 0 !important;
+    }
+    
+    .agent-hero .agent-hero-video video {
+      display: block !important;
+      width: 100% !important;
+      height: auto !important;
+      min-height: 180px !important;
+      max-height: 300px !important;
+      object-fit: contain !important;
+      visibility: visible !important;
+      opacity: 1 !important;
     }
     
     .section-header h2 {
@@ -1830,4 +1861,39 @@
   color: var(--gray-600);
   line-height: 1.6;
   margin: 0;
+}
+
+/* FINAL VIDEO VISIBILITY OVERRIDE - ULTIMATE FIX */
+@media (max-width: 768px) {
+  .agent-hero .agent-hero-video {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    min-height: 200px !important;
+    margin: 1rem 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    position: static !important;
+    z-index: 999 !important;
+  }
+  
+  .agent-hero .agent-hero-video video {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 200px !important;
+    max-height: 400px !important;
+    object-fit: contain !important;
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    z-index: 999 !important;
+  }
 }
