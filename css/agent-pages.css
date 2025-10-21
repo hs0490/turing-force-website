@@ -726,10 +726,12 @@
 @media (max-width: 1024px) {
   /* Force single column layout like homepage */
   .agent-hero-content-with-video {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
+    display: block !important;
+    grid-template-columns: none !important;
     gap: 2rem !important;
     text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
   }
   
   /* Reset video positioning like homepage */
@@ -739,6 +741,16 @@
     align-items: center !important;
     margin: 0 !important;
     padding: 1rem 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    order: 2 !important;
+  }
+  
+  .agent-hero-text {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
   }
   
   .agent-hero-video video {
@@ -746,99 +758,75 @@
     max-width: 100% !important;
     width: 100% !important;
     height: auto !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 }
 
-/* CRITICAL MOBILE OVERRIDE - Must come before responsive design */
+/* CRITICAL MOBILE OVERRIDE - 768px and below */
 @media (max-width: 768px) {
   /* Force complete layout reset for mobile */
   .agent-hero * {
     box-sizing: border-box !important;
   }
   
-  /* Override desktop video positioning completely */
-  .agent-hero .agent-hero-video {
-    position: static !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    transform: none !important;
-    margin: 0 !important;
-    padding: 1rem 0 !important;
+  /* Hero content layout - single column */
+  .agent-hero-content-with-video {
+    display: block !important;
+    grid-template-columns: none !important;
+    gap: 2rem !important;
     width: 100% !important;
     max-width: 100% !important;
-    height: auto !important;
-    min-height: 250px !important;
+    text-align: center !important;
+  }
+  
+  /* Hero text - first in order */
+  .agent-hero-text {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+  }
+  
+  /* Hero video - second in order, fully visible */
+  .agent-hero-video {
+    order: 2 !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    overflow: visible !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    z-index: 10 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 1rem 0 !important;
+    min-height: 200px !important;
   }
   
-  .agent-hero .agent-hero-video video {
-    position: static !important;
-    top: auto !important;
-    left: auto !important;
-    right: auto !important;
-    bottom: auto !important;
-    transform: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
+  /* Video element - fully visible and responsive */
+  .agent-hero-video video {
+    display: block !important;
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
     min-height: 200px !important;
     max-height: 300px !important;
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    z-index: 10 !important;
-    object-fit: contain !important;
-    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
     border-radius: 12px !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    object-fit: contain !important;
+    background: transparent !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
   
-  /* Force hero content to single column */
-  .agent-hero .agent-hero-content-with-video {
-    display: block !important;
-    grid-template-columns: none !important;
-    grid-template-rows: auto auto !important;
-    gap: 2rem !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    position: static !important;
-    overflow: visible !important;
-  }
-  
-  /* Force hero text to full width */
-  .agent-hero .agent-hero-text {
-    display: block !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    position: static !important;
-    overflow: visible !important;
-    text-align: center !important;
-  }
-  
-  /* Force hero title to be fully visible */
-  .agent-hero .agent-hero-text h1 {
-    display: block !important;
+  /* Hero title - fully visible */
+  .agent-hero-text h1 {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 0 1rem 0 !important;
     padding: 0 !important;
-    position: static !important;
-    overflow: visible !important;
     text-align: center !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
@@ -848,15 +836,12 @@
     line-height: 1.2 !important;
   }
   
-  /* Force hero subtitle to be fully visible */
-  .agent-hero .agent-hero-text .agent-hero-subtitle {
-    display: block !important;
+  /* Hero subtitle - fully visible */
+  .agent-hero-text .agent-hero-subtitle {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 0 2rem 0 !important;
     padding: 0 !important;
-    position: static !important;
-    overflow: visible !important;
     text-align: center !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
@@ -1627,6 +1612,61 @@
   p, li {
     line-height: 1.6;
   }
+}
+
+/* FINAL VIDEO VISIBILITY FIX - ULTIMATE OVERRIDE */
+@media (max-width: 768px) {
+  /* Force video to be visible on mobile */
+  .agent-hero .agent-hero-video {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 200px !important;
+    margin: 0 !important;
+    padding: 1rem 0 !important;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 999 !important;
+    background: transparent !important;
+    border: none !important;
+    overflow: visible !important;
+  }
+  
+  .agent-hero .agent-hero-video video {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 200px !important;
+    max-height: 300px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 999 !important;
+    object-fit: contain !important;
+    background: transparent !important;
+    min-width: 0 !important;
+  }
+}
   
   /* Optimize images for mobile */
   img {
