@@ -738,7 +738,12 @@
   
   /* Hero section mobile optimization */
   .agent-hero {
-    padding: 4rem 0 3rem 0;
+    padding: 4rem 0 3rem 0 !important;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible !important;
+    margin: 0 !important;
   }
   
   .agent-breadcrumb {
@@ -755,6 +760,11 @@
     padding: 0 !important;
     display: grid !important;
     align-items: center !important;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    overflow: visible !important;
   }
   
   .agent-hero-text {
@@ -763,6 +773,16 @@
     padding: 0 !important;
     max-width: 100% !important;
     margin: 0 !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    transform: none !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
   }
   
   .agent-hero-video {
@@ -770,11 +790,21 @@
     margin-top: 0 !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
+    margin-bottom: 0 !important;
     width: 100% !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     max-width: 100% !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    transform: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
   }
   
   .agent-hero-video video {
@@ -789,6 +819,15 @@
     margin-bottom: 0 !important;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    transform: none !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
   
   .agent-hero-icon {
@@ -955,9 +994,43 @@
   
   /* Video mobile optimization */
   video {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    transform: none !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Specific override for agent hero videos */
+  .agent-hero video {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    transform: none !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
   }
   
   /* Additional mobile optimizations for smaller screens */
