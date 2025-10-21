@@ -191,7 +191,10 @@
   line-height: 1.2;
   margin-bottom: 1.5rem;
   letter-spacing: -0.015em;
-  color: var(--gray-700);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .agent-hero-subtitle {
@@ -673,7 +676,10 @@
     font-weight: 600 !important;
     line-height: 1.2 !important;
     letter-spacing: -0.015em !important;
-    color: var(--gray-700) !important;
+    background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
   }
 }
 
@@ -791,7 +797,10 @@
     font-weight: 600 !important;
     line-height: 1.2 !important;
     letter-spacing: -0.015em !important;
-    color: var(--gray-700) !important;
+    background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
     margin-bottom: 1rem !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
@@ -1035,7 +1044,10 @@
       font-weight: 600 !important;
       line-height: 1.2 !important;
       letter-spacing: -0.015em !important;
-      color: var(--gray-700) !important;
+      background: linear-gradient(135deg, var(--primary), var(--secondary)) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      background-clip: text !important;
       width: 100% !important;
       max-width: 100% !important;
       padding: 0 !important;
