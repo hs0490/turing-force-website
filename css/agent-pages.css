@@ -723,6 +723,124 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
+/* CRITICAL MOBILE OVERRIDE - Must come before responsive design */
+@media (max-width: 768px) {
+  /* Force complete layout reset for mobile */
+  .agent-hero * {
+    box-sizing: border-box !important;
+  }
+  
+  /* Override desktop video positioning completely */
+  .agent-hero .agent-hero-video {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    padding: 1rem 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 250px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: visible !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 10 !important;
+  }
+  
+  .agent-hero .agent-hero-video video {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 200px !important;
+    max-height: 300px !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    z-index: 10 !important;
+    object-fit: contain !important;
+    background: transparent !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  /* Force hero content to single column */
+  .agent-hero .agent-hero-content-with-video {
+    display: block !important;
+    grid-template-columns: none !important;
+    grid-template-rows: auto auto !important;
+    gap: 2rem !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    overflow: visible !important;
+  }
+  
+  /* Force hero text to full width */
+  .agent-hero .agent-hero-text {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    overflow: visible !important;
+    text-align: center !important;
+  }
+  
+  /* Force hero title to be fully visible */
+  .agent-hero .agent-hero-text h1 {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 1rem 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    overflow: visible !important;
+    text-align: center !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    font-size: 2.25rem !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* Force hero subtitle to be fully visible */
+  .agent-hero .agent-hero-text .agent-hero-subtitle {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 2rem 0 !important;
+    padding: 0 !important;
+    position: static !important;
+    overflow: visible !important;
+    text-align: center !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   /* Container and general spacing */
@@ -732,8 +850,12 @@
   .agent-outcomes .container,
   .collaboration-section .container {
     padding: 0 1rem !important;
-    max-width: 100%;
-    overflow-x: hidden;
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: visible !important;
+    box-sizing: border-box !important;
+    margin: 0 auto !important;
   }
   
   /* Hero section mobile optimization */
@@ -744,13 +866,21 @@
     max-width: 100% !important;
     overflow: visible !important;
     margin: 0 !important;
+    box-sizing: border-box !important;
   }
   
   .agent-breadcrumb {
-    font-size: 0.85rem;
-    margin-bottom: 1.5rem;
-    padding: 0;
-    word-wrap: break-word;
+    font-size: 0.85rem !important;
+    margin-bottom: 1.5rem !important;
+    padding: 0 !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    display: block !important;
   }
   
   .agent-hero-content-with-video {
