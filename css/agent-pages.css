@@ -814,6 +814,10 @@
     float: none !important;
     clear: both !important;
     box-sizing: border-box !important;
+    min-height: 200px !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 1rem 0 !important;
   }
   
   .agent-hero-video video {
@@ -837,6 +841,10 @@
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
+    object-fit: contain !important;
+    background: transparent !important;
+    min-width: 0 !important;
+    max-height: 400px !important;
   }
   
   .agent-hero-icon {
@@ -1055,6 +1063,30 @@
     z-index: 1 !important;
     float: none !important;
     clear: both !important;
+  }
+  
+  /* Additional mobile video visibility rules */
+  .agent-hero .agent-hero-video {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 200px !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  .agent-hero .agent-hero-video video {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    object-fit: contain !important;
+    background: transparent !important;
   }
   
   /* Additional mobile optimizations for smaller screens */
