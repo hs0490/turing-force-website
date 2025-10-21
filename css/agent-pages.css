@@ -749,57 +749,81 @@
   }
   
   .agent-hero-content-with-video {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    text-align: center;
-    padding: 0;
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+    text-align: center !important;
+    padding: 0 !important;
+    display: grid !important;
+    align-items: center !important;
   }
   
   .agent-hero-text {
-    order: 1;
-    width: 100%;
-    padding: 0;
+    order: 1 !important;
+    width: 100% !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
   }
   
   .agent-hero-video {
-    order: 2;
-    margin-top: 0;
-    margin-left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    order: 2 !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    max-width: 100% !important;
   }
   
   .agent-hero-video video {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 12px !important;
     margin: 0 !important;
     margin-top: 0 !important;
     margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 0 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
   }
   
   .agent-hero-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 3rem !important;
+    margin-bottom: 1rem !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center !important;
+    width: 100% !important;
   }
   
   .agent-hero h1 {
-    font-size: 2.25rem;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    word-wrap: break-word;
-    hyphens: auto;
+    font-size: 2.25rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1rem !important;
+    word-wrap: break-word !important;
+    hyphens: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
   .agent-hero-subtitle {
-    font-size: 1rem;
-    line-height: 1.5;
-    margin-bottom: 2rem;
-    word-wrap: break-word;
-    hyphens: auto;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 2rem !important;
+    word-wrap: break-word !important;
+    hyphens: auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
   .agent-hero-actions {
@@ -962,13 +986,23 @@
     }
     
     .agent-hero h1 {
-      font-size: 1.875rem;
-      line-height: 1.1;
+      font-size: 1.875rem !important;
+      line-height: 1.1 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
     }
     
     .agent-hero-subtitle {
-      font-size: 0.9rem;
-      line-height: 1.4;
+      font-size: 0.9rem !important;
+      line-height: 1.4 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      padding: 0 !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
     }
     
     .section-header h2 {
