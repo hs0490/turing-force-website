@@ -536,7 +536,8 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  color: var(--white);
   padding-top: 3rem;
   padding-bottom: 0;
 }
@@ -624,9 +625,10 @@ body {
 .hero-title {
   font-size: 3.25rem;
   font-weight: 600;
-  line-height: 1.2;
-  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
   letter-spacing: -0.015em;
+  color: var(--white);
 }
 
 .title-line {
@@ -641,20 +643,22 @@ body {
 }
 
 .hero-title .gradient-text {
-  background: linear-gradient(135deg, #4338ca, #6d28d9);
+  background: linear-gradient(135deg, var(--white), rgba(255, 255, 255, 0.8));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 600;
   letter-spacing: -0.015em;
+  color: var(--white);
 }
 
 .hero-description {
-  font-size: 1.125rem;
-  color: var(--gray-600);
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   font-weight: 400;
+  max-width: 600px;
 }
 
 .hero-actions {
@@ -1924,6 +1928,8 @@ section {
   
   .hero-title {
     font-size: 2.75rem;
+    line-height: 1.3;
+    color: var(--white);
   }
   
   .about-content {
@@ -1952,8 +1958,9 @@ section {
   
   .hero-title {
     font-size: 2.25rem;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-bottom: 1rem;
+    color: var(--white);
   }
   
   .hero-subtitle {
@@ -2350,10 +2357,11 @@ section {
   
   .hero-title {
     font-size: 2rem;
-    line-height: 1.4;
+    line-height: 1.3;
     margin-bottom: 1.5rem;
     padding-top: 1rem;
     margin-top: 0;
+    color: var(--white);
   }
   
   section {
@@ -2528,10 +2536,13 @@ section {
   
   .hero-title {
     font-size: 2.25rem;
+    line-height: 1.3;
+    color: var(--white);
   }
   
   .hero-description {
     font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
   }
   
   .section-title {
@@ -2595,6 +2606,8 @@ section {
   /* Additional mobile optimizations for smaller screens */
   .hero-title {
     font-size: 1.875rem;
+    line-height: 1.3;
+    color: var(--white);
   }
   
   .section-header h2 {
@@ -2647,6 +2660,8 @@ section {
   
   .hero-title {
     font-size: 1.875rem;
+    line-height: 1.3;
+    color: var(--white);
   }
   
   .hero-visual {
