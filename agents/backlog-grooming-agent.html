@@ -230,7 +230,7 @@
       </div>
       
       <div class="action-workflow" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
+        <div class="workflow-step clickable-step" data-modal="scan-modal" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; cursor: pointer;">
           <div class="step-number" style="background: #6366f1; color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; margin: 0 auto 1.5rem auto;">1</div>
           <div class="step-content">
             <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Scan</h3>
@@ -358,9 +358,78 @@
     </div>
   </footer>
 
+  <!-- Modal Windows -->
+  <div id="scan-modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-icon">
+        <div class="scan-icon">🔍</div>
+      </div>
+      <div class="modal-body">
+        <ul class="modal-list">
+          <li>Pravin</li>
+          <li>Girish</li>
+          <li>Himanshu</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <script src="../js/main.js?v=2.2"></script>
   
   <script>
+    // Modal functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get all clickable steps
+      const clickableSteps = document.querySelectorAll('.clickable-step');
+      
+      // Add click event listeners to each step
+      clickableSteps.forEach(step => {
+        step.addEventListener('click', function() {
+          const modalId = this.getAttribute('data-modal');
+          const modal = document.getElementById(modalId);
+          if (modal) {
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+          }
+        });
+      });
+      
+      // Close modal when clicking the X button
+      const closeButtons = document.querySelectorAll('.modal-close');
+      closeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const modal = this.closest('.modal');
+          if (modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+          }
+        });
+      });
+      
+      // Close modal when clicking outside the modal content
+      const modals = document.querySelectorAll('.modal');
+      modals.forEach(modal => {
+        modal.addEventListener('click', function(e) {
+          if (e.target === this) {
+            this.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+          }
+        });
+      });
+      
+      // Close modal with Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          const openModal = document.querySelector('.modal[style*="block"]');
+          if (openModal) {
+            openModal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Restore scrolling
+          }
+        }
+      });
+    });
+
     // Video autoplay and audio control
     document.addEventListener('DOMContentLoaded', function() {
       const video = document.querySelector('.agent-hero-video video');
