@@ -227,6 +227,34 @@
   border-color: rgba(255, 255, 255, 0.5);
 }
 
+/* Hero Content with Video Layout */
+.agent-hero-content-with-video {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.agent-hero-content-with-video .agent-hero-text {
+  max-width: 100%;
+}
+
+.agent-hero-video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agent-hero-video video {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* Agent Powers Section */
 .agent-powers {
   padding: 6rem 0;
@@ -662,6 +690,30 @@
     margin: 0 auto !important;
   }
   
+  /* Hero with video - single column on tablet */
+  .agent-hero-content-with-video {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    align-items: center !important;
+  }
+  
+  .agent-hero-content-with-video .agent-hero-text {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+    order: 1 !important;
+  }
+  
+  .agent-hero-video {
+    width: 100% !important;
+    order: 2 !important;
+  }
+  
+  .agent-hero-video video {
+    max-width: 400px !important;
+  }
+  
   .agent-hero-text {
     width: 100% !important;
     max-width: 100% !important;
@@ -731,6 +783,32 @@
     white-space: normal !important;
     font-size: 1rem !important;
     line-height: 1.5 !important;
+  }
+  
+  /* Hero with video - mobile layout */
+  .agent-hero-content-with-video {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    align-items: center !important;
+  }
+  
+  .agent-hero-content-with-video .agent-hero-text {
+    width: 100% !important;
+    order: 1 !important;
+  }
+  
+  .agent-hero-video {
+    width: 100% !important;
+    order: 2 !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+  
+  .agent-hero-video video {
+    width: 100% !important;
+    max-width: 350px !important;
+    height: auto !important;
   }
 }
 
@@ -1051,6 +1129,11 @@
       padding: 0 !important;
       margin-left: 0 !important;
       margin-right: 0 !important;
+    }
+    
+    /* Video mobile optimization for 480px */
+    .agent-hero-video video {
+      max-width: 280px !important;
     }
     
     /* Standard mobile hero actions for 480px */
