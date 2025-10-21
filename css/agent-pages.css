@@ -25,7 +25,7 @@
 .agent-hero {
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
   color: var(--white);
-  padding: 8rem 0 6rem 0;
+  padding: 4rem 0 4rem 0;
   position: relative;
   overflow: hidden;
 }
