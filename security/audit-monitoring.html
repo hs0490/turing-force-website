@@ -212,34 +212,114 @@
       </div>
       
       <div class="action-workflow" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
-          <div class="step-number" style="background: #6366f1; color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; margin: 0 auto 1.5rem auto;">1</div>
+        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div class="step-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Data capture icon -->
+              <rect x="3" y="4" width="18" height="16" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+              <!-- Data streams -->
+              <path d="M2 2l2 2-2 2" stroke="#3b82f6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 2l-2 2 2 2" stroke="#3b82f6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 20l2-2-2-2" stroke="#3b82f6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 20l-2-2 2-2" stroke="#3b82f6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Log entries -->
+              <rect x="5" y="7" width="14" height="1" rx="0.5" fill="#10b981"/>
+              <rect x="5" y="9" width="12" height="1" rx="0.5" fill="#10b981"/>
+              <rect x="5" y="11" width="16" height="1" rx="0.5" fill="#10b981"/>
+              <rect x="5" y="13" width="10" height="1" rx="0.5" fill="#10b981"/>
+              <rect x="5" y="15" width="14" height="1" rx="0.5" fill="#10b981"/>
+              <!-- Capture indicators -->
+              <circle cx="6" cy="6" r="1" fill="#f59e0b"/>
+              <circle cx="18" cy="6" r="1" fill="#f59e0b"/>
+              <circle cx="6" cy="18" r="1" fill="#f59e0b"/>
+              <circle cx="18" cy="18" r="1" fill="#f59e0b"/>
+            </svg>
+          </div>
           <div class="step-content">
-            <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Capture</h3>
+            <h3 style="color: #6366f1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Capture</h3>
             <p style="color: #6b7280; line-height: 1.5; font-size: 0.95rem; margin: 0;">Log all platform activities with full context and metadata.</p>
           </div>
         </div>
         
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
-          <div class="step-number" style="background: #6366f1; color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; margin: 0 auto 1.5rem auto;">2</div>
+        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div class="step-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Analysis dashboard -->
+              <rect x="3" y="3" width="18" height="14" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+              <!-- Chart elements -->
+              <rect x="5" y="12" width="2" height="3" rx="1" fill="#3b82f6"/>
+              <rect x="8" y="9" width="2" height="6" rx="1" fill="#10b981"/>
+              <rect x="11" y="6" width="2" height="9" rx="1" fill="#f59e0b"/>
+              <rect x="14" y="8" width="2" height="7" rx="1" fill="#ef4444"/>
+              <rect x="17" y="4" width="2" height="11" rx="1" fill="#8b5cf6"/>
+              <!-- Analysis indicators -->
+              <circle cx="6" cy="5" r="1" fill="#f59e0b"/>
+              <circle cx="9" cy="5" r="1" fill="#f59e0b"/>
+              <circle cx="12" cy="5" r="1" fill="#f59e0b"/>
+              <circle cx="15" cy="5" r="1" fill="#f59e0b"/>
+              <circle cx="18" cy="5" r="1" fill="#f59e0b"/>
+              <!-- Trend analysis -->
+              <path d="M5 15l3-2 3 1 3-1 3 2" stroke="#10b981" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Insights indicators -->
+              <path d="M6 18l2-2" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M12 18l2-2" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M18 18l2-2" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
           <div class="step-content">
-            <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Analyze</h3>
+            <h3 style="color: #6366f1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Analyze</h3>
             <p style="color: #6b7280; line-height: 1.5; font-size: 0.95rem; margin: 0;">Detect anomalies and suspicious patterns in real-time.</p>
           </div>
         </div>
         
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
-          <div class="step-number" style="background: #6366f1; color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; margin: 0 auto 1.5rem auto;">3</div>
+        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div class="step-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Alert system -->
+              <path d="M12 2L4 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-8-4z" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+              <!-- Alert indicators -->
+              <circle cx="12" cy="10" r="2" fill="#ef4444"/>
+              <path d="M12 12l0 4" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+              <!-- Critical alerts -->
+              <circle cx="8" cy="8" r="1" fill="#ef4444"/>
+              <circle cx="16" cy="8" r="1" fill="#ef4444"/>
+              <circle cx="8" cy="16" r="1" fill="#ef4444"/>
+              <circle cx="16" cy="16" r="1" fill="#ef4444"/>
+              <!-- Alert waves -->
+              <circle cx="12" cy="10" r="4" fill="none" stroke="#ef4444" stroke-width="1" opacity="0.5"/>
+              <circle cx="12" cy="10" r="6" fill="none" stroke="#ef4444" stroke-width="1" opacity="0.3"/>
+            </svg>
+          </div>
           <div class="step-content">
-            <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Alert</h3>
+            <h3 style="color: #6366f1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Alert</h3>
             <p style="color: #6b7280; line-height: 1.5; font-size: 0.95rem; margin: 0;">Notify security teams of critical events immediately.</p>
           </div>
         </div>
         
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
-          <div class="step-number" style="background: #6366f1; color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; margin: 0 auto 1.5rem auto;">4</div>
+        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div class="step-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Report generation -->
+              <rect x="4" y="2" width="12" height="16" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+              <!-- Report content -->
+              <rect x="6" y="6" width="8" height="1" rx="0.5" fill="#3b82f6" opacity="0.8"/>
+              <rect x="6" y="8" width="6" height="1" rx="0.5" fill="#3b82f6" opacity="0.8"/>
+              <rect x="6" y="10" width="7" height="1" rx="0.5" fill="#3b82f6" opacity="0.8"/>
+              <rect x="6" y="12" width="5" height="1" rx="0.5" fill="#3b82f6" opacity="0.8"/>
+              <!-- Chart in report -->
+              <rect x="7" y="14" width="6" height="2" rx="1" fill="#10b981" opacity="0.6"/>
+              <!-- Generation indicators -->
+              <circle cx="18" cy="6" r="2" fill="#f59e0b"/>
+              <circle cx="18" cy="12" r="2" fill="#f59e0b"/>
+              <circle cx="18" cy="18" r="2" fill="#f59e0b"/>
+              <!-- Generation arrows -->
+              <path d="M16 6l2-2" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M16 12l2 0" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M16 18l2 2" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
           <div class="step-content">
-            <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Report</h3>
+            <h3 style="color: #6366f1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Report</h3>
             <p style="color: #6b7280; line-height: 1.5; font-size: 0.95rem; margin: 0;">Generate audit reports for compliance and security reviews.</p>
           </div>
         </div>
