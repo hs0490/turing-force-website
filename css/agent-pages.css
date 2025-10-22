@@ -784,7 +784,8 @@
   }
   
   /* Hero title - fully visible */
-  .agent-hero-text h1 {
+  .agent-hero-text h1,
+  .agent-hero-content h1 {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 0 1rem 0 !important;
@@ -801,7 +802,8 @@
   }
   
   /* Hero subtitle - fully visible */
-  .agent-hero-text .agent-hero-subtitle {
+  .agent-hero-text .agent-hero-subtitle,
+  .agent-hero-content .agent-hero-subtitle {
     width: 100% !important;
     max-width: 100% !important;
     margin: 0 0 2rem 0 !important;
