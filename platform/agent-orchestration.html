@@ -377,77 +377,41 @@
   </section>
 
   <!-- Ask the Platform Section -->
-  <section class="ask-agent" style="background: #ffffff; padding: 6rem 0;">
+  <section class="ask-agent">
     <div class="container">
-      <div style="text-align: center; margin-bottom: 4rem;">
-        <h2 style="color: #1f2937; font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; letter-spacing: -0.025em;">Ask the Platform</h2>
+      <div class="ask-header">
+        <h2>Ask the Platform</h2>
       </div>
       
-      <div class="ask-categories" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1000px; margin: 0 auto;">
-        <div class="ask-category" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: left;">
-          <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.3;">🕸️ Workflow Questions</h3>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="color: #374151; padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.5rem;">
-              <span style="color: #1f2937; font-size: 0.8rem; margin-top: 0.3rem;">•</span>
-              <span>How do I create multi-agent workflows?</span>
-            </li>
-            <li style="color: #374151; padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.5rem;">
-              <span style="color: #1f2937; font-size: 0.8rem; margin-top: 0.3rem;">•</span>
-              <span>Can workflows handle conditional logic?</span>
-            </li>
-            <li style="color: #374151; padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.5rem;">
-              <span style="color: #1f2937; font-size: 0.8rem; margin-top: 0.3rem;">•</span>
-              <span>How do I manage parallel agent execution?</span>
-            </li>
-            <li style="color: #374151; padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.5rem;">
-              <span style="color: #1f2937; font-size: 0.8rem; margin-top: 0.3rem;">•</span>
-              <span>What error handling options are available?</span>
-            </li>
-          </ul>
+      <div class="ask-categories">
+        <div class="ask-category">
+          <h3>🕸️ Workflow Questions</h3>
+          <div class="ask-examples">
+            <div class="ask-example">"How do I create multi-agent workflows?"</div>
+            <div class="ask-example">"Can workflows handle conditional logic?"</div>
+            <div class="ask-example">"How do I manage parallel agent execution?"</div>
+            <div class="ask-example">"What error handling options are available?"</div>
+          </div>
         </div>
         
-        <div class="ask-category" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: left;">
-          <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.3;">🔗 Integration</h3>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="color: #374151; padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.5rem;">
-              <span style="color: #1f2937; font-size: 0.8rem; margin-top: 0.3rem;">•</span>
-              <span>How do I integrate agents with external tools?</span>
-            </li>
-            <li style="color: #374151; padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.5rem;">
-              <span style="color: #1f2937; font-size: 0.8rem; margin-top: 0.3rem;">•</span>
-              <span>What APIs are supported for integration?</span>
-            </li>
-            <li style="color: #374151; padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.5rem;">
-              <span style="color: #1f2937; font-size: 0.8rem; margin-top: 0.3rem;">•</span>
-              <span>Can agents share data between workflows?</span>
-            </li>
-            <li style="color: #374151; padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.5rem;">
-              <span style="color: #1f2937; font-size: 0.8rem; margin-top: 0.3rem;">•</span>
-              <span>How do I handle data transformation?</span>
-            </li>
-          </ul>
+        <div class="ask-category">
+          <h3>🔗 Integration</h3>
+          <div class="ask-examples">
+            <div class="ask-example">"How do I integrate agents with external tools?"</div>
+            <div class="ask-example">"What APIs are supported for integration?"</div>
+            <div class="ask-example">"Can agents share data between workflows?"</div>
+            <div class="ask-example">"How do I handle data transformation?"</div>
+          </div>
         </div>
         
-        <div class="ask-category" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: left;">
-          <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.3;">⚡ Performance</h3>
-          <ul style="list-style: none; padding: 0; margin: 0;">
-            <li style="color: #374151; padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.5rem;">
-              <span style="color: #1f2937; font-size: 0.8rem; margin-top: 0.3rem;">•</span>
-              <span>How do I monitor workflow performance?</span>
-            </li>
-            <li style="color: #374151; padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.5rem;">
-              <span style="color: #1f2937; font-size: 0.8rem; margin-top: 0.3rem;">•</span>
-              <span>What optimization features are available?</span>
-            </li>
-            <li style="color: #374151; padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.5rem;">
-              <span style="color: #1f2937; font-size: 0.8rem; margin-top: 0.3rem;">•</span>
-              <span>How do I handle workflow failures?</span>
-            </li>
-            <li style="color: #374151; padding: 0.5rem 0; display: flex; align-items: flex-start; gap: 0.5rem;">
-              <span style="color: #1f2937; font-size: 0.8rem; margin-top: 0.3rem;">•</span>
-              <span>Can I scale workflows automatically?</span>
-            </li>
-          </ul>
+        <div class="ask-category">
+          <h3>⚡ Performance</h3>
+          <div class="ask-examples">
+            <div class="ask-example">"How do I monitor workflow performance?"</div>
+            <div class="ask-example">"What optimization features are available?"</div>
+            <div class="ask-example">"How do I handle workflow failures?"</div>
+            <div class="ask-example">"Can I scale workflows automatically?"</div>
+          </div>
         </div>
       </div>
     </div>
