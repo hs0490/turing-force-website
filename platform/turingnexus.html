@@ -293,34 +293,110 @@
       </div>
       
       <div class="action-workflow" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
-          <div class="step-number" style="background: #6366f1; color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; margin: 0 auto 1.5rem auto;">1</div>
+        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div class="step-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Visual canvas interface -->
+              <rect x="3" y="3" width="18" height="18" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+              <!-- Canvas elements -->
+              <rect x="6" y="6" width="4" height="3" rx="1" fill="#3b82f6" opacity="0.8"/>
+              <rect x="12" y="6" width="4" height="3" rx="1" fill="#10b981" opacity="0.8"/>
+              <rect x="6" y="11" width="4" height="3" rx="1" fill="#f59e0b" opacity="0.8"/>
+              <rect x="12" y="11" width="4" height="3" rx="1" fill="#ef4444" opacity="0.8"/>
+              <!-- Connection lines -->
+              <path d="M10 9l2 2M14 9l-2 2" stroke="#6b7280" stroke-width="1" stroke-linecap="round"/>
+              <!-- Design tools -->
+              <circle cx="18" cy="6" r="1.5" fill="#8b5cf6"/>
+              <rect x="16.5" y="8" width="3" height="1" rx="0.5" fill="#8b5cf6"/>
+              <!-- Canvas indicators -->
+              <circle cx="6" cy="6" r="1" fill="#3b82f6"/>
+              <circle cx="18" cy="18" r="1" fill="#10b981"/>
+            </svg>
+          </div>
           <div class="step-content">
-            <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">TuringCanvas</h3>
+            <h3 style="color: #6366f1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">TuringCanvas</h3>
             <p style="color: #6b7280; line-height: 1.5; font-size: 0.95rem; margin: 0;">Design the agent graph visually—define workflows, logic, and agent interactions using the visual builder.</p>
           </div>
         </div>
         
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
-          <div class="step-number" style="background: #6366f1; color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; margin: 0 auto 1.5rem auto;">2</div>
+        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div class="step-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Flow orchestration -->
+              <rect x="3" y="3" width="18" height="18" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+              <!-- Flow nodes -->
+              <circle cx="8" cy="8" r="2" fill="#3b82f6"/>
+              <circle cx="16" cy="8" r="2" fill="#10b981"/>
+              <circle cx="8" cy="16" r="2" fill="#f59e0b"/>
+              <circle cx="16" cy="16" r="2" fill="#ef4444"/>
+              <!-- Flow arrows -->
+              <path d="M10 8l4 0M8 10l0 4M14 10l0 4M10 16l4 0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M14 8l2 0M16 10l0 2M14 16l2 0M8 14l0 2" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round" marker-end="url(#arrowhead)"/>
+              <!-- Orchestration indicators -->
+              <circle cx="6" cy="6" r="1" fill="#8b5cf6"/>
+              <circle cx="18" cy="6" r="1" fill="#8b5cf6"/>
+            </svg>
+          </div>
           <div class="step-content">
-            <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">TuringFlow</h3>
+            <h3 style="color: #6366f1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">TuringFlow</h3>
             <p style="color: #6b7280; line-height: 1.5; font-size: 0.95rem; margin: 0;">Schedule and orchestrate multi-agent workflows with intelligent routing, retries, and handoffs.</p>
           </div>
         </div>
         
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
-          <div class="step-number" style="background: #6366f1; color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; margin: 0 auto 1.5rem auto;">3</div>
+        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div class="step-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Forge engine -->
+              <rect x="3" y="3" width="18" height="18" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+              <!-- Engine core -->
+              <circle cx="12" cy="12" r="4" fill="#3b82f6" opacity="0.8"/>
+              <!-- Processing gears -->
+              <circle cx="8" cy="8" r="2" fill="#10b981" opacity="0.8"/>
+              <circle cx="16" cy="8" r="2" fill="#10b981" opacity="0.8"/>
+              <circle cx="8" cy="16" r="2" fill="#10b981" opacity="0.8"/>
+              <circle cx="16" cy="16" r="2" fill="#10b981" opacity="0.8"/>
+              <!-- Gear teeth -->
+              <rect x="7" y="6" width="2" height="4" rx="1" fill="#10b981"/>
+              <rect x="15" y="6" width="2" height="4" rx="1" fill="#10b981"/>
+              <rect x="7" y="14" width="2" height="4" rx="1" fill="#10b981"/>
+              <rect x="15" y="14" width="2" height="4" rx="1" fill="#10b981"/>
+              <!-- Security indicators -->
+              <path d="M6 6l2 2-2 2" stroke="#f59e0b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <path d="M18 6l-2 2 2 2" stroke="#f59e0b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
           <div class="step-content">
-            <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">TuringForge</h3>
+            <h3 style="color: #6366f1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">TuringForge</h3>
             <p style="color: #6b7280; line-height: 1.5; font-size: 0.95rem; margin: 0;">The engine compiles, validates (RBAC, token/cost), and optimizes prompts for secure, efficient execution.</p>
           </div>
         </div>
         
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
-          <div class="step-number" style="background: #6366f1; color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; margin: 0 auto 1.5rem auto;">4</div>
+        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div class="step-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- MCP connector hub -->
+              <rect x="8" y="8" width="8" height="8" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+              <!-- Central hub -->
+              <circle cx="12" cy="12" r="2" fill="#3b82f6"/>
+              <!-- External connectors -->
+              <rect x="3" y="3" width="3" height="2" rx="1" fill="#10b981"/>
+              <rect x="18" y="3" width="3" height="2" rx="1" fill="#10b981"/>
+              <rect x="3" y="19" width="3" height="2" rx="1" fill="#10b981"/>
+              <rect x="18" y="19" width="3" height="2" rx="1" fill="#10b981"/>
+              <!-- MCP connections -->
+              <path d="M6 4l4 4M18 4l-4 4M6 20l4-4M18 20l-4-4" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"/>
+              <!-- Data flow indicators -->
+              <circle cx="6" cy="6" r="1" fill="#f59e0b"/>
+              <circle cx="18" cy="6" r="1" fill="#f59e0b"/>
+              <circle cx="6" cy="18" r="1" fill="#f59e0b"/>
+              <circle cx="18" cy="18" r="1" fill="#f59e0b"/>
+              <!-- Policy indicators -->
+              <rect x="10" y="2" width="4" height="1" rx="0.5" fill="#8b5cf6"/>
+              <rect x="10" y="21" width="4" height="1" rx="0.5" fill="#8b5cf6"/>
+            </svg>
+          </div>
           <div class="step-content">
-            <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">TuringNexus (MCP)</h3>
+            <h3 style="color: #6366f1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">TuringNexus (MCP)</h3>
             <p style="color: #6b7280; line-height: 1.5; font-size: 0.95rem; margin: 0;">Provides connectors, contracts, and governed context windows—feeding agents with least-privilege, policy-bound data.</p>
           </div>
         </div>
