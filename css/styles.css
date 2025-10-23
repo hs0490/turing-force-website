@@ -548,7 +548,7 @@ body {
 }
 
 .btn-outline:hover {
-  color: var(--primary);
+  color: var(--gray-800);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
@@ -791,7 +791,7 @@ body {
 }
 
 .hero-actions .btn-outline:hover {
-  color: var(--primary);
+  color: var(--gray-800);
   transform: translateY(-3px);
   box-shadow: 0 12px 30px rgba(255, 255, 255, 0.3);
 }
