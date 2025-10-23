@@ -2512,6 +2512,23 @@ section {
     padding: 0;
     background: transparent;
   }
+
+  /* Ensure submenu is always visible on mobile */
+  .platform-submenu:hover .platform-submenu-items {
+    display: block;
+  }
+
+  /* Mobile touch-friendly spacing */
+  .platform-submenu-items .agent-dropdown-item {
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    min-height: 44px; /* Touch-friendly minimum height */
+  }
+
+  .platform-submenu-items .agent-dropdown-item:last-child {
+    margin-bottom: 0;
+  }
   
   .platform-dropdown-icon,
   .agent-dropdown-icon,
