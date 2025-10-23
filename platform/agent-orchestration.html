@@ -274,34 +274,101 @@
       </div>
       
       <div class="action-workflow" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
-          <div class="step-number" style="background: #6366f1; color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; margin: 0 auto 1.5rem auto;">1</div>
+        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div class="step-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Workflow design canvas -->
+              <rect x="3" y="3" width="18" height="18" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+              <!-- Workflow nodes -->
+              <circle cx="8" cy="8" r="2" fill="#3b82f6"/>
+              <circle cx="16" cy="8" r="2" fill="#10b981"/>
+              <circle cx="8" cy="16" r="2" fill="#f59e0b"/>
+              <circle cx="16" cy="16" r="2" fill="#ef4444"/>
+              <!-- Connection lines -->
+              <path d="M10 8l4 0M8 10l0 4M14 10l0 4M10 16l4 0" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"/>
+              <!-- Design tools -->
+              <rect x="18" cy="3" width="3" height="1" rx="0.5" fill="#8b5cf6"/>
+              <rect x="18" cy="5" width="3" height="1" rx="0.5" fill="#8b5cf6"/>
+            </svg>
+          </div>
           <div class="step-content">
-            <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Workflow Design</h3>
+            <h3 style="color: #6366f1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Workflow Design</h3>
             <p style="color: #6b7280; line-height: 1.5; font-size: 0.95rem; margin: 0;">Create visual workflows connecting multiple agents with conditional logic, parallel branches, and error handling.</p>
           </div>
         </div>
         
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
-          <div class="step-number" style="background: #6366f1; color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; margin: 0 auto 1.5rem auto;">2</div>
+        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div class="step-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Agent coordination network -->
+              <circle cx="12" cy="12" r="8" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+              <!-- Central agent -->
+              <circle cx="12" cy="12" r="3" fill="#3b82f6"/>
+              <!-- Connected agents -->
+              <circle cx="6" cy="6" r="2" fill="#10b981"/>
+              <circle cx="18" cy="6" r="2" fill="#10b981"/>
+              <circle cx="6" cy="18" r="2" fill="#10b981"/>
+              <circle cx="18" cy="18" r="2" fill="#10b981"/>
+              <!-- Connection lines -->
+              <path d="M9 9l3 3M15 9l-3 3M9 15l3-3M15 15l-3-3" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"/>
+              <!-- Coordination indicators -->
+              <path d="M3 3l2 2-2 2" stroke="#f59e0b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+              <path d="M21 3l-2 2 2 2" stroke="#f59e0b" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
           <div class="step-content">
-            <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Agent Coordination</h3>
+            <h3 style="color: #6366f1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Agent Coordination</h3>
             <p style="color: #6b7280; line-height: 1.5; font-size: 0.95rem; margin: 0;">Agents automatically coordinate tasks, sharing context and triggering next steps based on workflow conditions.</p>
           </div>
         </div>
         
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
-          <div class="step-number" style="background: #6366f1; color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; margin: 0 auto 1.5rem auto;">3</div>
+        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div class="step-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Tool integration hub -->
+              <rect x="8" y="8" width="8" height="8" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+              <!-- Central hub -->
+              <circle cx="12" cy="12" r="2" fill="#3b82f6"/>
+              <!-- External tools -->
+              <rect x="3" y="3" width="3" height="2" rx="1" fill="#10b981"/>
+              <rect x="18" y="3" width="3" height="2" rx="1" fill="#10b981"/>
+              <rect x="3" y="19" width="3" height="2" rx="1" fill="#10b981"/>
+              <rect x="18" y="19" width="3" height="2" rx="1" fill="#10b981"/>
+              <!-- API connections -->
+              <path d="M6 4l4 4M18 4l-4 4M6 20l4-4M18 20l-4-4" stroke="#6b7280" stroke-width="1.5" stroke-linecap="round"/>
+              <!-- Integration indicators -->
+              <circle cx="6" cy="6" r="1" fill="#f59e0b"/>
+              <circle cx="18" cy="6" r="1" fill="#f59e0b"/>
+              <circle cx="6" cy="18" r="1" fill="#f59e0b"/>
+              <circle cx="18" cy="18" r="1" fill="#f59e0b"/>
+            </svg>
+          </div>
           <div class="step-content">
-            <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Tool Integration</h3>
+            <h3 style="color: #6366f1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Tool Integration</h3>
             <p style="color: #6b7280; line-height: 1.5; font-size: 0.95rem; margin: 0;">Seamlessly integrate with external tools, APIs, and services for enhanced functionality and data processing.</p>
           </div>
         </div>
         
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center;">
-          <div class="step-number" style="background: #6366f1; color: #ffffff; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 1.1rem; margin: 0 auto 1.5rem auto;">4</div>
+        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div class="step-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Performance dashboard -->
+              <rect x="3" y="3" width="18" height="18" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+              <!-- Performance chart -->
+              <path d="M6 16l3-4 3 2 6-6" stroke="#3b82f6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Chart bars -->
+              <rect x="6" y="14" width="2" height="4" rx="1" fill="#10b981" opacity="0.8"/>
+              <rect x="9" y="10" width="2" height="8" rx="1" fill="#10b981" opacity="0.8"/>
+              <rect x="12" y="12" width="2" height="6" rx="1" fill="#10b981" opacity="0.8"/>
+              <rect x="15" y="8" width="2" height="10" rx="1" fill="#10b981" opacity="0.8"/>
+              <!-- Optimization indicators -->
+              <circle cx="18" cy="6" r="1.5" fill="#f59e0b"/>
+              <circle cx="6" cy="6" r="1.5" fill="#ef4444"/>
+              <circle cx="12" cy="6" r="1.5" fill="#10b981"/>
+            </svg>
+          </div>
           <div class="step-content">
-            <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Performance Optimization</h3>
+            <h3 style="color: #6366f1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Performance Optimization</h3>
             <p style="color: #6b7280; line-height: 1.5; font-size: 0.95rem; margin: 0;">Monitor workflow performance, identify bottlenecks, and optimize execution for maximum efficiency and reliability.</p>
           </div>
         </div>
