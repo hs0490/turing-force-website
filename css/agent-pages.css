@@ -1853,4 +1853,98 @@
     flex-wrap: wrap;
     gap: 1rem;
   }
+
+  /* Power cards mobile responsiveness */
+  .power-card {
+    padding: 1.5rem !important;
+    min-height: 160px !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .power-card h3 {
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .power-card p {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .power-icon {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* Workflow steps mobile responsiveness */
+  .workflow-step {
+    padding: 1.5rem !important;
+    min-height: 160px !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .workflow-step h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .workflow-step p {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .step-logo {
+    margin-bottom: 0.75rem !important;
+  }
+
+  .step-logo svg {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  /* Ask section mobile responsiveness */
+  .ask-card {
+    padding: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .ask-card h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .ask-example {
+    padding: 0.75rem !important;
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+  }
+
+  /* Collaboration section mobile responsiveness */
+  .collaboration-title {
+    font-size: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .collaboration-card {
+    padding: 1.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .collaboration-card h4 {
+    font-size: 1rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .collaboration-card p {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .collaboration-card-icon {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+  }
 }
