@@ -255,7 +255,7 @@ body {
 .resources-grid-dropdown {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0;
+  gap: 0.5rem;
   padding: 1rem 0;
 }
 
@@ -275,7 +275,7 @@ body {
   text-decoration: none;
   border-radius: var(--radius);
   transition: all 0.2s ease;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0;
 }
 
 .platform-dropdown-item:hover,
@@ -2582,6 +2582,7 @@ section {
   .security-grid-dropdown,
   .resources-grid-dropdown {
     grid-template-columns: 1fr;
+    gap: 0.25rem;
     padding: 0.5rem 0;
   }
   
