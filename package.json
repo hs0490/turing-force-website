@@ -1,7 +1,7 @@
 {
   "name": "turingforce-website",
   "version": "1.0.0",
-  "description": "TuringForce - Agentic AI Agent Platform Website",
+  "description": "TuringForce - Agentic AI Agent Platform Website with Google Sheets Integration for lead capture",
   "main": "index.html",
   "scripts": {
     "start": "python3 -m http.server 8000",
