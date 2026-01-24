@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initParallax();
     initCounters();
+    initWorkspaceSwitcher();
     
     // Navigation functionality
     function initNavigation() {
@@ -463,6 +464,352 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize lazy loading
     initLazyLoading();
+    
+    // Workspace Switcher functionality
+    function initWorkspaceSwitcher() {
+        const workspaceSwitcher = document.getElementById('workspace-switcher');
+        const workspaceToggle = document.getElementById('workspace-toggle');
+        const workspaceDropdown = document.getElementById('workspace-dropdown');
+        const workspaceSearchInput = document.getElementById('workspace-search-input');
+        const workspaceList = document.getElementById('workspace-list');
+        const currentWorkspaceSpan = document.getElementById('current-workspace');
+        
+        // API configuration - update with your actual API endpoint
+        const WORKSPACE_API_BASE = window.WORKSPACE_API_BASE || '/api/workspaces';
+        const WORKSPACE_API_ENDPOINTS = {
+            list: `${WORKSPACE_API_BASE}`,
+            current: `${WORKSPACE_API_BASE}/current`,
+            switch: (workspaceId) => `${WORKSPACE_API_BASE}/${workspaceId}/switch`
+        };
+        
+        let workspaces = [];
+        let currentWorkspace = null;
+        let filteredWorkspaces = [];
+        let isLoading = false;
+        
+        // Fetch workspaces from API
+        async function fetchWorkspaces() {
+            if (isLoading) return;
+            
+            isLoading = true;
+            showLoadingState();
+            
+            try {
+                const response = await fetch(WORKSPACE_API_ENDPOINTS.list, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        // Add authentication header if needed
+                        // 'Authorization': `Bearer ${getAuthToken()}`
+                    },
+                    credentials: 'include' // Include cookies for session-based auth
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch workspaces: ${response.status} ${response.statusText}`);
+                }
+                
+                const data = await response.json();
+                
+                // Handle different API response formats
+                if (Array.isArray(data)) {
+                    workspaces = data;
+                } else if (data.workspaces && Array.isArray(data.workspaces)) {
+                    workspaces = data.workspaces;
+                } else if (data.data && Array.isArray(data.data)) {
+                    workspaces = data.data;
+                } else {
+                    throw new Error('Invalid workspace data format');
+                }
+                
+                // Fetch current workspace
+                await fetchCurrentWorkspace();
+                
+                // Update filtered list
+                filteredWorkspaces = [...workspaces];
+                
+                // If no workspaces found, show empty state
+                if (workspaces.length === 0) {
+                    workspaceList.innerHTML = '<div class="workspace-item" style="justify-content: center; color: var(--gray-500); padding: 2rem; text-align: center;">No workspaces available</div>';
+                    currentWorkspaceSpan.textContent = 'No workspace';
+                } else {
+                    renderWorkspaceList(filteredWorkspaces);
+                }
+                
+            } catch (error) {
+                console.error('Error fetching workspaces:', error);
+                showErrorState(error.message || 'Unable to connect to workspace API');
+            } finally {
+                isLoading = false;
+            }
+        }
+        
+        // Fetch current workspace from API
+        async function fetchCurrentWorkspace() {
+            try {
+                const response = await fetch(WORKSPACE_API_ENDPOINTS.current, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        // 'Authorization': `Bearer ${getAuthToken()}`
+                    },
+                    credentials: 'include'
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    const workspaceData = data.workspace || data.data || data;
+                    
+                    // Find matching workspace in the list
+                    const found = workspaces.find(w => 
+                        w.id === workspaceData.id || 
+                        w.workspaceId === workspaceData.id ||
+                        w.name === workspaceData.name
+                    );
+                    
+                    if (found) {
+                        currentWorkspace = found;
+                        currentWorkspaceSpan.textContent = found.name || found.workspaceName || workspaceData.name;
+                    } else if (workspaceData.name) {
+                        // If workspace not in list, use the API response
+                        currentWorkspace = workspaceData;
+                        currentWorkspaceSpan.textContent = workspaceData.name;
+                    }
+                } else {
+                    // If no current workspace endpoint, use first workspace or localStorage
+                    const savedWorkspace = localStorage.getItem('selectedWorkspace');
+                    if (savedWorkspace) {
+                        try {
+                            const parsed = JSON.parse(savedWorkspace);
+                            const found = workspaces.find(w => 
+                                w.id === parsed.id || 
+                                w.workspaceId === parsed.id ||
+                                w.name === parsed.name
+                            );
+                            if (found) {
+                                currentWorkspace = found;
+                                currentWorkspaceSpan.textContent = found.name || found.workspaceName;
+                            }
+                        } catch (e) {
+                            console.error('Error parsing saved workspace:', e);
+                        }
+                    }
+                    
+                    // Default to first workspace if available
+                    if (!currentWorkspace && workspaces.length > 0) {
+                        currentWorkspace = workspaces[0];
+                        currentWorkspaceSpan.textContent = workspaces[0].name || workspaces[0].workspaceName;
+                    }
+                }
+            } catch (error) {
+                console.error('Error fetching current workspace:', error);
+                // Fallback to first workspace or localStorage
+                if (workspaces.length > 0 && !currentWorkspace) {
+                    currentWorkspace = workspaces[0];
+                    currentWorkspaceSpan.textContent = workspaces[0].name || workspaces[0].workspaceName;
+                }
+            }
+        }
+        
+        // Show loading state
+        function showLoadingState() {
+            workspaceList.innerHTML = '<div class="workspace-item" style="justify-content: center; color: var(--gray-500); padding: 2rem;">Loading workspaces...</div>';
+        }
+        
+        // Show error state
+        function showErrorState(message) {
+            workspaceList.innerHTML = `<div class="workspace-item" style="justify-content: center; color: var(--error); padding: 2rem; text-align: center;">
+                <div style="font-weight: 600; margin-bottom: 0.5rem;">Failed to load workspaces</div>
+                <div style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--gray-500);">${message}</div>
+                <button onclick="location.reload()" style="margin-top: 1rem; padding: 0.5rem 1rem; background: var(--primary); color: white; border: none; border-radius: var(--radius); cursor: pointer; font-size: 0.9rem;">Retry</button>
+            </div>`;
+            // Update current workspace display to show error state
+            currentWorkspaceSpan.textContent = 'Error';
+        }
+        
+        // Render workspace list
+        function renderWorkspaceList(workspacesToRender) {
+            workspaceList.innerHTML = '';
+            
+            if (workspacesToRender.length === 0) {
+                workspaceList.innerHTML = '<div class="workspace-item" style="justify-content: center; color: var(--gray-500); padding: 2rem;">No workspaces found</div>';
+                return;
+            }
+            
+            workspacesToRender.forEach(workspace => {
+                // Handle different workspace object structures
+                const workspaceId = workspace.id || workspace.workspaceId;
+                const workspaceName = workspace.name || workspace.workspaceName;
+                const workspaceRegion = workspace.region || workspace.regionName || workspace.awsRegion || '';
+                
+                const isActive = currentWorkspace && (
+                    (currentWorkspace.id && currentWorkspace.id === workspaceId) ||
+                    (currentWorkspace.workspaceId && currentWorkspace.workspaceId === workspaceId) ||
+                    (currentWorkspace.name && currentWorkspace.name === workspaceName)
+                );
+                
+                const workspaceItem = document.createElement('div');
+                workspaceItem.className = `workspace-item ${isActive ? 'active' : ''}`;
+                workspaceItem.setAttribute('data-workspace-id', workspaceId);
+                
+                workspaceItem.innerHTML = `
+                    <div class="workspace-item-check">
+                        ${isActive ? '<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.3333 4L6 11.3333L2.66667 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' : ''}
+                    </div>
+                    <div class="workspace-item-info">
+                        <div class="workspace-item-name">${workspaceName}</div>
+                        ${workspaceRegion ? `<div class="workspace-item-region">${workspaceRegion}</div>` : ''}
+                    </div>
+                `;
+                
+                workspaceItem.addEventListener('click', () => {
+                    selectWorkspace(workspace);
+                });
+                
+                workspaceList.appendChild(workspaceItem);
+            });
+        }
+        
+        // Select workspace
+        async function selectWorkspace(workspace) {
+            const workspaceId = workspace.id || workspace.workspaceId;
+            const workspaceName = workspace.name || workspace.workspaceName;
+            
+            // Optimistically update UI
+            const previousWorkspace = currentWorkspace;
+            currentWorkspace = workspace;
+            currentWorkspaceSpan.textContent = workspaceName;
+            renderWorkspaceList(filteredWorkspaces);
+            
+            try {
+                // Call API to switch workspace
+                const response = await fetch(WORKSPACE_API_ENDPOINTS.switch(workspaceId), {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        // 'Authorization': `Bearer ${getAuthToken()}`
+                    },
+                    credentials: 'include'
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`Failed to switch workspace: ${response.status} ${response.statusText}`);
+                }
+                
+                // Store selected workspace in localStorage
+                localStorage.setItem('selectedWorkspace', JSON.stringify(workspace));
+                
+                // Trigger custom event for workspace change
+                const event = new CustomEvent('workspaceChanged', { 
+                    detail: { 
+                        workspace: workspace,
+                        previousWorkspace: previousWorkspace
+                    } 
+                });
+                document.dispatchEvent(event);
+                
+                closeWorkspaceDropdown();
+                
+                // Optionally reload the page or refresh data
+                // window.location.reload();
+                
+            } catch (error) {
+                console.error('Error switching workspace:', error);
+                
+                // Revert UI changes on error
+                currentWorkspace = previousWorkspace;
+                if (currentWorkspace) {
+                    currentWorkspaceSpan.textContent = currentWorkspace.name || currentWorkspace.workspaceName;
+                }
+                renderWorkspaceList(filteredWorkspaces);
+                
+                // Show error notification
+                alert(`Failed to switch workspace: ${error.message}`);
+            }
+        }
+        
+        // Toggle dropdown
+        function toggleWorkspaceDropdown() {
+            // Don't open if still loading or if there's an error
+            if (isLoading) {
+                return;
+            }
+            
+            // If no workspaces and not in error state, try to fetch again
+            if (workspaces.length === 0 && !workspaceList.querySelector('.workspace-item[style*="color: var(--error)"]')) {
+                fetchWorkspaces();
+                return;
+            }
+            
+            workspaceSwitcher.classList.toggle('active');
+        }
+        
+        // Close dropdown
+        function closeWorkspaceDropdown() {
+            workspaceSwitcher.classList.remove('active');
+            workspaceSearchInput.value = '';
+            filteredWorkspaces = [...workspaces];
+            renderWorkspaceList(filteredWorkspaces);
+        }
+        
+        // Filter workspaces based on search
+        function filterWorkspaces(searchTerm) {
+            const term = searchTerm.toLowerCase().trim();
+            if (term === '') {
+                filteredWorkspaces = [...workspaces];
+            } else {
+                filteredWorkspaces = workspaces.filter(workspace => {
+                    const workspaceName = (workspace.name || workspace.workspaceName || '').toLowerCase();
+                    const workspaceRegion = (workspace.region || workspace.regionName || workspace.awsRegion || '').toLowerCase();
+                    return workspaceName.includes(term) || workspaceRegion.includes(term);
+                });
+            }
+            renderWorkspaceList(filteredWorkspaces);
+        }
+        
+        // Event listeners
+        workspaceToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleWorkspaceDropdown();
+        });
+        
+        workspaceSearchInput.addEventListener('input', (e) => {
+            filterWorkspaces(e.target.value);
+        });
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!workspaceSwitcher.contains(e.target)) {
+                closeWorkspaceDropdown();
+            }
+        });
+        
+        // Close dropdown on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && workspaceSwitcher.classList.contains('active')) {
+                closeWorkspaceDropdown();
+            }
+        });
+        
+        // Prevent dropdown from closing when clicking inside
+        workspaceDropdown.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+        
+        // Show initial loading state
+        showLoadingState();
+        currentWorkspaceSpan.textContent = 'Loading...';
+        
+        // Fetch workspaces on initialization
+        fetchWorkspaces();
+        
+        // Refresh workspaces when dropdown is opened (optional - for real-time updates)
+        workspaceToggle.addEventListener('click', () => {
+            if (!workspaceSwitcher.classList.contains('active') && workspaces.length === 0) {
+                fetchWorkspaces();
+            }
+        });
+    }
     
     // Analytics tracking (placeholder)
     function trackEvent(eventName, eventData) {

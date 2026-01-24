@@ -247,13 +247,39 @@
         <a href="#about" class="nav-link">About</a>
         <a href="#contact" class="nav-link">Contact</a>
       </div>
-      <div class="nav-cta">
-        <a href="#contact" class="btn-primary">Free trial</a>
-      </div>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="nav-right">
+        <!-- Workspace Switcher -->
+        <div class="workspace-switcher" id="workspace-switcher">
+          <button class="workspace-toggle" id="workspace-toggle" aria-label="Switch workspace">
+            <span class="workspace-name" id="current-workspace">Loading...</span>
+            <svg class="workspace-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="workspace-dropdown" id="workspace-dropdown">
+            <div class="workspace-search">
+              <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.33333 12.6667C10.2789 12.6667 12.6667 10.2789 12.6667 7.33333C12.6667 4.38781 10.2789 2 7.33333 2C4.38781 2 2 4.38781 2 7.33333C2 10.2789 4.38781 12.6667 7.33333 12.6667Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14 14L11.1 11.1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <input type="text" id="workspace-search-input" placeholder="Search workspaces" autocomplete="off">
+            </div>
+            <div class="workspace-list" id="workspace-list">
+              <!-- Workspace items will be populated by JavaScript -->
+            </div>
+            <div class="workspace-footer">
+              <a href="#manage-account" class="manage-account-link">Manage account</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-cta">
+          <a href="#contact" class="btn-primary">Free trial</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
   </nav>
@@ -590,6 +616,12 @@
     </div>
   </footer>
 
+  <!-- Workspace API Configuration -->
+  <!-- Uncomment and set your API base URL:
+  <script>
+    window.WORKSPACE_API_BASE = '/api/workspaces'; // Update with your actual API endpoint
+  </script>
+  -->
   <script src="js/main.js?v=2.2"></script>
   
   <!-- Formspree Form Handling -->
