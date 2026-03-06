@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScrolling();
     initParallax();
     initCounters();
-    initWorkspaceSwitcher();
+    // initWorkspaceSwitcher(); // removed - widget deprecated
     
     // Navigation functionality
     function initNavigation() {

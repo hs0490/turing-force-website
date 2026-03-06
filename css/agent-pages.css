@@ -1,33 +1,143 @@
 /* Agent Pages Styles - Following Acceldata Design Patterns */
 
-/* CSS Variables */
-:root {
-  --primary: #6366f1;
-  --primary-dark: #4f46e5;
-  --secondary: #8b5cf6;
-  --white: #ffffff;
-  --gray-50: #f9fafb;
-  --gray-100: #f3f4f6;
-  --gray-200: #e5e7eb;
-  --gray-600: #4b5563;
-  --gray-700: #374151;
-  --gray-900: #111827;
-  --success: #10b981;
-  --error: #ef4444;
-  --radius: 0.5rem;
-  --radius-lg: 1rem;
-  --radius-full: 9999px;
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-}
-
 /* Agent Hero Section */
 .agent-hero {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  background: #0f172a;
   color: var(--white);
   padding: 4rem 0 3rem 0;
   position: relative;
   overflow: hidden;
+}
+
+/* Video background variant – video fills hero as full background */
+.agent-hero-with-video {
+  background: #1a1a2e;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.agent-hero-with-video .agent-hero-video-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.agent-hero-with-video .agent-hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.agent-hero-with-video .container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.agent-hero-with-video::before {
+  display: none;
+}
+
+/* Accelerators hero – same image structure as homepage (hero-background + hero-bg-image) */
+.hero.agent-hero-with-bg {
+  background: transparent;
+}
+
+/* No overlay – hero image shows fully on Accelerators page */
+.hero.agent-hero-with-bg .hero-bg-overlay-dark {
+  background: transparent;
+  z-index: 1;
+}
+
+.hero.agent-hero-with-bg .container,
+.hero.agent-hero-with-bg .hero-container {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+  text-align: center;
+}
+
+.hero.agent-hero-with-bg .hero-content {
+  text-align: center;
+}
+
+/* Title on two lines: line 1 = TuringForce Data Services —, line 2 = Accelerators */
+.hero.agent-hero-with-bg .hero-title {
+  white-space: normal !important;
+  text-align: center;
+}
+
+.hero.agent-hero-with-bg .hero-title .title-line {
+  display: block;
+}
+
+.hero.agent-hero-with-bg .hero-title .title-line-2 {
+  display: block !important;
+  margin-top: 0.15em;
+}
+
+/* Accelerators hero – ensure title displays on 2 lines only */
+.accelerators-hero .hero-title {
+  white-space: normal !important;
+  font-size: 3rem;
+}
+
+.accelerators-hero .hero-title .title-line {
+  display: block !important;
+}
+
+/* Keep "TuringForce Data Services" on one line */
+.accelerators-hero .hero-title .title-line:first-child {
+  white-space: nowrap;
+}
+
+.accelerators-hero .hero-title .title-line-2 {
+  display: block !important;
+  margin-top: 0.15em;
+}
+
+/* Gen AI hero – tighter spacing to move content up */
+/* Gen AI hero – ensure title displays on 2 lines */
+.gen-ai-hero .hero-title {
+  margin-bottom: 0.75rem;
+  white-space: normal !important;
+  font-size: 3rem;
+}
+
+.gen-ai-hero .hero-title .title-line {
+  display: block !important;
+}
+
+.gen-ai-hero .hero-title .title-line-2 {
+  display: block !important;
+  margin-top: 0.15em;
+  white-space: nowrap;
+}
+
+.gen-ai-hero .hero-description {
+  margin-bottom: 0.5rem;
+}
+
+.gen-ai-hero .hero-subtext {
+  margin-bottom: 0.5rem;
+}
+
+.gen-ai-hero .hero-actions {
+  margin-bottom: 0;
 }
 
 .agent-hero::before {
@@ -154,6 +264,143 @@
 .feature-card p {
   color: var(--gray-600);
   line-height: 1.6;
+}
+
+/* Why TuringForce Accelerators – match Services section styling (agent-studio-section) */
+.agent-studio-section .features-grid {
+  align-items: stretch;
+}
+
+.agent-studio-section .feature-card {
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.05);
+  display: flex;
+  flex-direction: column;
+  min-height: 240px;
+}
+
+.agent-studio-section .feature-card h3 {
+  color: var(--primary);
+  text-align: center;
+}
+
+.agent-studio-section .feature-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.01) 0%, rgba(139, 92, 246, 0.02) 100%);
+}
+
+.agent-studio-section .feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.agent-studio-section .feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.agent-studio-section .feature-card p {
+  text-align: center;
+  flex: 1;
+}
+
+.agent-studio-section .feature-icon {
+  text-align: center;
+}
+
+/* Accelerator Portfolio – align with Why TuringForce Accelerators cards */
+.accelerator-item {
+  background: var(--white);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  margin: 0 auto 2rem auto;
+  max-width: 1000px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.accelerator-item:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.01) 0%, rgba(139, 92, 246, 0.02) 100%);
+}
+
+.accelerator-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  transform: scaleX(0);
+  transition: all 0.3s ease;
+}
+
+.accelerator-item:hover::before {
+  transform: scaleX(1);
+}
+
+.accelerator-item h3 {
+  margin-top: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.accelerator-item > p {
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.accelerator-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.accelerator-box {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.accelerator-box h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 0 0 0.75rem 0;
+}
+
+.accelerator-box ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.accelerator-box li {
+  color: var(--gray-600);
+  line-height: 1.5;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.accelerator-box li:last-child {
+  margin-bottom: 0;
 }
 
 .agent-hero-content-with-video {
@@ -321,7 +568,7 @@
 .power-card:hover {
   transform: translateY(-4px) !important;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
-  border-color: #6366f1 !important;
+  border-color: var(--primary) !important;
 }
 
 .power-icon {
@@ -332,7 +579,7 @@
 }
 
 .power-card h3 {
-  color: #6366f1 !important;
+  color: var(--primary) !important;
   font-size: 1.1rem !important;
   font-weight: 600 !important;
   margin-bottom: 0.75rem !important;
@@ -368,7 +615,9 @@
 }
 
 .collaboration-items {
-  space-y: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .collaboration-item {
@@ -426,7 +675,9 @@
 }
 
 .cortex-metrics {
-  space-y: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .metric {
@@ -971,7 +1222,8 @@
   .action-workflow,
   .ask-categories,
   .related-agents,
-  .features-grid {
+  .features-grid,
+  .agent-studio-section .blog-grid-infocepts {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
@@ -1973,5 +2225,275 @@
   .collaboration-cards {
     grid-template-columns: 1fr !important;
     gap: 1rem !important;
+  }
+
+  /* Accelerator boxes stack on mobile */
+  .accelerator-boxes {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .accelerator-item {
+    padding: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .accelerator-box {
+    padding: 1rem !important;
+  }
+}
+
+/* Blogs page – Infocepts-style layout */
+.blog-topic-filter {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.topic-label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.topic-select {
+  padding: 0.5rem 2rem 0.5rem 1rem;
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  color: var(--gray-700);
+  background: var(--white);
+  cursor: pointer;
+}
+
+/* Blog grid – align with agent-studio-section .features-grid (Services, Why sections) */
+.agent-studio-section .blog-grid-infocepts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 2rem auto 0 auto;
+  max-width: 1000px;
+}
+
+.blog-card-infocepts {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.blog-card-infocepts:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.1);
+}
+
+.blog-card-image {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+  background: var(--gray-100);
+  flex-shrink: 0;
+  margin: 0.75rem 0;
+}
+
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog-card-link h3 {
+  padding: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.blog-card-link .blog-date {
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.blog-card-link h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin: 0 0 0.75rem 0;
+  line-height: 1.4;
+}
+
+.blog-card-link h3:hover {
+  color: var(--primary);
+}
+
+.blog-card-link .blog-date {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+}
+
+/* Blog post hero – title left, image right */
+.blog-post-hero {
+  padding-top: 4rem !important;
+  padding-bottom: 3rem !important;
+}
+
+.blog-post-hero .container {
+  max-width: 1100px !important;
+  width: 100%;
+}
+
+/* Blog post body – align width with hero and homepage/accelerator content */
+.blog-post-body .blog-post-content-wrapper {
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* Blog section with image – text left, image right, aligned for readability */
+.blog-section-with-image {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  align-items: flex-start;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.blog-section-with-image-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.blog-section-with-image-media {
+  flex-shrink: 0;
+  width: 320px;
+  margin: 0;
+}
+
+.blog-section-with-image-media img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  display: block;
+}
+
+.blog-image-caption {
+  font-size: 0.875rem;
+  color: var(--gray-500);
+  margin-top: 0.75rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .blog-section-with-image {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 1rem 0 1.5rem 0;
+  }
+  .blog-section-with-image-media {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .blog-section-with-image-media img {
+    margin: 0 auto;
+  }
+}
+
+.blog-back-link {
+  color: var(--primary);
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+.blog-back-link:hover {
+  text-decoration: underline;
+}
+
+.blog-hero-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+}
+
+.blog-hero-content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.blog-hero-image {
+  flex: 1;
+  min-width: 0;
+  flex-shrink: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.blog-hero-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  line-height: 1.3;
+  margin: 0 0 0.75rem 0;
+}
+
+.blog-hero-meta {
+  color: var(--gray-500);
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.blog-hero-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.blog-author-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-hero-author span {
+  color: var(--gray-600);
+  font-size: 0.95rem;
+}
+
+.blog-hero-cta {
+  margin-top: 0.5rem;
+}
+
+.blog-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .blog-hero-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .blog-hero-title {
+    font-size: 1.75rem;
   }
 }
