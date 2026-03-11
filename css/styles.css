@@ -325,16 +325,20 @@ body {
 .agent-dropdown-icon,
 .security-dropdown-icon,
 .resources-dropdown-icon {
-  font-size: 1.25rem;
   flex-shrink: 0;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--gray-50);
+  background: var(--gray-100);
   border-radius: var(--radius);
   margin-top: 0.125rem;
+  color: var(--primary);
+}
+
+.resources-dropdown-item--full {
+  grid-column: 1 / -1;
 }
 
 .platform-dropdown-content,
@@ -812,7 +816,7 @@ body {
 .hero-bg-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(10, 20, 50, 0.45);
+  background: rgba(10, 20, 50, 0.35);
   pointer-events: none;
   z-index: 0;
 }
