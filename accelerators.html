@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=10.5" />
-  <link rel="stylesheet" href="css/agent-pages.css?v=1.7" />
+  <link rel="stylesheet" href="css/styles.css?v=11.4" />
+  <link rel="stylesheet" href="css/agent-pages.css?v=2.0" />
 </head>
 <body class="tf-body">
   <!-- Navigation -->
@@ -26,6 +26,45 @@
         <a href="index.html" class="nav-link">Home</a>
         <a href="accelerators.html" class="nav-link active">Accelerators</a>
         <a href="gen-ai.html" class="nav-link">Gen AI</a>
+        <div class="nav-dropdown">
+          <a href="security/data-protection.html" class="nav-link dropdown-toggle">Security <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-menu security-dropdown">
+            <div class="dropdown-header">
+              <h3>Security</h3>
+              <p>Enterprise-grade security and compliance</p>
+            </div>
+            <div class="security-grid-dropdown">
+              <a href="security/data-protection.html" class="security-dropdown-item">
+                <div class="security-dropdown-icon">🔐</div>
+                <div class="security-dropdown-content">
+                  <h4>Data Protection</h4>
+                  <p>Encryption, minimization, and ephemeral memory</p>
+                </div>
+              </a>
+              <a href="security/access-control.html" class="security-dropdown-item">
+                <div class="security-dropdown-icon">👥</div>
+                <div class="security-dropdown-content">
+                  <h4>Access Control</h4>
+                  <p>SSO, MFA, and RBAC</p>
+                </div>
+              </a>
+              <a href="security/compliance.html" class="security-dropdown-item">
+                <div class="security-dropdown-icon">🏢</div>
+                <div class="security-dropdown-content">
+                  <h4>Compliance</h4>
+                  <p>SOC 2, GDPR, CCPA, and HIPAA</p>
+                </div>
+              </a>
+              <a href="security/audit-monitoring.html" class="security-dropdown-item">
+                <div class="security-dropdown-icon">🔍</div>
+                <div class="security-dropdown-content">
+                  <h4>Audit & Monitoring</h4>
+                  <p>Logs, traceability, and alerting</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
         <div class="nav-dropdown">
           <a href="index.html#resources" class="nav-link dropdown-toggle">Resources <span class="dropdown-arrow">▼</span></a>
           <div class="dropdown-menu resources-dropdown">
@@ -101,18 +140,13 @@
     </div>
   </nav>
 
-  <!-- Accelerators Hero – same image structure as homepage -->
-  <section class="hero agent-hero-with-bg accelerators-hero">
-    <div class="hero-background" aria-hidden="true">
-      <img src="images/TuringForceAccelerators11.jpg" alt="" class="hero-bg-image" role="presentation">
-      <div class="hero-bg-overlay hero-bg-overlay-dark" role="presentation"></div>
-    </div>
+  <!-- Accelerators Hero -->
+  <section class="hero hero--simple accelerators-hero">
     <div class="container hero-container">
       <div class="hero-content">
         <p class="hero-eyebrow">Pre-built consulting offerings</p>
         <h1 class="hero-title">
-          <span class="title-line">TuringForce Data Services</span>
-          <span class="title-line title-line-2">Accelerators</span>
+          <span class="title-line">Data Services Accelerators</span>
         </h1>
         <p class="hero-description">
           Ship faster. Reduce risk. Operate with confidence.
@@ -127,7 +161,7 @@
           </a>
         </div>
         <p class="hero-subtext">
-          TuringForce Accelerators help enterprises move faster with proven, repeatable solutions—without reinventing the wheel.
+          TuringForce Accelerators help enterprises move faster with proven, repeatable solutions without reinventing the wheel.
         </p>
         <div class="hero-meta">
           <span class="hero-meta-item">Fixed-scope delivery</span>

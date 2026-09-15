@@ -90,54 +90,26 @@
   margin-top: 0.15em;
 }
 
-/* Accelerators hero – ensure title displays on 2 lines only */
-.accelerators-hero .hero-title {
-  white-space: normal !important;
-  font-size: 3rem;
-}
-
-.accelerators-hero .hero-title .title-line {
-  display: block !important;
-}
-
-/* Keep "TuringForce Data Services" on one line */
-.accelerators-hero .hero-title .title-line:first-child {
+/* Accelerators hero – single-line title aligned with homepage hero--simple */
+.accelerators-hero.hero--simple .hero-title {
   white-space: nowrap;
 }
 
-.accelerators-hero .hero-title .title-line-2 {
-  display: block !important;
-  margin-top: 0.15em;
+@media (max-width: 768px) {
+  .accelerators-hero.hero--simple .hero-title {
+    white-space: normal;
+  }
 }
 
-/* Gen AI hero – tighter spacing to move content up */
-/* Gen AI hero – ensure title displays on 2 lines */
-.gen-ai-hero .hero-title {
-  margin-bottom: 0.75rem;
-  white-space: normal !important;
-  font-size: 3rem;
-}
-
-.gen-ai-hero .hero-title .title-line {
-  display: block !important;
-}
-
-.gen-ai-hero .hero-title .title-line-2 {
-  display: block !important;
-  margin-top: 0.15em;
+/* Gen AI hero – single-line title aligned with homepage hero--simple */
+.gen-ai-hero.hero--simple .hero-title {
   white-space: nowrap;
 }
 
-.gen-ai-hero .hero-description {
-  margin-bottom: 0.5rem;
-}
-
-.gen-ai-hero .hero-subtext {
-  margin-bottom: 0.5rem;
-}
-
-.gen-ai-hero .hero-actions {
-  margin-bottom: 0;
+@media (max-width: 768px) {
+  .gen-ai-hero.hero--simple .hero-title {
+    white-space: normal;
+  }
 }
 
 .agent-hero::before {
@@ -272,8 +244,8 @@
 }
 
 .agent-studio-section .feature-card {
-  border: 1px solid rgba(99, 102, 241, 0.15);
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.05);
+  border: 1px solid rgba(29, 78, 216), 0.15);
+  box-shadow: 0 2px 8px rgba(29, 78, 216), 0.05);
   display: flex;
   flex-direction: column;
   min-height: 240px;
@@ -286,8 +258,8 @@
 
 .agent-studio-section .feature-card:hover {
   border-color: var(--primary);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15);
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.01) 0%, rgba(139, 92, 246, 0.02) 100%);
+  box-shadow: 0 8px 25px rgba(29, 78, 216), 0.15);
+  background: linear-gradient(135deg, rgba(29, 78, 216), 0.01) 0%, rgba(139, 92, 246, 0.02) 100%);
 }
 
 .agent-studio-section .feature-card::before {
@@ -318,13 +290,13 @@
 /* Accelerator Portfolio – align with Why TuringForce Accelerators cards */
 .accelerator-item {
   background: var(--white);
-  border: 1px solid rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(29, 78, 216), 0.15);
   border-radius: var(--radius-xl);
   padding: 2rem;
   margin: 0 auto 2rem auto;
   max-width: 1000px;
   text-align: left;
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.05);
+  box-shadow: 0 2px 8px rgba(29, 78, 216), 0.05);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -332,8 +304,8 @@
 
 .accelerator-item:hover {
   border-color: var(--primary);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.15);
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.01) 0%, rgba(139, 92, 246, 0.02) 100%);
+  box-shadow: 0 8px 25px rgba(29, 78, 216), 0.15);
+  background: linear-gradient(135deg, rgba(29, 78, 216), 0.01) 0%, rgba(139, 92, 246, 0.02) 100%);
 }
 
 .accelerator-item::before {
@@ -764,14 +736,14 @@
   align-items: center;
   justify-content: center;
   font-size: 2rem;
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 6px 20px rgba(29, 78, 216), 0.4);
   transition: all 0.3s ease;
   margin: 0 auto 1rem auto;
 }
 
 .step-logo:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+  box-shadow: 0 8px 25px rgba(29, 78, 216), 0.5);
 }
 
 .step-content h3 {
@@ -852,7 +824,7 @@
 
 .ask-example:hover {
   border-color: var(--primary);
-  background: rgba(99, 102, 241, 0.02);
+  background: rgba(29, 78, 216, 0.04);
 }
 
 .ask-example::before {
@@ -954,6 +926,10 @@
 .agent-dropdown-item.active {
   background: var(--primary);
   color: var(--white);
+}
+
+.security-dropdown-item.active {
+  background: var(--gray-50);
 }
 
 .agent-dropdown-item.active .agent-dropdown-content h4,
@@ -1745,6 +1721,11 @@
   .cta-content {
     text-align: center !important;
   }
+
+  .cta-section .cta-list,
+  .cta-section .cta-list li {
+    text-align: left !important;
+  }
   
   .cta-title {
     font-size: 1.75rem !important;
@@ -1826,7 +1807,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.75rem;
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 4px 12px rgba(29, 78, 216), 0.3);
   transition: all 0.3s ease;
   margin: 0 auto 1.5rem auto;
   flex-shrink: 0;
@@ -1834,7 +1815,7 @@
 
 .step-icon:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 6px 20px rgba(29, 78, 216), 0.4);
 }
 
 .step-logo {
@@ -1847,7 +1828,7 @@
   align-items: center;
   justify-content: center;
   font-size: 2.25rem;
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 6px 20px rgba(29, 78, 216), 0.4);
   transition: all 0.3s ease;
   margin: 0 auto 1rem auto;
   flex-shrink: 0;
@@ -1855,7 +1836,7 @@
 
 .step-logo:hover {
   transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.5);
+  box-shadow: 0 8px 25px rgba(29, 78, 216), 0.5);
 }
 
 .step-content h3 {
@@ -2287,7 +2268,7 @@
 
 .blog-card-infocepts:hover {
   border-color: var(--primary);
-  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.1);
+  box-shadow: 0 8px 25px rgba(29, 78, 216), 0.1);
 }
 
 .blog-card-image {

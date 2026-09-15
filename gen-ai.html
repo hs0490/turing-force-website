@@ -9,8 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css?v=10.5" />
-  <link rel="stylesheet" href="css/agent-pages.css?v=1.7" />
+  <link rel="stylesheet" href="css/styles.css?v=11.5" />
+  <link rel="stylesheet" href="css/agent-pages.css?v=2.1" />
 </head>
 <body class="tf-body">
   <!-- Navigation -->
@@ -26,6 +26,45 @@
         <a href="index.html" class="nav-link">Home</a>
         <a href="accelerators.html" class="nav-link">Accelerators</a>
         <a href="gen-ai.html" class="nav-link active">Gen AI</a>
+        <div class="nav-dropdown">
+          <a href="security/data-protection.html" class="nav-link dropdown-toggle">Security <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-menu security-dropdown">
+            <div class="dropdown-header">
+              <h3>Security</h3>
+              <p>Enterprise-grade security and compliance</p>
+            </div>
+            <div class="security-grid-dropdown">
+              <a href="security/data-protection.html" class="security-dropdown-item">
+                <div class="security-dropdown-icon">🔐</div>
+                <div class="security-dropdown-content">
+                  <h4>Data Protection</h4>
+                  <p>Encryption, minimization, and ephemeral memory</p>
+                </div>
+              </a>
+              <a href="security/access-control.html" class="security-dropdown-item">
+                <div class="security-dropdown-icon">👥</div>
+                <div class="security-dropdown-content">
+                  <h4>Access Control</h4>
+                  <p>SSO, MFA, and RBAC</p>
+                </div>
+              </a>
+              <a href="security/compliance.html" class="security-dropdown-item">
+                <div class="security-dropdown-icon">🏢</div>
+                <div class="security-dropdown-content">
+                  <h4>Compliance</h4>
+                  <p>SOC 2, GDPR, CCPA, and HIPAA</p>
+                </div>
+              </a>
+              <a href="security/audit-monitoring.html" class="security-dropdown-item">
+                <div class="security-dropdown-icon">🔍</div>
+                <div class="security-dropdown-content">
+                  <h4>Audit & Monitoring</h4>
+                  <p>Logs, traceability, and alerting</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
         <div class="nav-dropdown">
           <a href="index.html#resources" class="nav-link dropdown-toggle">Resources <span class="dropdown-arrow">▼</span></a>
           <div class="dropdown-menu resources-dropdown">
@@ -102,34 +141,41 @@
   </nav>
 
   <!-- Gen AI Hero -->
-  <section class="hero agent-hero-with-bg gen-ai-hero">
-    <div class="hero-background" aria-hidden="true">
-      <img src="images/TuringForceGenAIProduct1.jpg" alt="" class="hero-bg-image" role="presentation">
-      <div class="hero-bg-overlay hero-bg-overlay-dark" role="presentation"></div>
-    </div>
+  <section class="hero hero--simple gen-ai-hero">
     <div class="container hero-container">
       <div class="hero-content">
         <p class="hero-eyebrow">Generative AI Services</p>
         <h1 class="hero-title">
-          <span class="title-line">Gen AI</span>
-          <span class="title-line title-line-2">Built for Enterprise Delivery</span>
+          <span class="title-line">TuringForce Gen AI</span>
         </h1>
         <p class="hero-description">
-          Build. Govern. Operate. Scale.
-        </p>
-        <p class="hero-subtext">
-          Design, deploy, and scale AI agents with enterprise security, observability, and cost control built in.
+          Built for enterprise delivery. Design, deploy, and scale AI agents with enterprise security, observability, and cost control built in.
         </p>
         <div class="hero-actions">
-          <a href="index.html#contact" class="btn-primary btn-hero">Start for Free</a>
-          <a href="index.html#contact" class="btn-outline btn-hero">Schedule Demo</a>
+          <a href="index.html#contact" class="btn-primary btn-hero">Get in Touch</a>
+          <a href="#platform-blocks" class="btn-outline btn-hero">
+            <span>Platform Building Blocks</span>
+            <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+        <p class="hero-subtext">
+          Build. Govern. Operate. Scale.
+        </p>
+        <div class="hero-meta">
+          <span class="hero-meta-item">Enterprise security</span>
+          <span class="separator">•</span>
+          <span class="hero-meta-item">Observability</span>
+          <span class="separator">•</span>
+          <span class="hero-meta-item">Cost control</span>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Platform Building Blocks -->
-  <section class="agent-studio-section">
+  <section id="platform-blocks" class="agent-studio-section">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">Platform Building Blocks</h2>
@@ -140,37 +186,37 @@
           <div class="feature-icon">🛠</div>
           <h3>TuringForceStudio — Visual, Governed Agent Builder</h3>
           <p>Build, test, and deploy AI agents using a visual authoring environment: Visual agent composition & orchestration • Tool integrations with low-code connectors • Built-in RBAC, audit trails, and cost controls • Human-in-the-loop checkpoints and retries</p>
-          <p style="font-size: 0.9rem; margin-top: 0.5rem; font-style: italic;">TuringForceStudio is where ideas become reliable AI agents</p>
+          <p class="feature-card-note">TuringForceStudio is where ideas become reliable AI agents</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">💬</div>
           <h3>TPulse — Context-aware, Governed AI Interactions</h3>
           <p>Across your Domains and portfolio, TPulse delivers interactive, on-demand answers with context, sources, and next-steps—while enforcing governance policies. Citation-aware answers • Step-by-step reasoning • Guardrails and security enforcement</p>
-          <p style="font-size: 0.9rem; margin-top: 0.5rem; font-style: italic;">Think of TPulse as your "interactive AI expert" that stays accountable.</p>
+          <p class="feature-card-note">Think of TPulse as your "interactive AI expert" that stays accountable.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">📚</div>
           <h3>TCorpus — Knowledge Ingestion & Retrieval Layer</h3>
           <p>Everything an agent knows comes from context you control: Structured + unstructured knowledge ingestion • AI retrieval with relevance and grounding • Knowledge versioning & governance</p>
-          <p style="font-size: 0.9rem; margin-top: 0.5rem; font-style: italic;">TCorpus ensures agents answer from trusted enterprise knowledge.</p>
+          <p class="feature-card-note">TCorpus ensures agents answer from trusted enterprise knowledge.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🔌</div>
           <h3>TNexus — Unified Tool & Connector Fabric</h3>
           <p>Agents don't operate in a vacuum—they integrate: Connectors to tools like Jira, Confluence, Slack, Git, etc. • Secure access with policies and RBAC • Context-aware tool actions with audit logs</p>
-          <p style="font-size: 0.9rem; margin-top: 0.5rem; font-style: italic;">TNexus makes your agents capable of real work—backed by control.</p>
+          <p class="feature-card-note">TNexus makes your agents capable of real work—backed by control.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🤖</div>
           <h3>TCompanion — AI Agents for End Users</h3>
           <p>Bring AI into the flow of work with purpose-built agents: Role-specific assistants (PMO, engineering, operations) • Conversational + action-trigger interfaces • Integrated with team tools and processes</p>
-          <p style="font-size: 0.9rem; margin-top: 0.5rem; font-style: italic;">TCompanion is how users interact with agents every day.</p>
+          <p class="feature-card-note">TCompanion is how users interact with agents every day.</p>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🏪</div>
           <h3>TMarketplace — Reusable Agents & Accelerators</h3>
           <p>Kickstart success with proven assets you can reuse: Pre-built agents for common workflows • Workflow templates and prompts • Industry accelerators for faster deployment</p>
-          <p style="font-size: 0.9rem; margin-top: 0.5rem; font-style: italic;">TMarketplace helps you move from pilot to production at scale.</p>
+          <p class="feature-card-note">TMarketplace helps you move from pilot to production at scale.</p>
         </div>
       </div>
     </div>
@@ -203,15 +249,15 @@
     <div class="container">
       <div class="cta-content">
         <h2 class="cta-title">Get Started Today</h2>
-        <p class="cta-subtitle">Free Trial — No credit card required</p>
-        <ul style="list-style: none; padding: 0; margin: 1.5rem 0; text-align: left; max-width: 400px; margin-left: auto; margin-right: auto;">
-          <li style="margin-bottom: 0.75rem;">✓ Connect your tools</li>
-          <li style="margin-bottom: 0.75rem;">✓ Deploy agents in minutes</li>
-          <li style="margin-bottom: 0.75rem;">✓ Automate delivery and insight workflows</li>
-          <li>✓ Govern everything with enterprise controls</li>
+        <p class="cta-subtitle">Connect your tools, deploy agents, and govern everything with enterprise controls.</p>
+        <ul class="cta-list">
+          <li>Connect your tools</li>
+          <li>Deploy agents in minutes</li>
+          <li>Automate delivery and insight workflows</li>
+          <li>Govern everything with enterprise controls</li>
         </ul>
         <div class="cta-actions">
-          <a href="index.html#contact" class="btn-primary">Start for Free</a>
+          <a href="index.html#contact" class="btn-primary">Get in Touch</a>
           <a href="index.html#contact" class="btn-outline">Schedule Demo</a>
         </div>
       </div>

@@ -3,396 +3,313 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Audit & Monitoring — TuringForce Security</title>
+  <title>Audit &amp; Monitoring — TuringForce Security</title>
   <meta name="description" content="Structured logs, traceability, immutable audit trails, monitoring & alerting — comprehensive audit and monitoring." />
   <link rel="icon" type="image/png" href="../images/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/styles.css?v=10.5" />
-  <link rel="stylesheet" href="../css/agent-pages.css?v=1.0" />
+  <link rel="stylesheet" href="../css/styles.css?v=11.6" />
+  <link rel="stylesheet" href="../css/agent-pages.css?v=2.2" />
 </head>
 <body class="tf-body">
-  <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <div class="nav-brand">
         <a href="../index.html">
-          <img src='../images/logo.png' alt='TuringForce logo' class='logo'/>
+          <img src="../images/logo.png" alt="TuringForce logo" class="logo"/>
           <span class="brand-name">TuringForce</span>
         </a>
       </div>
       <div class="nav-menu" id="nav-menu">
         <a href="../index.html" class="nav-link">Home</a>
-        <a href="../index.html#platform" class="nav-link">Platform</a>
-        <a href="../index.html#agents" class="nav-link">Agents</a>
+        <a href="../accelerators.html" class="nav-link">Accelerators</a>
+        <a href="../gen-ai.html" class="nav-link">Gen AI</a>
         <div class="nav-dropdown">
-          <a href="../index.html#security" class="nav-link dropdown-toggle">Security <span class="dropdown-arrow">▼</span></a>
+          <a href="data-protection.html" class="nav-link dropdown-toggle active">Security <span class="dropdown-arrow">▼</span></a>
           <div class="dropdown-menu security-dropdown">
             <div class="dropdown-header">
               <h3>Security</h3>
               <p>Enterprise-grade security and compliance</p>
             </div>
-            
             <div class="security-grid-dropdown">
-              <div class="security-column">
-                <a href="data-protection.html" class="security-dropdown-item">
-                  <div class="security-dropdown-icon">🔐</div>
-                  <div class="security-dropdown-content">
-                    <h4>Data Protection</h4>
-                    <p>Encryption, minimization, and ephemeral memory</p>
-                  </div>
-                </a>
-                
-                <a href="access-control.html" class="security-dropdown-item">
-                  <div class="security-dropdown-icon">👥</div>
-                  <div class="security-dropdown-content">
-                    <h4>Access Control</h4>
-                    <p>SSO, MFA, and RBAC</p>
-                  </div>
-                </a>
-              </div>
-              
-              <div class="security-column">
-                <a href="compliance.html" class="security-dropdown-item">
-                  <div class="security-dropdown-icon">🏢</div>
-                  <div class="security-dropdown-content">
-                    <h4>Compliance</h4>
-                    <p>SOC 2, GDPR, CCPA, and HIPAA</p>
-                  </div>
-                </a>
-                
-                <a href="audit-monitoring.html" class="security-dropdown-item active">
-                  <div class="security-dropdown-icon">🔍</div>
-                  <div class="security-dropdown-content">
-                    <h4>Audit & Monitoring</h4>
-                    <p>Logs, traceability, and alerting</p>
-                  </div>
-                </a>
-              </div>
+              <a href="data-protection.html" class="security-dropdown-item">
+                <div class="security-dropdown-icon">🔐</div>
+                <div class="security-dropdown-content">
+                  <h4>Data Protection</h4>
+                  <p>Encryption, minimization, and ephemeral memory</p>
+                </div>
+              </a>
+              <a href="access-control.html" class="security-dropdown-item">
+                <div class="security-dropdown-icon">👥</div>
+                <div class="security-dropdown-content">
+                  <h4>Access Control</h4>
+                  <p>SSO, MFA, and RBAC</p>
+                </div>
+              </a>
+              <a href="compliance.html" class="security-dropdown-item">
+                <div class="security-dropdown-icon">🏢</div>
+                <div class="security-dropdown-content">
+                  <h4>Compliance</h4>
+                  <p>SOC 2, GDPR, CCPA, and HIPAA</p>
+                </div>
+              </a>
+              <a href="audit-monitoring.html" class="security-dropdown-item active">
+                <div class="security-dropdown-icon">🔍</div>
+                <div class="security-dropdown-content">
+                  <h4>Audit & Monitoring</h4>
+                  <p>Logs, traceability, and alerting</p>
+                </div>
+              </a>
             </div>
-            
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <a href="../index.html#resources" class="nav-link dropdown-toggle">Resources <span class="dropdown-arrow">▼</span></a>
+          <div class="dropdown-menu resources-dropdown">
+            <div class="dropdown-header">
+              <h3>Resources</h3>
+              <p>Documentation, updates, and community</p>
+            </div>
+            <div class="resources-grid-dropdown">
+              <a href="../resources/news.html" class="resources-dropdown-item">
+                <div class="resources-dropdown-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+                </div>
+                <div class="resources-dropdown-content">
+                  <h4>News</h4>
+                  <p>Latest updates and announcements</p>
+                </div>
+              </a>
+              <a href="../resources/blog.html" class="resources-dropdown-item">
+                <div class="resources-dropdown-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                </div>
+                <div class="resources-dropdown-content">
+                  <h4>Blogs</h4>
+                  <p>Insights and best practices</p>
+                </div>
+              </a>
+              <a href="../resources/docs.html" class="resources-dropdown-item">
+                <div class="resources-dropdown-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                </div>
+                <div class="resources-dropdown-content">
+                  <h4>Product Docs</h4>
+                  <p>Technical documentation and guides</p>
+                </div>
+              </a>
+              <a href="../resources/events.html" class="resources-dropdown-item">
+                <div class="resources-dropdown-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </div>
+                <div class="resources-dropdown-content">
+                  <h4>Events</h4>
+                  <p>Webinars, conferences, and meetups</p>
+                </div>
+              </a>
+              <a href="../resources/trust-center.html" class="resources-dropdown-item resources-dropdown-item--full">
+                <div class="resources-dropdown-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </div>
+                <div class="resources-dropdown-content">
+                  <h4>Trust Center</h4>
+                  <p>Security, compliance, and reliability</p>
+                </div>
+              </a>
+            </div>
             <div class="dropdown-footer">
+              <a href="../index.html#resources" class="view-all-resources">View All Resources →</a>
             </div>
           </div>
         </div>
         <a href="../index.html#about" class="nav-link">About</a>
         <a href="../index.html#contact" class="nav-link">Contact</a>
       </div>
-      <div class="nav-cta">
-        <a href="../index.html#contact" class="btn-primary">Free trial</a>
-      </div>
-      <div class="hamburger" id="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
+      <div class="nav-right">
+        <div class="nav-cta">
+          <a href="../index.html#contact" class="btn-primary">Get in Touch</a>
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </div>
     </div>
   </nav>
 
-  <!-- Agent Hero Section -->
-  <section class="agent-hero">
-    <div class="container">
-      <div class="agent-breadcrumb">
-        <a href="../index.html">Home</a> / <a href="../index.html#security">Security</a> / <span>Audit & Monitoring</span>
-      </div>
-      
-      <div class="agent-hero-content">
-        <div class="agent-hero-icon">🔍</div>
-        <h1>Audit & Monitoring. Complete Visibility.</h1>
-        <p class="agent-hero-subtitle">All significant actions including agent creation, API calls, and model invocations are logged and auditable. With structured logs, immutable audit trails, and real-time monitoring, you have complete visibility into platform activity for security, compliance, and troubleshooting.</p>
-        
-        <div class="agent-hero-actions">
-          <a href="../index.html#contact" class="btn-primary">See Security in Action</a>
-          <a href="../index.html#contact" class="btn-outline">Sign up for Free Trial</a>
+  <section class="hero hero--simple">
+    <div class="container hero-container">
+      <div class="hero-content">
+        <p class="hero-eyebrow">Security</p>
+        <h1 class="hero-title">
+          <span class="title-line">Audit &amp; Monitoring</span>
+        </h1>
+        <p class="hero-description">
+          All significant actions including agent creation, API calls, and model invocations are logged and auditable. With structured logs, immutable audit trails, and real-time monitoring, you have complete visibility into platform activity for security, compliance, and troubleshooting.
+        </p>
+        <div class="hero-actions">
+          <a href="../index.html#contact" class="btn-primary btn-hero">Get in Touch</a>
+          <a href="#capabilities" class="btn-outline btn-hero">
+            <span>Core Capabilities</span>
+            <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+        <p class="hero-subtext">Complete visibility.</p>
+        <div class="hero-meta">
+          <span class="hero-meta-item">Comprehensive logging</span>
+          <span class="separator">•</span>
+          <span class="hero-meta-item">Real-time alerting</span>
+          <span class="separator">•</span>
+          <span class="hero-meta-item">SIEM integration</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Agent Core Powers -->
-  <section class="agent-powers">
+  <section id="capabilities" class="agent-studio-section">
     <div class="container">
       <div class="section-header">
-        <h2>Core Audit & Monitoring Capabilities</h2>
-        <p>Where every action is logged and every anomaly is detected.</p>
+        <h2 class="section-title">Core Audit &amp; Monitoring Capabilities</h2>
+        <p class="section-subtitle">Where every action is logged and every anomaly is detected.</p>
       </div>
-      
-      <div class="powers-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
-        <div class="power-card" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 200px; display: flex; flex-direction: column; justify-content: center; margin-bottom: 0;">
-          <div class="power-icon" style="font-size: 2rem; margin-bottom: 1rem; display: block; opacity: 0.9;">📝</div>
-          <h3 style="color: #6366f1; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Comprehensive Logging</h3>
-          <p style="color: #6b7280; line-height: 1.5; font-size: 0.9rem; margin: 0;">Structured, immutable logs for all platform and agent activities.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📝</div>
+          <h3>Comprehensive Logging</h3>
+          <p>Structured, immutable logs for all platform and agent activities.</p>
         </div>
-        
-        <div class="power-card" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 200px; display: flex; flex-direction: column; justify-content: center; margin-bottom: 0;">
-          <div class="power-icon" style="font-size: 2rem; margin-bottom: 1rem; display: block; opacity: 0.9;">🔔</div>
-          <h3 style="color: #6366f1; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Real-time Alerting</h3>
-          <p style="color: #6b7280; line-height: 1.5; font-size: 0.9rem; margin: 0;">Proactive notifications for security events and anomalies.</p>
+        <div class="feature-card">
+          <div class="feature-icon">🔔</div>
+          <h3>Real-time Alerting</h3>
+          <p>Proactive notifications for security events and anomalies.</p>
         </div>
-        
-        <div class="power-card" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 200px; display: flex; flex-direction: column; justify-content: center; margin-bottom: 0;">
-          <div class="power-icon" style="font-size: 2rem; margin-bottom: 1rem; display: block; opacity: 0.9;">🔗</div>
-          <h3 style="color: #6366f1; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">SIEM Integration</h3>
-          <p style="color: #6b7280; line-height: 1.5; font-size: 0.9rem; margin: 0;">Stream logs to Splunk, Datadog, or other monitoring tools.</p>
+        <div class="feature-card">
+          <div class="feature-icon">🔗</div>
+          <h3>SIEM Integration</h3>
+          <p>Stream logs to Splunk, Datadog, or other monitoring tools.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- You + AI Working Together -->
-  <section class="features-section">
-    <div class="container">
-      <div class="collaboration-layout">
-        <div class="collaboration-content">
-          <div class="collaboration-text">
-            <h2 class="collaboration-title">Unified Visibility for Modern Teams</h2>
-            
-            <div class="collaboration-cards">
-              <div class="collaboration-card">
-                <div class="collaboration-card-icon">📋</div>
-                <h4>Review Audit Logs</h4>
-                <p>Access comprehensive logs for security investigations and compliance.</p>
-              </div>
-              
-              <div class="collaboration-card">
-                <div class="collaboration-card-icon">🔔</div>
-                <h4>Configure Alerts</h4>
-                <p>Set up custom alerts for critical security events and anomalies.</p>
-              </div>
-              
-              <div class="collaboration-card">
-                <div class="collaboration-card-icon">🔗</div>
-                <h4>Integrate SIEM</h4>
-                <p>Connect your existing SIEM tools for centralized monitoring.</p>
-              </div>
-              
-              <div class="collaboration-card">
-                <div class="collaboration-card-icon">📊</div>
-                <h4>Analyze Patterns</h4>
-                <p>Use audit data to identify trends and improve security posture.</p>
-              </div>
-            </div>
-          </div>
-          
-          <div class="collaboration-visual">
-            <div class="agent-cortex">
-              <div class="cortex-header">
-                <h3>Audit & Monitoring</h3>
-                <span class="cortex-status">Active</span>
-              </div>
-              
-              <div class="cortex-metrics">
-                <div class="metric">
-                  <span class="metric-label">Events Logged</span>
-                  <span class="metric-value">1.2M</span>
-                </div>
-                <div class="metric">
-                  <span class="metric-label">Active Alerts</span>
-                  <span class="metric-value">0</span>
-                </div>
-                <div class="metric">
-                  <span class="metric-label">Log Retention</span>
-                  <span class="metric-value">90 days</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Agent in Action -->
-  <section class="agent-action">
+  <section class="agent-studio-section">
     <div class="container">
       <div class="section-header">
-        <h2>Audit & Monitoring in Action</h2>
-        <p>See how the Audit & Monitoring framework provides complete visibility with comprehensive tracking in four intelligent steps:</p>
+        <h2 class="section-title">Unified Visibility for Modern Teams</h2>
       </div>
-      
-      <div class="action-workflow" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-          <div class="step-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Data capture icon -->
-              <rect x="3" y="4" width="18" height="16" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-              <!-- Data streams -->
-              <path d="M2 2l2 2-2 2" stroke="#3b82f6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M22 2l-2 2 2 2" stroke="#3b82f6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M2 20l2-2-2-2" stroke="#3b82f6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M22 20l-2-2 2-2" stroke="#3b82f6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <!-- Log entries -->
-              <rect x="5" y="7" width="14" height="1" rx="0.5" fill="#10b981"/>
-              <rect x="5" y="9" width="12" height="1" rx="0.5" fill="#10b981"/>
-              <rect x="5" y="11" width="16" height="1" rx="0.5" fill="#10b981"/>
-              <rect x="5" y="13" width="10" height="1" rx="0.5" fill="#10b981"/>
-              <rect x="5" y="15" width="14" height="1" rx="0.5" fill="#10b981"/>
-              <!-- Capture indicators -->
-              <circle cx="6" cy="6" r="1" fill="#f59e0b"/>
-              <circle cx="18" cy="6" r="1" fill="#f59e0b"/>
-              <circle cx="6" cy="18" r="1" fill="#f59e0b"/>
-              <circle cx="18" cy="18" r="1" fill="#f59e0b"/>
-            </svg>
-          </div>
-          <div class="step-content">
-            <h3 style="color: #6366f1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Capture</h3>
-            <p style="color: #6b7280; line-height: 1.5; font-size: 0.95rem; margin: 0;">Log all platform activities with full context and metadata.</p>
-          </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h3>Review Audit Logs</h3>
+          <p>Access comprehensive logs for security investigations and compliance.</p>
         </div>
-        
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-          <div class="step-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Analysis dashboard -->
-              <rect x="3" y="3" width="18" height="14" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-              <!-- Chart elements -->
-              <rect x="5" y="12" width="2" height="3" rx="1" fill="#3b82f6"/>
-              <rect x="8" y="9" width="2" height="6" rx="1" fill="#10b981"/>
-              <rect x="11" y="6" width="2" height="9" rx="1" fill="#f59e0b"/>
-              <rect x="14" y="8" width="2" height="7" rx="1" fill="#ef4444"/>
-              <rect x="17" y="4" width="2" height="11" rx="1" fill="#8b5cf6"/>
-              <!-- Analysis indicators -->
-              <circle cx="6" cy="5" r="1" fill="#f59e0b"/>
-              <circle cx="9" cy="5" r="1" fill="#f59e0b"/>
-              <circle cx="12" cy="5" r="1" fill="#f59e0b"/>
-              <circle cx="15" cy="5" r="1" fill="#f59e0b"/>
-              <circle cx="18" cy="5" r="1" fill="#f59e0b"/>
-              <!-- Trend analysis -->
-              <path d="M5 15l3-2 3 1 3-1 3 2" stroke="#10b981" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <!-- Insights indicators -->
-              <path d="M6 18l2-2" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M12 18l2-2" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M18 18l2-2" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="step-content">
-            <h3 style="color: #6366f1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Analyze</h3>
-            <p style="color: #6b7280; line-height: 1.5; font-size: 0.95rem; margin: 0;">Detect anomalies and suspicious patterns in real-time.</p>
-          </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔔</div>
+          <h3>Configure Alerts</h3>
+          <p>Set up custom alerts for critical security events and anomalies.</p>
         </div>
-        
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-          <div class="step-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Alert system -->
-              <path d="M12 2L4 6v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V6l-8-4z" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-              <!-- Alert indicators -->
-              <circle cx="12" cy="10" r="2" fill="#ef4444"/>
-              <path d="M12 12l0 4" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
-              <!-- Critical alerts -->
-              <circle cx="8" cy="8" r="1" fill="#ef4444"/>
-              <circle cx="16" cy="8" r="1" fill="#ef4444"/>
-              <circle cx="8" cy="16" r="1" fill="#ef4444"/>
-              <circle cx="16" cy="16" r="1" fill="#ef4444"/>
-              <!-- Alert waves -->
-              <circle cx="12" cy="10" r="4" fill="none" stroke="#ef4444" stroke-width="1" opacity="0.5"/>
-              <circle cx="12" cy="10" r="6" fill="none" stroke="#ef4444" stroke-width="1" opacity="0.3"/>
-            </svg>
-          </div>
-          <div class="step-content">
-            <h3 style="color: #6366f1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Alert</h3>
-            <p style="color: #6b7280; line-height: 1.5; font-size: 0.95rem; margin: 0;">Notify security teams of critical events immediately.</p>
-          </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔗</div>
+          <h3>Integrate SIEM</h3>
+          <p>Connect your existing SIEM tools for centralized monitoring.</p>
         </div>
-        
-        <div class="workflow-step" style="background: #ffffff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; min-height: 180px; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-          <div class="step-logo" style="margin-bottom: 1rem; display: flex; justify-content: center;">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Report generation -->
-              <rect x="4" y="2" width="12" height="16" rx="2" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
-              <!-- Report content -->
-              <rect x="6" y="6" width="8" height="1" rx="0.5" fill="#3b82f6" opacity="0.8"/>
-              <rect x="6" y="8" width="6" height="1" rx="0.5" fill="#3b82f6" opacity="0.8"/>
-              <rect x="6" y="10" width="7" height="1" rx="0.5" fill="#3b82f6" opacity="0.8"/>
-              <rect x="6" y="12" width="5" height="1" rx="0.5" fill="#3b82f6" opacity="0.8"/>
-              <!-- Chart in report -->
-              <rect x="7" y="14" width="6" height="2" rx="1" fill="#10b981" opacity="0.6"/>
-              <!-- Generation indicators -->
-              <circle cx="18" cy="6" r="2" fill="#f59e0b"/>
-              <circle cx="18" cy="12" r="2" fill="#f59e0b"/>
-              <circle cx="18" cy="18" r="2" fill="#f59e0b"/>
-              <!-- Generation arrows -->
-              <path d="M16 6l2-2" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M16 12l2 0" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M16 18l2 2" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="step-content">
-            <h3 style="color: #6366f1; font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; line-height: 1.3;">Report</h3>
-            <p style="color: #6b7280; line-height: 1.5; font-size: 0.95rem; margin: 0;">Generate audit reports for compliance and security reviews.</p>
-          </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Analyze Patterns</h3>
+          <p>Use audit data to identify trends and improve security posture.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Ask the Agent -->
-  <section class="ask-agent">
+  <section class="agent-studio-section">
     <div class="container">
       <div class="section-header">
-        <h2>Audit & Monitoring Questions</h2>
+        <h2 class="section-title">Audit &amp; Monitoring in Action</h2>
+        <p class="section-subtitle">See how the Audit &amp; Monitoring framework provides complete visibility with comprehensive tracking in four intelligent steps:</p>
       </div>
-      
-      <div class="ask-categories" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-        <div class="ask-category" style="background: #f8f9fb; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; transition: all 0.3s ease;">
-          <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;">Logging</h3>
-          <div class="ask-examples" style="display: flex; flex-direction: column; gap: 1rem;">
-            <div class="ask-example" style="background: #ffffff; padding: 1rem; border-radius: 8px; border: 1px solid #e5e7eb; color: #6b7280; font-style: italic; line-height: 1.5; transition: all 0.3s ease;">"What activities are logged in the platform?"</div>
-            <div class="ask-example" style="background: #ffffff; padding: 1rem; border-radius: 8px; border: 1px solid #e5e7eb; color: #6b7280; font-style: italic; line-height: 1.5; transition: all 0.3s ease;">"How long are audit logs retained?"</div>
-          </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">📥</div>
+          <h3>Capture</h3>
+          <p>Log all platform activities with full context and metadata.</p>
         </div>
-        
-        <div class="ask-category" style="background: #f8f9fb; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; transition: all 0.3s ease;">
-          <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;">Monitoring</h3>
-          <div class="ask-examples" style="display: flex; flex-direction: column; gap: 1rem;">
-            <div class="ask-example" style="background: #ffffff; padding: 1rem; border-radius: 8px; border: 1px solid #e5e7eb; color: #6b7280; font-style: italic; line-height: 1.5; transition: all 0.3s ease;">"What security events trigger alerts?"</div>
-            <div class="ask-example" style="background: #ffffff; padding: 1rem; border-radius: 8px; border: 1px solid #e5e7eb; color: #6b7280; font-style: italic; line-height: 1.5; transition: all 0.3s ease;">"Can we integrate with our existing SIEM?"</div>
-          </div>
+        <div class="feature-card">
+          <div class="feature-icon">📈</div>
+          <h3>Analyze</h3>
+          <p>Detect anomalies and suspicious patterns in real-time.</p>
         </div>
-        
-        <div class="ask-category" style="background: #f8f9fb; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); border: 1px solid #e5e7eb; transition: all 0.3s ease;">
-          <h3 style="color: #1f2937; font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;">Compliance</h3>
-          <div class="ask-examples" style="display: flex; flex-direction: column; gap: 1rem;">
-            <div class="ask-example" style="background: #ffffff; padding: 1rem; border-radius: 8px; border: 1px solid #e5e7eb; color: #6b7280; font-style: italic; line-height: 1.5; transition: all 0.3s ease;">"How do audit logs support compliance requirements?"</div>
-            <div class="ask-example" style="background: #ffffff; padding: 1rem; border-radius: 8px; border: 1px solid #e5e7eb; color: #6b7280; font-style: italic; line-height: 1.5; transition: all 0.3s ease;">"Can we export logs for external audits?"</div>
-          </div>
+        <div class="feature-card">
+          <div class="feature-icon">🚨</div>
+          <h3>Alert</h3>
+          <p>Notify security teams of critical events immediately.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📄</div>
+          <h3>Report</h3>
+          <p>Generate audit reports for compliance and security reviews.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <section class="agent-studio-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Audit &amp; Monitoring Questions</h2>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Logging</h3>
+          <p class="ask-example">What activities are logged in the platform?</p>
+          <p class="ask-example">How long are audit logs retained?</p>
+        </div>
+        <div class="feature-card">
+          <h3>Monitoring</h3>
+          <p class="ask-example">What security events trigger alerts?</p>
+          <p class="ask-example">Can we integrate with our existing SIEM?</p>
+        </div>
+        <div class="feature-card">
+          <h3>Compliance</h3>
+          <p class="ask-example">How do audit logs support compliance requirements?</p>
+          <p class="ask-example">Can we export logs for external audits?</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <!-- CTA Section -->
   <section class="cta-section">
     <div class="container">
       <div class="cta-content">
-        <h2 class="cta-title">Ready to Monitor & Audit?</h2>
-        <p class="cta-subtitle">Get complete visibility into platform activity with structured logs and real-time monitoring</p>
+        <h2 class="cta-title">Ready to Monitor &amp; Audit?</h2>
+        <p class="cta-subtitle">Get complete visibility into platform activity with structured logs and real-time monitoring.</p>
         <div class="cta-actions">
-          <a href="../index.html#contact" class="btn-outline">Get Started</a>
-          <a href="../index.html#platform" class="btn-primary">Explore Platform</a>
+          <a href="../index.html#contact" class="btn-primary">Get in Touch</a>
+          <a href="../index.html#services" class="btn-outline">Our Services</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <img src='../images/logo.png' alt='TuringForce logo' class='logo'/>
+          <img src="../images/logo.png" alt="TuringForce logo" class="logo"/>
           <div class="brand-name">TuringForce</div>
-          <p>Agentic AI Agent Platform for modern PMOs.</p>
+          <p>Data Services—build, modernize, and operate trusted data products.</p>
         </div>
         <div class="footer-links">
           <div class="footer-column">
             <h4>Product</h4>
             <ul>
-              <li><a href="../index.html#platform">Platform</a></li>
+              <li><a href="../accelerators.html">Accelerators</a></li>
+              <li><a href="../gen-ai.html">Gen AI</a></li>
               <li><a href="../index.html#agents">Agents</a></li>
-              <li><a href="../index.html#security">Security</a></li>
             </ul>
           </div>
           <div class="footer-column">
@@ -400,16 +317,16 @@
             <ul>
               <li><a href="../index.html#about">About</a></li>
               <li><a href="../index.html#contact">Contact</a></li>
-              <li><a href="../index.html#home">Careers</a></li>
-              <li><a href="../index.html#home">Press</a></li>
+              <li><a href="../index.html">Careers</a></li>
+              <li><a href="../index.html">Press</a></li>
             </ul>
           </div>
           <div class="footer-column">
             <h4>Resources</h4>
             <ul>
-              <li><a href="../index.html#home">Blog</a></li>
+              <li><a href="../resources/news.html">Blog</a></li>
               <li><a href="../index.html#contact">Support</a></li>
-              <li><a href="../index.html#home">Documentation</a></li>
+              <li><a href="../resources/docs.html">Documentation</a></li>
               <li><a href="../index.html#contact">Community</a></li>
             </ul>
           </div>
@@ -424,4 +341,3 @@
   <script src="../js/main.js?v=2.2"></script>
 </body>
 </html>
-
